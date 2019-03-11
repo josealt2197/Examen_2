@@ -14,8 +14,5 @@ namespace HotelService
     {
         [OperationContract]
         Table InsertClient(int id, string name, string last, string mail, string phone);
-
-        [OperationContract]
-        Table SelectClients();
     }
 }
