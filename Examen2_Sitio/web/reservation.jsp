@@ -1,17 +1,242 @@
-<%-- 
-    Document   : reservation
-    Created on : Mar 12, 2019, 8:56:01 PM
-    Author     : joma2
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TicoBooking</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="img/costa-rica64.png">
+
+
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
+    <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hospedaje</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Vehículos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ayuda</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="login.jsp">Ingresar</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </nav>
+    
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h2>Reservación</h2>
+      <p class="lead">Llena los espacios que se solicitan abajo para completar la reservación.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 order-md-1">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Park Inn San Jose by Radisson</span>
+          <span class="badge badge-primary badge-pill">Hotel</span>
+        </h4>
+        <div class="mb-3">
+          <div class="mx-auto">
+            <img src="" alt="ImagenLugar" width="64px" height="64px">
+            <div class="list-group-item">
+              <h6 class="text-success">Ubicación</h6>
+              <h6>Calle Central y Tercera Av 15, Barrio Tournon, 00001 San José, Costa Rica</h6>
+            </div>
+            <div class="list-group-item">
+              <h6 class="text-success">Detalles</h6>
+              <h6>Está en nuestra selección para San José</h6>
+              <h6>Tiene 2 restaurantes</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-7 order-md-2">
+        <div class='alert alert-success'>
+          <strong>¿Aún no has iniciado sesión?</strong><p>Puedes iniciar sesión para completar tus datos personales con tu perfil o crea una cuenta para estar en contacto contigo.</p>
+        </div>
+        <h4 class="mb-3">Datos personales</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="firstName">Nombre</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="lastName">Apellidos</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="phone">Teléfono</label>
+              <input type="text" class="form-control" id="phone" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="ticobooking@correo.com" value="" required="">
+            <div class="invalid-feedback">
+              Este campo es requerido.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="repeatemail">Repita su correo electrónico</label>
+            <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required="">
+            <div class="invalid-feedback">
+              Este campo es requerido.
+            </div>
+          </div>
+          <hr class="mb-4">
+
+          <h4 class="mb-3">Datos de reservación</h4>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="check-in">Fecha de entrada</label>
+              <input type="date" class="form-control" id="check-in" placeholder="" required="">
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="check-out">Fecha de salida</label>
+              <input type="date" class="form-control" id="check-out" placeholder="" required="">
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="persons">Cantidad de huéspedes</label>
+              <select class="custom-select d-block w-100" id="persons" required="">
+                <option value="">...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <div class="invalid-feedback">
+                Seleccione una opción.
+              </div>
+            </div> 
+          </div>
+          <hr class="mb-4">
+
+          <h4 class="mb-3">Envía alguna petición/comentario</h4>
+          <div class="row">
+            <div class="col-md-12 mb-3">
+              <label for="comments">Comentarios</label>
+              <textarea id="comments" class="form-control"></textarea>
+              <small class="text-muted">Las peticiones especiales no se pueden garantizar, pero haremos todo lo posible para atender tu solicitud de la mejor manera. 
+              ¡También puedes enviarnos tu petición especial cuando hayas realizado la reserva!</small>
+            </div>
+          </div> 
+
+          <hr class="mb-4">
+          <button class="btn btn-success btn-lg btn-block" type="submit">Reservar</button>
+        </form>
+        
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="foot col-lg-6 h-100 text-center mx-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">Ayuda</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Hospedaje</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Vehículos</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; JBSG 2019. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
+    <script>
+      (function () {
+        'use strict'
+
+        window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+      }());
+    </script>
+  </body>
+  </html>
