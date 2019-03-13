@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TicoBooking - Detalles</title>
+    <title>TicoBooking - Detalles del alojamiento</title>
     <link rel="stylesheet" href="css/theme/customAB.css" />
     <link rel="stylesheet" href="css/theme/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
@@ -17,7 +17,7 @@
     <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="TicoBooking - Detalles">
+    <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="TicoBooking - Detalles del alojamiento">
 
         <div data-role="header" data-theme="b">
             <img src="./img/logos/logo8.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:100px; heigth:800px;"><br>
@@ -27,14 +27,6 @@
 
         <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
             <h2 class="ui-title" data-role="heading" style="font-weight: 700; color:#0071bc;">Detalles</h2>
-
-            <div class="ui-grid-a ui-responsive">
-                <div class="ui-block-solo">
-                    <div class="ui-bar ui-bar-a" style="height:80px; margin-bottom: 10px;">
-                        Ubicación/Mapa
-                    </div>
-                </div>
-            </div>
 
             <div class="ui-body ui-body-a ui-corner-all">
                 <h2>Radisson Hotel San Jose - Costa Rica</h2>
@@ -153,4 +145,5 @@
     </div>
 </body>
 </html>
+
 
