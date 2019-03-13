@@ -57,17 +57,11 @@
         <div class="sign-in-body" >
             <form class="form-signin">
                 <h1 class="text-green">TicoBooking</h1>
-                <h1 class="h3 mb-3 font-weight-normal text-green">Iniciar Sesion</h1>
+                <h1 class="h3 mb-3 font-weight-normal text-green">Registrarse</h1>
+                <h5> Antes de poder completar tu registro necesitamos confimar tu dirección de Correo Electrónico </h5><br/>
                 <label for="inputEmail" class="sr-only">Correo Electronico</label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div class="checkbox mb-3">
-                    <label>
-                        <a href="pre_register.jsp">Resgistrate</a>
-                    </label>
-                </div>
-                <button class="btn btn-lg btn-success btn-block" type="submit">Ingresar</button>
+                <br/><button class="btn btn-lg btn-success btn-block" type="submit">Continuar</button>
             </form>
         </div>
 
