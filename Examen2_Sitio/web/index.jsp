@@ -9,9 +9,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Landing Page - Start Bootstrap Theme</title>
+  <title>TicoBooking</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -25,13 +26,33 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <a style="float:right" class="btn btn-primary" href="#">Sign In</a>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
+    <a class="navbar-brand" href="#"><strong>TicoBooking</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hospedaje</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Vehículos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ayuda</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Ingresar</a>
+        </li>
+      </ul>
+      </form>
     </div>
   </nav>
+
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
@@ -39,17 +60,23 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+          <h1 class="mb-5">¿Quieres explorar Costa Rica?</h1>
+          <h2 class="mb-5">Tenemos lo que necesitas.</h2>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <center>
             <form>
               <div class="form-row">
-                <div class="col-md-8">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                <div class="col-md-12">
+                  <select class="form-control form-control-lg" >
+                    <option>¿Qué andas buscando?</option>
+                    <option>Hospedaje</option>
+                    <option>Vehículos</option>
+                  </select><br>
+                  <input type="text" class="form-control form-control-lg" placeholder="¿Donde lo necesitas?">
                 </div><br>
-                <div class="col-md-4">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                <div class="col-md-4 mx-auto">
+                  <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar</button>
                 </div>
               </div>
             </form>
@@ -62,32 +89,30 @@
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
+      <h2>TicoBooking, los expertos en resevaciones.</h2><br>
       <div class="row">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+              <i class="icon-screen-smartphone m-auto text-success"></i>
             </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+            <p class="lead mb-0">Ofrecemos nuestro servicio de reservacion en tiempo real por medio de nuestro sitio Web o a traves de nuestra App Movil.</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+              <i class="icon-book-open m-auto text-success"></i>
             </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            <p class="lead mb-0">Contamos con un amplio catalogo de opciones, de acuerdo a las necesidades de nuestros clientes.</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
+              <i class="icon-check m-auto text-success"></i>
             </div>
-            <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+            <p class="lead mb-0">Poseemos los mas altos estandares de seguridad, para poder brindar la mejor experiencia.</p>
           </div>
         </div>
       </div>
@@ -101,22 +126,15 @@
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Fully Responsive Design</h2>
-          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+          <h3>¿Necesitas donde hospedarte?</h3>
+          <p class="lead mb-0">Con nosotros estás en buenas manos: Tenemos opciones de hoteles para todos los gustos, con los mejores precios y en todo el país.</p>
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Updated For Bootstrap 4</h2>
-          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-        </div>
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Customize</h2>
-          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>¿Necesitas transporte?</h2>
+          <p class="lead mb-0">Nosotros te ayudamos. Te ofrecemos distintos vehículos, para que puedes conocer todas las provincias y llegar a tu destino esperado.</p>
         </div>
       </div>
     </div>
@@ -125,27 +143,27 @@
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
     <div class="container">
-      <h2 class="mb-5">What people are saying...</h2>
+      <h2 class="mb-5">Qué dicen nuestros clientes...</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
             <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+            <p class="font-weight-light mb-0">"TicoBooking ofrece las mejores ofertas."</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
             <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+            <p class="font-weight-light mb-0">"¡Excelente servicio! Recomendado para extrajeros y locales."</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
             <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+            <p class="font-weight-light mb-0">"Cuando pienso en planear mis vacaciones, pienso en TicoBooking"</p>
           </div>
         </div>
       </div>
@@ -157,22 +175,11 @@
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+        <div class="col-xl-12 mx-auto">
+          <h2 class="mb-4">¿Necesitas ayuda?</h2>
+          <h3>Visita nuestra seccion de preguntas frecuentes.</h3>          
         </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <center>
-            <form>
-              <div class="form-row">
-                <div class="col-md-8">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div><br>
-                <div class="col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
-          </center>
+        <div class="col-xl-2 mx-auto"><br><br><button type="submit" class="btn btn-block btn-lg btn-success">Ayuda</button>
         </div>
       </div>
     </div>
@@ -182,44 +189,21 @@
   <footer class="footer bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+        <div class="foot col-lg-6 h-100 text-center mx-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#">Ayuda</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+              <a href="#">Hospedaje</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
+              <a href="#">Vehículos</a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
-        </div>
-        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
-            </li>
-          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; JBSG 2019. All Rights Reserved.</p>
         </div>
       </div>
     </div>
