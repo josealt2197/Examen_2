@@ -2,6 +2,7 @@
 package controller;
 
 import bean.hotels;
+import bean.reservaciones;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import java.util.ArrayList;
@@ -26,6 +27,24 @@ public class controller_services {
     public String insertUsuario(){
         model_services da = new model_services();
         da.insertU(getU());
+
+        return SUCCESS;
+    }
+    
+    //----------------Insert de Reservaciones
+    private reservaciones r = new reservaciones();
+
+    public reservaciones getR() {
+        return r;
+    }
+
+    public void setR(reservaciones r) {
+        this.r = r;
+    }    
+    
+    public String insertReservacion(){
+        model_services da = new model_services();
+        da.insertReservations(getR());
 
         return SUCCESS;
     }

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelEntitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NombreHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadHuespedes" Type="Int32" Nullable="false" />
+    <Property Name="UbicacionExacta" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProvinciaHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ServiciosIncluidos" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Precio" Type="Int32" Nullable="false" />
+    <Property Name="ImagenHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HoraEntradaHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HoraSalidaHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DescripcionHos" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservaciones">
+    <Key>
+      <PropertyRef Name="Id_Reservacion" />
+    </Key>
+    <Property Name="Id_Reservacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Hospedaje" Type="Int32" />
+    <Property Name="Id_Cliente" Type="Int32" />
+    <Property Name="FechaEntrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaSalida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cant_Huespedes" Type="Int32" />
+    <Property Name="CostoTotal" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaNac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="HotelEntitiesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hotel" EntityType="Self.Hotel" />
+    <EntitySet Name="Reservaciones" EntityType="Self.Reservaciones" />
+    <EntitySet Name="Table" EntityType="Self.Table" />
+  </EntityContainer>
+</Schema>

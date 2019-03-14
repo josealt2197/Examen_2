@@ -8,14 +8,26 @@
     <Property Name="NombreHos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Tipo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CantidadHuespedes" Type="int" Nullable="false" />
-    <Property Name="UbicacionExacta" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="UbicacionExacta" Type="varchar" MaxLength="1000" Nullable="false" />
     <Property Name="ProvinciaHos" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ServiciosIncluidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServiciosIncluidos" Type="varchar" MaxLength="5000" Nullable="false" />
     <Property Name="Precio" Type="int" Nullable="false" />
     <Property Name="ImagenHos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="HoraEntradaHos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="HoraSalidaHos" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="DescripcionHos" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="DescripcionHos" Type="varchar" MaxLength="5000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservaciones">
+    <Key>
+      <PropertyRef Name="Id_Reservacion" />
+    </Key>
+    <Property Name="Id_Reservacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Hospedaje" Type="int" Nullable="false" />
+    <Property Name="Id_Cliente" Type="int" Nullable="false" />
+    <Property Name="FechaEntrada" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaSalida" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cant.Huespedes" Type="int" Nullable="false" />
+    <Property Name="CostoTotal" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Table">
     <Key>
@@ -30,6 +42,7 @@
   </EntityType>
   <EntityContainer Name="HotelEntitiesModelStoreContainer">
     <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservaciones" EntityType="Self.Reservaciones" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

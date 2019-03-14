@@ -7,6 +7,9 @@
         <action name="registrar" class="controller.controller_services" method="insertUsuario">
             <result name="success">login.jsp</result>
         </action>  
+        <action name="registrar_reservacion" class="controller.controller_services" method="insertReservacion">
+            <result name="success">place_reservation.jsp</result>
+        </action> 
         <action name="viewrecords" class="controller.controller_services" method="selectHoteles">  
             <result name="success">list.jsp</result>  
         </action>   

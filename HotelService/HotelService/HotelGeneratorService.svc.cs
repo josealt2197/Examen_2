@@ -34,6 +34,31 @@ namespace HotelService
             return null;
         }
 
+        public Reservaciones InsertReservation(int id_hospedaje, int id_cliente, string nombre, string apellido, string telefono, string correo, string entrada, string salida, int cantidad, int costo)
+        {
+            Reservaciones reservation = new Reservaciones();
+
+            using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
+            {
+                reservation.Id_Hospedaje = id_hospedaje;
+                reservation.Id_Cliente = id_cliente;
+                reservation.Nombre = nombre;
+                reservation.Apellido = apellido;
+                reservation.Telefono = telefono;
+                reservation.Correo = correo;
+                reservation.FechaEntrada = entrada;
+                reservation.FechaSalida = salida;
+                reservation.Cant_Huespedes = cantidad;
+                reservation.CostoTotal = costo;
+
+                dc.Configuration.ValidateOnSaveEnabled = false;
+                dc.Reservaciones.Add(reservation);
+                dc.SaveChanges();
+            }
+
+            return null;
+        }
+
         public Table UpdateClient(int id, string fullname, string mail, string phone)
         {
             Table table = new Table();

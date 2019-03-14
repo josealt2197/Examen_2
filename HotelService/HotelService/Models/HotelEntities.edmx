@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HotelEntitiesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Hotel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NombreHos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tipo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CantidadHuespedes" Type="int" Nullable="false" />
+          <Property Name="UbicacionExacta" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="ProvinciaHos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ServiciosIncluidos" Type="varchar" MaxLength="5000" Nullable="false" />
+          <Property Name="Precio" Type="int" Nullable="false" />
+          <Property Name="ImagenHos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HoraEntradaHos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HoraSalidaHos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DescripcionHos" Type="varchar" MaxLength="5000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reservaciones">
+          <Key>
+            <PropertyRef Name="Id_Reservacion" />
+          </Key>
+          <Property Name="Id_Reservacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Hospedaje" Type="int" />
+          <Property Name="Id_Cliente" Type="int" />
+          <Property Name="FechaEntrada" Type="varchar" MaxLength="50" />
+          <Property Name="FechaSalida" Type="varchar" MaxLength="50" />
+          <Property Name="Cant.Huespedes" Type="int" />
+          <Property Name="CostoTotal" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaNac" Type="varchar" MaxLength="50" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="HotelEntitiesModelStoreContainer">
+          <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservaciones" EntityType="Self.Reservaciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HotelEntitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hotel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NombreHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CantidadHuespedes" Type="Int32" Nullable="false" />
+          <Property Name="UbicacionExacta" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProvinciaHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ServiciosIncluidos" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Precio" Type="Int32" Nullable="false" />
+          <Property Name="ImagenHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoraEntradaHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HoraSalidaHos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DescripcionHos" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reservaciones">
+          <Key>
+            <PropertyRef Name="Id_Reservacion" />
+          </Key>
+          <Property Name="Id_Reservacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Hospedaje" Type="Int32" />
+          <Property Name="Id_Cliente" Type="Int32" />
+          <Property Name="FechaEntrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaSalida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cant_Huespedes" Type="Int32" />
+          <Property Name="CostoTotal" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="HotelEntitiesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hotel" EntityType="Self.Hotel" />
+          <EntitySet Name="Reservaciones" EntityType="Self.Reservaciones" />
+          <EntitySet Name="Table" EntityType="Self.Table" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HotelEntitiesModelStoreContainer" CdmEntityContainer="HotelEntitiesEntities">
+          <EntitySetMapping Name="Hotel">
+            <EntityTypeMapping TypeName="HotelEntitiesModel.Hotel">
+              <MappingFragment StoreEntitySet="Hotel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NombreHos" ColumnName="NombreHos" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="CantidadHuespedes" ColumnName="CantidadHuespedes" />
+                <ScalarProperty Name="UbicacionExacta" ColumnName="UbicacionExacta" />
+                <ScalarProperty Name="ProvinciaHos" ColumnName="ProvinciaHos" />
+                <ScalarProperty Name="ServiciosIncluidos" ColumnName="ServiciosIncluidos" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="ImagenHos" ColumnName="ImagenHos" />
+                <ScalarProperty Name="HoraEntradaHos" ColumnName="HoraEntradaHos" />
+                <ScalarProperty Name="HoraSalidaHos" ColumnName="HoraSalidaHos" />
+                <ScalarProperty Name="DescripcionHos" ColumnName="DescripcionHos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservaciones">
+            <EntityTypeMapping TypeName="HotelEntitiesModel.Reservaciones">
+              <MappingFragment StoreEntitySet="Reservaciones">
+                <ScalarProperty Name="Id_Reservacion" ColumnName="Id_Reservacion" />
+                <ScalarProperty Name="Id_Hospedaje" ColumnName="Id_Hospedaje" />
+                <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+                <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+                <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+                <ScalarProperty Name="Cant_Huespedes" ColumnName="Cant.Huespedes" />
+                <ScalarProperty Name="CostoTotal" ColumnName="CostoTotal" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table">
+            <EntityTypeMapping TypeName="HotelEntitiesModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

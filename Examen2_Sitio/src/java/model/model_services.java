@@ -2,6 +2,7 @@
 package model;
 
 import bean.usuarios;
+import bean.reservaciones;
 
 public class model_services {
     public boolean insertU(usuarios u){
@@ -17,6 +18,27 @@ public class model_services {
         HotelGeneratorService WebService = new HotelGeneratorService();        
         
         WebService.getBasicHttpBindingIHotelGeneratorService().insertClient(id, fullname, mail, phone, date, password);
+        
+        return resultado;
+    }
+    
+    public boolean insertReservations(reservaciones r){
+        boolean resultado = false;        
+        
+        int id_hospedaje = r.getId_hospedaje();
+        int id_cliente = r.getId_cliente();
+        String nombre = r.getNombre();
+        String apellido = r.getApellido();
+        String telefono = r.getTelefono();
+        String correo = r.getCorreo();
+        String entrada = r.getEntrada();
+        String salida = r.getSalida();
+        int cantidad = r.getCantidad();
+        int costo = r.getCosto();
+
+        HotelGeneratorService WebService = new HotelGeneratorService();        
+        
+        WebService.getBasicHttpBindingIHotelGeneratorService().insertReservation(id_hospedaje, id_cliente, nombre, apellido, telefono, correo, entrada, salida, cantidad, costo);
         
         return resultado;
     }

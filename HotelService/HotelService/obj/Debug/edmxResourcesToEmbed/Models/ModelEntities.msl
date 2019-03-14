@@ -31,5 +31,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Reservaciones">
+      <EntityTypeMapping TypeName="HotelEntitiesModel.Reservaciones">
+        <MappingFragment StoreEntitySet="Reservaciones">
+          <ScalarProperty Name="CostoTotal" ColumnName="CostoTotal" />
+          <ScalarProperty Name="Cant_Huespedes" ColumnName="Cant.Huespedes" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+          <ScalarProperty Name="Id_Hospedaje" ColumnName="Id_Hospedaje" />
+          <ScalarProperty Name="Id_Reservacion" ColumnName="Id_Reservacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

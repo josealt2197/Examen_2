@@ -1,5 +1,6 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,25 +89,36 @@
           <strong>¿Aún no has iniciado sesión?</strong><p>Puedes iniciar sesión para completar tus datos personales con tu perfil o crea una cuenta para estar en contacto contigo.</p>
         </div>
         <h4 class="mb-3">Datos personales</h4>
-        <form class="needs-validation" novalidate="">
+        <s:form  theme="simple" cssClass="needs-validation" action = "registrar_reservacion" id="registration_form" method = "post">
           <div class="row">
             <div class="col-md-4 mb-3">
-              <label for="firstName">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <label for="id">Cédula</label>
+              <s:textfield type = "text" cssClass="form-control" id="id" name = "r.id_cliente" placeholder="Cédula" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="firstname">Nombre</label>
+              <s:textfield type = "text" cssClass="form-control" id="firstname" name = "r.nombre" placeholder="Nombre" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <label for="lastName">Apellidos</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <s:textfield type = "text" cssClass="form-control" id="lastName" name = "r.apellido" placeholder="Apellidos" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <label for="phone">Teléfono</label>
-              <input type="text" class="form-control" id="phone" placeholder="" value="" required="">
+              <s:textfield type = "text" cssClass="form-control" id="phone" name = "r.telefono" placeholder="12345678" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="phone" placeholder="" value="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
@@ -115,7 +127,8 @@
 
           <div class="mb-3">
             <label for="email">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="ticobooking@correo.com" value="" required="">
+            <s:textfield type = "text" cssClass="form-control" id="email" name = "r.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+            <!--<input type="email" class="form-control" id="email" placeholder="" value="" required="">-->
             <div class="invalid-feedback">
               Este campo es requerido.
             </div>
@@ -135,14 +148,16 @@
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="check-in">Fecha de entrada</label>
-              <input type="date" class="form-control" id="check-in" placeholder="" required="">
+              <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
+              <!--<input type="date" class="form-control" id="check-in" placeholder="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <label for="check-out">Fecha de salida</label>
-              <input type="date" class="form-control" id="check-out" placeholder="" required="">
+              <s:textfield type = "date" cssClass="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required="required"></s:textfield>
+              <!--<input type="date" class="form-control" id="check-out" placeholder="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
@@ -151,20 +166,9 @@
 
           <div class="row">
             <div class="col-md-4 mb-3">
-              <label for="persons">Cantidad de huéspedes</label>
-              <select class="custom-select d-block w-100" id="persons" required="">
-                <option value="">...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
+              <label for="persons">Cantidad de huéspedes</label>              
+              <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
+              <!--<select class="custom-select d-block w-100" id="persons" required="">-->
               <div class="invalid-feedback">
                 Seleccione una opción.
               </div>
@@ -184,7 +188,7 @@
 
           <hr class="mb-4">
           <button class="btn btn-success btn-lg btn-block" type="submit">Reservar</button>
-        </form>
+        </s:form>
         
       </div>
     </div>

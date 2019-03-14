@@ -16,6 +16,9 @@ namespace HotelService
         Table InsertClient(int id, string fullname, string mail, string phone, string fecha, string pass);
 
         [OperationContract]
+        Reservaciones InsertReservation(int id_hospedaje, int id_cliente, string nombre, string apellido, string telefono, string correo, string entrada, string salida, int cantidad, int costo);
+
+        [OperationContract]
         Table UpdateClient(int id, string fullname, string mail, string phone);
 
         [OperationContract]
