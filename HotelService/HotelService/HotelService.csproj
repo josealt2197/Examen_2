@@ -144,24 +144,27 @@
       <DependentUpon>HotelGeneratorService.svc</DependentUpon>
     </Compile>
     <Compile Include="IHotelGeneratorService.cs" />
-    <Compile Include="Models\HotelModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelModel.Context.tt</DependentUpon>
+    <Compile Include="Models\Hotel.cs">
+      <DependentUpon>ModelEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HotelModel.cs">
+    <Compile Include="Models\ModelEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HotelModel.tt</DependentUpon>
+      <DependentUpon>ModelEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HotelModel.Designer.cs">
+    <Compile Include="Models\ModelEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HotelModel.edmx</DependentUpon>
+      <DependentUpon>ModelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\Table.cs">
-      <DependentUpon>HotelModel.tt</DependentUpon>
+      <DependentUpon>ModelEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -179,24 +182,24 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="HotelGeneratorService.svc" />
-    <Content Include="Models\HotelModel.Context.tt">
+    <Content Include="Models\ModelEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>HotelModel.Context.cs</LastGenOutput>
-      <DependentUpon>HotelModel.edmx</DependentUpon>
+      <DependentUpon>ModelEntities.edmx</DependentUpon>
+      <LastGenOutput>ModelEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\HotelModel.tt">
+    <Content Include="Models\ModelEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HotelModel.edmx</DependentUpon>
-      <LastGenOutput>HotelModel.cs</LastGenOutput>
+      <DependentUpon>ModelEntities.edmx</DependentUpon>
+      <LastGenOutput>ModelEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\HotelModel.edmx">
+    <EntityDeploy Include="Models\ModelEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HotelModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\HotelModel.edmx.diagram">
-      <DependentUpon>HotelModel.edmx</DependentUpon>
+    <Content Include="Models\ModelEntities.edmx.diagram">
+      <DependentUpon>ModelEntities.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

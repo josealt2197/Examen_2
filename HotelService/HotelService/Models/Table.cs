@@ -11,23 +11,14 @@ namespace HotelService.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Table
     {
-        [DataType(DataType.Text)]
         public int Id { get; set; }
-
-        [DataType(DataType.Text)]
         public string Nombre { get; set; }
-
-        [DataType(DataType.Text)]
-        public string Apellidos { get; set; }
-
-        [DataType(DataType.Text)]
         public string Correo { get; set; }
-
-        [DataType(DataType.Text)]
         public string Telefono { get; set; }
+        public string FechaNac { get; set; }
+        public string Contraseña { get; set; }
     }
 }

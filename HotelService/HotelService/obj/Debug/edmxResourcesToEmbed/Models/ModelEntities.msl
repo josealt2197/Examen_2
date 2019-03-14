@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelEntitiesModelStoreContainer" CdmEntityContainer="HotelEntitiesEntities">
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="HotelEntitiesModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotel">
+      <EntityTypeMapping TypeName="HotelEntitiesModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="DescripcionHos" ColumnName="DescripcionHos" />
+          <ScalarProperty Name="HoraSalidaHos" ColumnName="HoraSalidaHos" />
+          <ScalarProperty Name="HoraEntradaHos" ColumnName="HoraEntradaHos" />
+          <ScalarProperty Name="ImagenHos" ColumnName="ImagenHos" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="ServiciosIncluidos" ColumnName="ServiciosIncluidos" />
+          <ScalarProperty Name="ProvinciaHos" ColumnName="ProvinciaHos" />
+          <ScalarProperty Name="UbicacionExacta" ColumnName="UbicacionExacta" />
+          <ScalarProperty Name="CantidadHuespedes" ColumnName="CantidadHuespedes" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NombreHos" ColumnName="NombreHos" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

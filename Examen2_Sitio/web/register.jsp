@@ -1,5 +1,6 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,18 +64,21 @@
     <div class="row ">
       <div class="col-md-8 mx-auto">
         <h4 class="mb-3">Datos Personales</h4>
-        <form class="needs-validation" novalidate>
+        <!--<form class="needs-validation" novalidate> -->
+        <s:form  theme="simple" cssClass="needs-validation" action = "registrar" id="registration_form" method = "post">
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="firstName">Nombre Completo</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Nombre y Apellidos" value="" required>
+              <label for="firstName">Nombre Completo</label><br>
+              <s:textfield type = "text" cssClass="form-control" id="firstName" name = "u.fullnombre" placeholder="Nombre Completo" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="firstName" placeholder="Nombre y Apellidos" value="" required>-->
               <div class="invalid-feedback">
                 Un nombre valido es requerido.
               </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="lastName">Cedula</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Número de Cédula" value="" required>
+              <label for="form_cedula">Cédula</label><br>
+              <s:textfield type = "number" cssClass="form-control" id="form_cedula" name = "u.cedula" placeholder="Cédula" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="lastName" placeholder="Número de Cédula" value="" required>-->
               <div class="invalid-feedback">
                 Una Cédula valida es requerida.
               </div>
@@ -82,12 +86,13 @@
           </div>
 
           <div class="mb-3">
-            <label for="email">Correo Electrónico</label>
+            <label for="form_email">Correo Electrónico</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">@</span>
               </div>
-              <input type="email" class="form-control" id="email" placeholder="ticobooking@correo.com" required>
+                <s:textfield type = "email" cssClass="form-control" id="form_email" name = "u.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+              <!--<input type="email" class="form-control" id="email" placeholder="ticobooking@correo.com" required>-->
               <div class="invalid-feedback" style="width: 100%;">
                 Un Correo Electrónico valido es requerido.
               </div>
@@ -95,16 +100,18 @@
           </div>
 
           <div class="mb-3">
-            <label for="pass">Contraseña</label>
-            <input type="password" class="form-control" id="pass" placeholder="Contraseña" required>
+            <label for="form_password">Contraseña</label><br>
+            <s:textfield type = "password" cssClass="form-control" id="form_password" name = "u.password" placeholder="Contraseña" required="required"></s:textfield>
+            <!--<input type="password" class="form-control" id="pass" placeholder="Contraseña" required>-->
             <div class="invalid-feedback">
               Este campo es requerido.
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="pass2">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="pass2" placeholder="Confirmar Contraseña" required>
+            <label for="form_password2">Confirmar Contraseña</label><br>
+            <s:textfield type = "password" cssClass="form-control" id="form_password2" placeholder="Confirmar Contraseña" required="required"></s:textfield>
+            <!--<input type="password" class="form-control" id="pass2" placeholder="Confirmar Contraseña" required>-->
             <div class="invalid-feedback">
               Este campo es requerido.
             </div>
@@ -112,23 +119,26 @@
 
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="birth">Fecha de Nacimiento</label>
-              <input type="date" class="form-control" id="pass2" placeholder="Confirmar Contraseña" required>
+              <label for="form_date">Fecha de Nacimiento</label>
+              <s:textfield type = "date" cssClass="form-control" id="form_date" name = "u.fechanacimiento" placeholder="Fecha de nacimiento" required="required"></s:textfield>
+              <!--<input type="date" class="form-control" id="pass2" placeholder="Confirmar Contraseña" required>-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="phone">Teléfono</label>
-              <input type="number" class="form-control" id="phone" placeholder="12345678" required>
+              <label for="form_phone">Teléfono</label><br>
+              <s:textfield type = "number" cssClass="form-control" id="form_phone" name = "u.telefono" placeholder="12345678" required="required"></s:textfield>
+              <!--<input type="number" class="form-control" id="phone" placeholder="12345678" required>-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
           </div>
           <hr class="mb-4">
-          <button class="btn btn-success btn-lg btn-block" type="submit">Completar Registro</button>
-        </form>
+          <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Registrarse"></s:submit>
+          <!--<button class="btn btn-success btn-lg btn-block" type="submit">Completar Registro</button>-->
+        </s:form> 
       </div>
     </div>
 
@@ -162,23 +172,23 @@
 
     <script>
       (function () {
-        'use strict'
+        'use strict';
 
         window.addEventListener('load', function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation')
+    var forms = document.getElementsByClassName('needs-validation');
 
     // Loop over them and prevent submission
     Array.prototype.filter.call(forms, function (form) {
       form.addEventListener('submit', function (event) {
         if (form.checkValidity() === false) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
         }
-        form.classList.add('was-validated')
-      }, false)
-    })
-  }, false)
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
       }());
     </script>
   </body>

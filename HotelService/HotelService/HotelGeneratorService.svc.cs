@@ -13,39 +13,39 @@ namespace HotelService
     public class HotelGeneratorService : IHotelGeneratorService
     {
 
-        public Table InsertClient(int id, string name, string last, string mail, string phone)
+        public Table InsertClient(int id, string fullname, string mail, string phone, string date, string pass)
         {
             Table table = new Table();
 
             using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
             {
                 table.Id = id;
-                table.Nombre = name;
-                table.Apellidos = last;
+                table.Nombre = fullname;
                 table.Correo = mail;
                 table.Telefono = phone;
+                table.FechaNac = date;
+                table.Contraseña = pass;
 
                 dc.Configuration.ValidateOnSaveEnabled = false;
-                dc.Tables.Add(table);
+                dc.Table.Add(table);
                 dc.SaveChanges();
             }
 
             return null;
         }
 
-        public Table UpdateClient(int id, string name, string last, string mail, string phone)
+        public Table UpdateClient(int id, string fullname, string mail, string phone)
         {
             Table table = new Table();
 
             using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
             {
-                var v = dc.Tables.Where(a => a.Id == id).FirstOrDefault();
+                var v = dc.Table.Where(a => a.Id == id).FirstOrDefault();
 
                 if (v != null)
                 {
                     v.Id = id;
-                    v.Nombre = name;
-                    v.Apellidos = last;
+                    v.Nombre = fullname;
                     v.Correo = mail;
                     v.Telefono = phone;
                     dc.Configuration.ValidateOnSaveEnabled = false;
@@ -60,12 +60,12 @@ namespace HotelService
             return null;
         }
 
-        public List<Table> SelectClient()
+        public List<Hotel> SelectHotels()
         {
-            List<Table> list = new List<Table>();
+            List<Hotel> list = new List<Hotel>();
             using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
             {
-                var v = dc.Tables.ToList();
+                var v = dc.Hotel.ToList();
                 if (v != null)
                 {
                     foreach (var item in v)
@@ -81,7 +81,7 @@ namespace HotelService
 
             }
             return list;
-        }
+        } 
 
         public int DeleteClient(int id)
         {
@@ -89,10 +89,10 @@ namespace HotelService
 
             using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
             {
-                var v = dc.Tables.Single(a => a.Id == id);
+                var v = dc.Table.Single(a => a.Id == id);
                 if (v != null)
                 {
-                    dc.Tables.Remove(v);
+                    dc.Table.Remove(v);
                     dc.SaveChanges();
                     res = 1;
                 }
@@ -112,7 +112,7 @@ namespace HotelService
 
             using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
             {
-                var v = dc.Tables.Where(a => a.Id == id).ToList();
+                var v = dc.Table.Where(a => a.Id == id).ToList();
                 if (v != null)
                 {
                     foreach (var item in v)

@@ -13,13 +13,13 @@ namespace HotelService
     public interface IHotelGeneratorService
     {
         [OperationContract]
-        Table InsertClient(int id, string name, string last, string mail, string phone);
+        Table InsertClient(int id, string fullname, string mail, string phone, string fecha, string pass);
 
         [OperationContract]
-        Table UpdateClient(int id, string name, string last, string mail, string phone);
+        Table UpdateClient(int id, string fullname, string mail, string phone);
 
         [OperationContract]
-        List<Table> SelectClient();
+        List<Hotel> SelectHotels();
 
         [OperationContract]
         int DeleteClient(int id);

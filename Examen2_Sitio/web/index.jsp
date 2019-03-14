@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +79,7 @@
                                         <input type="text" class="form-control form-control-lg" placeholder="¿Donde lo necesitas?">
                                     </div><br>
                                     <div class="col-md-4 mx-auto">
-                                        <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar</button>
+                                        <br><a href="viewrecords" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar</a>
                                     </div>
                                 </div>
                             </form>
