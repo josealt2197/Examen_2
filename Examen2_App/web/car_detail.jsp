@@ -1,9 +1,3 @@
-<%-- 
-    Document   : car_detail
-    Created on : 13/03/2019, 04:11:41 PM
-    Author     : xxddp
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -145,4 +139,5 @@
     </div>
 </body>
 </html>
+
 

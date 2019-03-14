@@ -1,9 +1,3 @@
-<%-- 
-    Document   : flight_detail
-    Created on : 13/03/2019, 04:12:55 PM
-    Author     : xxddp
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -38,7 +32,6 @@
                 <h2>San José-Juan(SJO) - Barcelona(BCN)</h2>
                 <small>Salida: 16:05 Juan Santamaria</small><br>
                 <small>Llegada: 12:55 +1 día Aeropuerto de Barcelona-El Prat</small>
-                <img src="./img/info.png" alt="rss" style="display: block; margin: 30px auto;"><br>
             </div>
 
             <form>
@@ -140,4 +133,5 @@
     </div>
 </body>
 </html>
+
 
