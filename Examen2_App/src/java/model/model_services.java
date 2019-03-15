@@ -37,7 +37,7 @@ public class model_services {
 
         HotelGeneratorService WebService = new HotelGeneratorService();        
         
-        WebService.getBasicHttpBindingIHotelGeneratorService().insertReservation(id_hospedaje, id_cliente, nombre, apellido, telefono, correo, entrada, salida, cantidad, costo);
+        WebService.getBasicHttpBindingIHotelGeneratorService().insertReservation(12, id_cliente, nombre, apellido, telefono, correo, entrada, salida, cantidad, costo);
         
         return resultado;
     }
