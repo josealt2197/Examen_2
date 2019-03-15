@@ -35,6 +35,8 @@ public class controller_services {
     }
     
     //----------------Insert de Reservaciones
+    private int id_hotel;
+    
     private reservaciones r = new reservaciones();
 
     public reservaciones getR() {
@@ -43,11 +45,19 @@ public class controller_services {
 
     public void setR(reservaciones r) {
         this.r = r;
-    }    
+    }   
+
+    public int getId_hotel() {
+        return id_hotel;
+    }
+
+    public void setId_hotel(int id_hotel) {
+        this.id_hotel = id_hotel;
+    }   
     
     public String insertReservacion(){
         model_services da = new model_services();
-        da.insertReservations(getR());
+        da.insertReservations(getR(), id_hotel);
 
         return SUCCESS;
     }
