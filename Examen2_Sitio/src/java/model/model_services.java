@@ -50,5 +50,12 @@ public class model_services {
         return WebService.getBasicHttpBindingIHotelGeneratorService().selectHotels();
     }
     
+    public ArrayOfHotel selectOneHotel(int id){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().searchHotel(id);
+    }
+    
 }
 

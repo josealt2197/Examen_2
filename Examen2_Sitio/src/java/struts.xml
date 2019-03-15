@@ -13,5 +13,8 @@
         <action name="viewrecords" class="controller.controller_services" method="selectHoteles">  
             <result name="success">list.jsp</result>  
         </action>   
+        <action name="place_detail" class="controller.controller_services" method="selectUnHotel">  
+            <result name="success">place_detail.jsp</result>  
+        </action> 
     </package>
 </struts>

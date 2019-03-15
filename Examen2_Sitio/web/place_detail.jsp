@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,25 +50,26 @@
         </nav>
 
         <div class="container">
-            <div class="jumbotron p-4 p-md-4 text-white rounded">
+        <s:iterator  value="hotel_info"> 
+            <!--<div class="jumbotron p-4 p-md-4 text-white rounded">
                 <div class="col-md-6 px-0">
                     <h1 class="display-4 font-italic">Ubicación-Mapa</h1>
                     <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
                 </div>
-            </div>
+            </div>-->
 
             <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
                 <div class="row">
                     <div class="col-md-6 mr-5 px-0">
-                        <h1 class="display-5 font-italic">Park Inn San Jose by Radisson</h1>
-                        <span class="badge badge-primary badge-pill">Hotel</span><span class="ml-3 badge badge-info">Ideal para dos viajeros</span>
-                        <p class="lead my-3">Calle Central y Tercera Av 15, Barrio Tournon, 00001 San José, Costa Rica.</p>
+                        <h1 class="display-5 font-italic"><s:property value="NombreHos.getValue()"></s:property></h1>
+                        <span class="badge badge-primary badge-pill"><s:property value="Tipo.getValue()"></s:property></span><span class="ml-3 badge badge-info">Ideal para dos viajeros</span>
+                        <p class="lead my-3"><s:property value="UbicacionExacta.getValue()"></s:property></p>
                     </div>
                     <div class="col-md-3">
                         <button class="btn btn-success btn-lg btn-block" type="submit">Reservar</button>
                     </div>
                 </div>
-                <img src="https://q-ec.bstatic.com/images/hotel/max1280x900/161/161776615.jpg" data-highres="https://q-ec.bstatic.com/images/hotel/max1280x900/161/161776615.jpg" alt="Imagen de la galería de este alojamiento" width="800px" height="300px">
+                <img src="<s:property value="ImagenDetail.getValue()"></s:property>" data-highres="<s:property value="ImagenDetail.getValue()"></s:property>" alt="Imagen" width="800px" height="300px">
             </div>
 
             <div class="row">
@@ -77,17 +79,7 @@
                     </h3>
                     <div class="blog-post">
 
-                        <p>Este hotel elegante alberga piscina al aire libre, piscina cubierta climatizada y centro de conferencias. Sus habitaciones son amplias e incluyen conexión WiFi gratuita y soporte para iPod.</p>
-
-                        <p>El Radisson Hotel San Jose Costa Rica se encuentra en el centro de San José, a 800 metros de la avenida central. Dispone de parking seguro gratuito 24 horas.</p>
-
-                        <p>El Radisson Hotel San Jose cuenta con sauna, bañera de hidromasaje, gimnasio bien equipado y servicio de masajes, bajo petición.</p>
-
-                        <p>Las habitaciones son grandes y presentan una decoración de estilo clásico con muebles sofisticados de madera tallada. Todas tienen minibar, cafetera y baño elegante con artículos de aseo y secador de pelo.</p>
-
-                        <p>El restaurante Acuarelas del Radisson sirve platos de cocina local e internacional, mientras que el Café Tropical ofrece un desayuno buffet variado. El centro de fitness Gold's Gym, así como el servicio de habitaciones y el de atención médica están disponibles las 24 horas.</p>
-
-                        <p>¡Hablamos tu idioma!</p>
+                        <p><s:property value="DescripcionHos.getValue()"></s:property></p>
                         <hr>
 
                     </div>
@@ -97,19 +89,20 @@
                 <aside class="col-md-4 blog-sidebar">
                     <div class="p-4 mb-3 bg-light rounded">
                         <h4 class="font-italic">Servicios incluidos</h4>
-                        <p class="mb-0">Piscina</p>
-                        <p class="mb-0">Traslado</p>
+                        <p class="mb-0"><s:property value="ServiciosIncluidos.getValue()"></s:property></p>
+                        <!--<p class="mb-0">Traslado</p>
                         <p class="mb-0">Aeropuerto</p>
                         <p class="mb-0">Centro de fitness bueno</p>
                         <p class="mb-0">Habitaciones para no fumadores</p>
                         <p class="mb-0">Parking gratis</p>
                         <p class="mb-0">Restaurante</p>
                         <p class="mb-0">Bar</p>
-                        <p class="mb-0">Muy buen desayuno</p>		               
+                        <p class="mb-0">Muy buen desayuno</p>-->
                     </div>
                 </aside>
 
             </div>
+            </s:iterator> 
 
             <div class="my-3 p-3 bg-white rounded shadow-sm mb-4">
                 <h4 class="border-bottom border-gray pb-2 mb-0">Reseñas</h4>

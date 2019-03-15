@@ -1,10 +1,7 @@
 ﻿using HotelService.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
+using System.ServiceModel.Web;
 
 namespace HotelService
 {
@@ -13,22 +10,26 @@ namespace HotelService
     public interface IHotelGeneratorService
     {
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/insert_client", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         Table InsertClient(int id, string fullname, string mail, string phone, string fecha, string pass);
 
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/insert_reservation", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         Reservaciones InsertReservation(int id_hospedaje, int id_cliente, string nombre, string apellido, string telefono, string correo, string entrada, string salida, int cantidad, int costo);
 
         [OperationContract]
         Table UpdateClient(int id, string fullname, string mail, string phone);
 
         [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "/select_hotels", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<Hotel> SelectHotels();
 
         [OperationContract]
         int DeleteClient(int id);
 
         [OperationContract]
-        List<Table> SearchClient(int id);
+        [WebInvoke(Method = "GET", UriTemplate = "/select_hotel", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        List<Hotel> SearchHotel(int id);
 
     }
 }

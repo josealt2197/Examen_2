@@ -17,6 +17,7 @@ public class hotels implements Serializable{
     public String HoraEntradaHos;
     public String HoraSalidaHos;
     public String DescripcionHos;
+    public String ImagenDetail;
     
     public hotels(){
         
@@ -117,7 +118,13 @@ public class hotels implements Serializable{
     public void setDescripcionHos(String DescripcionHos) {
         this.DescripcionHos = DescripcionHos;
     }
-    
-    
-    
+
+    public String getImagenDetail() {
+        return ImagenDetail;
+    }
+
+    public void setImagenDetail(String ImagenDetail) {
+        this.ImagenDetail = ImagenDetail;
+    }
+       
 }

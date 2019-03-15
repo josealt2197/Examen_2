@@ -16,6 +16,7 @@
     <Property Name="HoraEntradaHos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="HoraSalidaHos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="DescripcionHos" Type="varchar" MaxLength="5000" Nullable="false" />
+    <Property Name="ImagenDetail" Type="varchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="Reservaciones">
     <Key>

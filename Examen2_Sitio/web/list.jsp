@@ -95,7 +95,7 @@
                                     <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="Precio"></s:property></i>
                                     </div>                      
                                     <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="DescripcionHos.getValue()"></s:property></p>
-                                    <br><a class="btn btn-success" href="#">Leer más</a>
+                                    <br><a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
                                 </div>
                                 <img class="card-img-right flex-auto d-none d-md-block" width="290px" height="275px" style="padding-top: 25px;" src="<s:property value="ImagenHos.getValue()"></s:property>" alt="Card image cap">
                             </div>

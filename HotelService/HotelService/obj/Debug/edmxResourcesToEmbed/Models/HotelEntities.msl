@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Hotel">
       <EntityTypeMapping TypeName="HotelEntitiesModel.Hotel">
         <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="ImagenDetail" ColumnName="ImagenDetail" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="NombreHos" ColumnName="NombreHos" />
           <ScalarProperty Name="Tipo" ColumnName="Tipo" />

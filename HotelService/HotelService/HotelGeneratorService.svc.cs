@@ -131,13 +131,13 @@ namespace HotelService
             return res;
         }
 
-        public List<Table> SearchClient(int id)
+        public List<Hotel> SearchHotel(int id)
         {
-            List<Table> list = new List<Table>();
+            List<Hotel> list = new List<Hotel>();
 
             using (HotelEntitiesEntities dc = new HotelEntitiesEntities())
             {
-                var v = dc.Table.Where(a => a.Id == id).ToList();
+                var v = dc.Hotel.Where(a => a.Id == id).ToList();
                 if (v != null)
                 {
                     foreach (var item in v)

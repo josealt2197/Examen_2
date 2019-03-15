@@ -5,10 +5,13 @@ import bean.hotels;
 import bean.reservaciones;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionContext;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
 import model.Hotel;
 import model.model_services;
+import org.apache.struts2.ServletActionContext;
 
 
 public class controller_services {
@@ -74,6 +77,33 @@ public class controller_services {
         model_services da = new model_services();
         hotels_list = da.selectHotels().getHotel();
         
+        return SUCCESS;
+    }
+    
+    //----------------Select de un Hotel
+   private int id;
+    
+    private List<Hotel> hotel_info = new ArrayList<>();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Hotel> getHotel_info() {
+        return hotel_info;
+    }
+
+    public void setHotel_info(List<Hotel> hotel_info) {
+        this.hotel_info = hotel_info;
+    }
+        
+    public String selectUnHotel(){        
+        model_services da = new model_services();
+        hotel_info = da.selectOneHotel(id).getHotel();        
         return SUCCESS;
     }
 }

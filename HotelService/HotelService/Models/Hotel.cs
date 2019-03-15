@@ -26,5 +26,6 @@ namespace HotelService.Models
         public string HoraEntradaHos { get; set; }
         public string HoraSalidaHos { get; set; }
         public string DescripcionHos { get; set; }
+        public string ImagenDetail { get; set; }
     }
 }
