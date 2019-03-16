@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
     <link rel="shortcut icon" href="./img/costa-rica64.png">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="jqmobile/demos/js/jquery.js"></script>
     <script src="jqmobile/demos/_assets/js/index.js"></script>
     <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -60,17 +61,16 @@
                         <div class="ui-block-a">
                             <div class="ui-body ui-body-d">                    
                                 <center>
-                                    <img width="300px" src="<s:property value="ImagenHos.getValue()"></s:property>"><br>
+                                    <img width="290px" src="<s:property value="ImagenHos.getValue()"></s:property>" alt="Card image cap"><br>
                                 </center>
                             </div>
                         </div>
                         <div class="ui-block-b">
                             <div class="ui-body ui-body-d">
                                 <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="NombreHos.getValue()"></s:property></h1>
-                                <i class="fas fa-map-marker-alt"><s:property value="ProvinciaHos.getValue()"></s:property></i>
-                                <i class="fas fa-map-marker-alt"><s:property value="CantidadHuespedes"></s:property></i>
+                            <i class="fas fa-map-marker-alt"><span class="pl-2"><s:property value="UbicacionExacta.getValue()"></s:property></span></i>
+                                <i class="fas fa-users"><s:property value="CantidadHuespedes"></s:property></i>
                                 <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="Precio"></s:property></i>
-                                <p><s:property value="DescripcionHos.getValue()"></s:property></p>
                                 <center>
                                     <a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
                                 </center>
@@ -83,7 +83,6 @@
             <br><hr><br>
             </s:iterator>
 
-            <br><hr><br>
 
 <!--            <div class="ui-corner-all custom-corners">
                 <div class="ui-bar ui-bar-a">
@@ -141,7 +140,6 @@
                 </div>
             </div>-->
 
-            <br><hr><br>
 
         </div><!-- /content -->
 
