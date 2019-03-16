@@ -3,7 +3,6 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">   
         <action name="registrar" class="controller.controller_services" method="insertUsuario">
             <result name="success">login.jsp</result>

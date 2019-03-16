@@ -30,8 +30,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "id"
 })
-@XmlRootElement(name = "SearchClient")
-public class SearchClient {
+@XmlRootElement(name = "SearchHotel")
+public class SearchHotel {
 
     protected Integer id;
 

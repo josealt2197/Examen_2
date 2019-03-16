@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,36 +50,42 @@
             <hr>
             <br> 
 
+            <s:iterator value="hotels_list"> 
             <div class="ui-corner-all custom-corners">
                 <div class="ui-bar ui-bar-a">
-                    <h2>Hotel</h2>
+                    <h2><s:property value="Tipo.getValue()"></s:property></h2>
                 </div>
                 <div class="ui-body ui-body-a">
                     <div class="ui-grid-a ui-responsive">
                         <div class="ui-block-a">
                             <div class="ui-body ui-body-d">                    
                                 <center>
-                                    <img width="300px" src="img/bg-showcase-2.jpg"><br>
+                                    <img width="300px" src="<s:property value="ImagenHos.getValue()"></s:property>"><br>
                                 </center>
                             </div>
                         </div>
                         <div class="ui-block-b">
                             <div class="ui-body ui-body-d">
-                                <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Hotel Perla Negra</h1>
-                                <h3><i class="fas fa-map-marker-alt"> Puerto Viejo</h3></i>
-                                <p>El hotel Perla Negra Beach Front Accommodation ofrece acceso directo a una hermosa playa situada en el mar Caribe, así como un desayuno gratuito y una piscina al aire libre.</p>
+                                <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="NombreHos.getValue()"></s:property></h1>
+                                <i class="fas fa-map-marker-alt"><s:property value="ProvinciaHos.getValue()"></s:property></i>
+                                <i class="fas fa-map-marker-alt"><s:property value="CantidadHuespedes"></s:property></i>
+                                <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="Precio"></s:property></i>
+                                <p><s:property value="DescripcionHos.getValue()"></s:property></p>
                                 <center>
-                                    <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
+                                    <a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
                                 </center>
                             </div> 
                         </div>
                     </div><!-- /grid-a -->
                 </div>
             </div>
+                                
+            <br><hr><br>
+            </s:iterator>
 
             <br><hr><br>
 
-            <div class="ui-corner-all custom-corners">
+<!--            <div class="ui-corner-all custom-corners">
                 <div class="ui-bar ui-bar-a">
                     <h2>Hotel</h2>
                 </div>
@@ -101,7 +108,7 @@
                                 </center>
                             </div> 
                         </div>
-                    </div><!-- /grid-a -->
+                    </div> /grid-a 
                 </div>
             </div>
 
@@ -130,9 +137,9 @@
                                 </center>
                             </div> 
                         </div>
-                    </div><!-- /grid-a -->
+                    </div> /grid-a 
                 </div>
-            </div>
+            </div>-->
 
             <br><hr><br>
 

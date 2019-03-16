@@ -32,7 +32,6 @@ public class ObjectFactory {
     private final static QName _Reservaciones_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "Reservaciones");
     private final static QName _ArrayOfHotel_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "ArrayOfHotel");
     private final static QName _Hotel_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "Hotel");
-    private final static QName _ArrayOfTable_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "ArrayOfTable");
     private final static QName _AnyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyType");
     private final static QName _AnyURI_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyURI");
     private final static QName _Base64Binary_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "base64Binary");
@@ -69,10 +68,11 @@ public class ObjectFactory {
     private final static QName _InsertReservationResponseInsertReservationResult_QNAME = new QName("http://tempuri.org/", "InsertReservationResult");
     private final static QName _UpdateClientResponseUpdateClientResult_QNAME = new QName("http://tempuri.org/", "UpdateClientResult");
     private final static QName _SelectHotelsResponseSelectHotelsResult_QNAME = new QName("http://tempuri.org/", "SelectHotelsResult");
-    private final static QName _SearchClientResponseSearchClientResult_QNAME = new QName("http://tempuri.org/", "SearchClientResult");
+    private final static QName _SearchHotelResponseSearchHotelResult_QNAME = new QName("http://tempuri.org/", "SearchHotelResult");
     private final static QName _HotelDescripcionHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "DescripcionHos");
     private final static QName _HotelHoraEntradaHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "HoraEntradaHos");
     private final static QName _HotelHoraSalidaHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "HoraSalidaHos");
+    private final static QName _HotelImagenDetail_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "ImagenDetail");
     private final static QName _HotelImagenHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "ImagenHos");
     private final static QName _HotelNombreHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "NombreHos");
     private final static QName _HotelProvinciaHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "ProvinciaHos");
@@ -204,27 +204,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SearchClient }
+     * Create an instance of {@link SearchHotel }
      * 
      */
-    public SearchClient createSearchClient() {
-        return new SearchClient();
+    public SearchHotel createSearchHotel() {
+        return new SearchHotel();
     }
 
     /**
-     * Create an instance of {@link SearchClientResponse }
+     * Create an instance of {@link SearchHotelResponse }
      * 
      */
-    public SearchClientResponse createSearchClientResponse() {
-        return new SearchClientResponse();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfTable }
-     * 
-     */
-    public ArrayOfTable createArrayOfTable() {
-        return new ArrayOfTable();
+    public SearchHotelResponse createSearchHotelResponse() {
+        return new SearchHotelResponse();
     }
 
     /**
@@ -269,15 +261,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", name = "Hotel")
     public JAXBElement<Hotel> createHotel(Hotel value) {
         return new JAXBElement<Hotel>(_Hotel_QNAME, Hotel.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfTable }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", name = "ArrayOfTable")
-    public JAXBElement<ArrayOfTable> createArrayOfTable(ArrayOfTable value) {
-        return new JAXBElement<ArrayOfTable>(_ArrayOfTable_QNAME, ArrayOfTable.class, null, value);
     }
 
     /**
@@ -632,12 +615,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfTable }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfHotel }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "SearchClientResult", scope = SearchClientResponse.class)
-    public JAXBElement<ArrayOfTable> createSearchClientResponseSearchClientResult(ArrayOfTable value) {
-        return new JAXBElement<ArrayOfTable>(_SearchClientResponseSearchClientResult_QNAME, ArrayOfTable.class, SearchClientResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "SearchHotelResult", scope = SearchHotelResponse.class)
+    public JAXBElement<ArrayOfHotel> createSearchHotelResponseSearchHotelResult(ArrayOfHotel value) {
+        return new JAXBElement<ArrayOfHotel>(_SearchHotelResponseSearchHotelResult_QNAME, ArrayOfHotel.class, SearchHotelResponse.class, value);
     }
 
     /**
@@ -665,6 +648,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", name = "HoraSalidaHos", scope = Hotel.class)
     public JAXBElement<String> createHotelHoraSalidaHos(String value) {
         return new JAXBElement<String>(_HotelHoraSalidaHos_QNAME, String.class, Hotel.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", name = "ImagenDetail", scope = Hotel.class)
+    public JAXBElement<String> createHotelImagenDetail(String value) {
+        return new JAXBElement<String>(_HotelImagenDetail_QNAME, String.class, Hotel.class, value);
     }
 
     /**

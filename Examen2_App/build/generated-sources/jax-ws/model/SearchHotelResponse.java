@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="SearchClientResult" type="{http://schemas.datacontract.org/2004/07/HotelService.Models}ArrayOfTable" minOccurs="0"/&gt;
+ *         &lt;element name="SearchHotelResult" type="{http://schemas.datacontract.org/2004/07/HotelService.Models}ArrayOfHotel" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -30,36 +30,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "searchClientResult"
+    "searchHotelResult"
 })
-@XmlRootElement(name = "SearchClientResponse")
-public class SearchClientResponse {
+@XmlRootElement(name = "SearchHotelResponse")
+public class SearchHotelResponse {
 
-    @XmlElementRef(name = "SearchClientResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
-    protected JAXBElement<ArrayOfTable> searchClientResult;
+    @XmlElementRef(name = "SearchHotelResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<ArrayOfHotel> searchHotelResult;
 
     /**
-     * Obtiene el valor de la propiedad searchClientResult.
+     * Obtiene el valor de la propiedad searchHotelResult.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfTable }{@code >}
+     *     {@link JAXBElement }{@code <}{@link ArrayOfHotel }{@code >}
      *     
      */
-    public JAXBElement<ArrayOfTable> getSearchClientResult() {
-        return searchClientResult;
+    public JAXBElement<ArrayOfHotel> getSearchHotelResult() {
+        return searchHotelResult;
     }
 
     /**
-     * Define el valor de la propiedad searchClientResult.
+     * Define el valor de la propiedad searchHotelResult.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfTable }{@code >}
+     *     {@link JAXBElement }{@code <}{@link ArrayOfHotel }{@code >}
      *     
      */
-    public void setSearchClientResult(JAXBElement<ArrayOfTable> value) {
-        this.searchClientResult = value;
+    public void setSearchHotelResult(JAXBElement<ArrayOfHotel> value) {
+        this.searchHotelResult = value;
     }
 
 }

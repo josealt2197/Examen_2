@@ -39,7 +39,7 @@
                     </select>
                     <input type="text"  style="font-size: 1.2em; text-align: center" placeholder="¿Donde lo necesitas?">
                     <center>
-                        <button type="submit" style="width:300px">Buscar</button>
+                        <a href="viewrecords" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar Hoteles</a>
                     </center>
                 </form> 
             </center>
