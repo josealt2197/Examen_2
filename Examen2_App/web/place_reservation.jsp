@@ -68,14 +68,14 @@
                         <div class="ui-body ui-body-d">
 
                             <div class='alert alert-success'>
-                                <strong>¿Aún no has iniciado sesión?</strong><p>Puedes iniciar sesión para completar tus datos personales con tu perfil o crea una cuenta para estar en contacto contigo.</p>
+                                <strong>¿Aún no has iniciado sesión?</strong><p>Puedes <a href="login.jsp" rel="external" style="text-decoration: none;">iniciar sesión</a> para completar tus datos personales con tu perfil o <a href="pre_register.jsp" rel="external" style="text-decoration: none;">crea una cuenta</a> para estar en contacto contigo.</p>
                             </div>
                             <h4 class="mb-3">Datos personales</h4>
                             <s:form  theme="simple" cssClass="needs-validation" action = "registrar_reservacion" id="registration_form" method = "post">
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
                                         <label for="id">Cédula</label>
-                                        <s:textfield type = "number" cssClass="form-control" id="id" name = "r.id_cliente" placeholder="Cédula" required="required"></s:textfield>
+                                        <s:textfield type = "text" cssClass="form-control" id="id" name = "r.id_cliente" placeholder="Cédula" required="required"></s:textfield>
                                             <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                             <div class="invalid-feedback">
                                                 Este campo es requerido.
@@ -91,8 +91,13 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="phone">Teléfono</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="phone" name = "r.telefono" placeholder="12345678" required="required"></s:textfield>
+                                        <s:textfield type = "text" cssClass="form-control" id="phone" name = "r.telefono" placeholder="83120203" required="required"></s:textfield>
                                         </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="idhotel">ID Hotel</label>
+                                        <input type="text" name="r.id_hospedaje" value='<s:property value="id_hotel"/>'>
                                     </div>
 
 
@@ -123,7 +128,7 @@
                                     <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <label for="persons">Cantidad de huéspedes</label>
-                                        <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
+                                        <s:select cssClass="custom-select d-block w-100" headerKey="-1" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
                                         </div> 
                                     </div>
                                     <hr class="mb-4">
