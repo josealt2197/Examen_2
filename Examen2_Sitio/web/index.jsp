@@ -100,8 +100,8 @@
                   <div class="col-md-12">
                     <input type="text" class="form-control form-control-lg" placeholder="¿Dónde necesitas el vehículo?">
                   </div><br>
-                  <div class="col-md-4 mx-auto">
-                    <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar Vehículos</button>
+                  <div class="col-md-4 mx-auto"><br>
+                    <a href="viewcar_list" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar Vehículos</a>
                   </div>
                 </div>
               </form>

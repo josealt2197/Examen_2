@@ -6,7 +6,8 @@
     <package name="default" extends="struts-default">   
         <action name="registrar" class="controller.controller_services" method="insertUsuario">
             <result name="success">login.jsp</result>
-        </action>  
+        </action> 
+         
         <action name="registrar_reservacion" class="controller.controller_services" method="insertReservacion">
             <result name="success">place_reservation.jsp</result>
         </action> 
@@ -15,6 +16,16 @@
         </action>   
         <action name="place_detail" class="controller.controller_services" method="selectUnHotel">  
             <result name="success">place_detail.jsp</result>  
+        </action> 
+        
+        <action name="reservacion_vehiculo" class="controller.controller_services" method="insertCarReservacion">
+            <result name="success">car_reservation.jsp</result>
+        </action> 
+        <action name="viewcar_list" class="controller.controller_services" method="selectCars">  
+            <result name="success">car_list.jsp</result>  
+        </action>   
+        <action name="viewcar_detail" class="controller.controller_services" method="selectCar">  
+            <result name="success">car_detail.jsp</result>  
         </action> 
     </package>
 </struts>

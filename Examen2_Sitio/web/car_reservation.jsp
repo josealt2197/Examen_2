@@ -1,5 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,52 +59,65 @@
     </div>
 
     <div class="row">
+      <s:iterator  value="car_info">
       <div class="col-md-4 order-md-1">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-muted">Chevrolet Tahoe</span>
-          <span class="badge badge-primary badge-pill">SUV</span>
+          <span class="text-muted"><s:property value="modelo.getValue()"></s:property></span>
+          <span class="badge badge-primary badge-pill"><s:property value="tipo.getValue()"></s:property></span>
         </h4>
         <div class="mb-3">
           <div class="mx-auto">
             <img src="" alt="ImagenVehiculo" width="64px" height="64px">
             <div class="list-group-item">
-              <h6 class="text-success">Precio x día: $393</h6>
+              <h6 class="text-success">Precio por día: <s:property value="precioxdia"></s:property></h6>
             </div>
             <div class="list-group-item">
               <h6 class="text-success">Detalles</h6>
-              <h6>Automático</h6>
-              <h6>Pasajeros: 8</h6>
-              <h6>Aire Acondicionado</h6>
+              <h6>Transmisión: <s:property value="transmision.getValue()"></s:property></h6>
+              <h6>Pasajeros: <s:property value="cantpasajeros"></s:property></h6>
+              <h6>Extras: <s:property value="extras.getValue()"></s:property></h6>
             </div>
           </div>
         </div>
       </div>
+      </s:iterator>
 
 
       <div class="col-md-7 order-md-2">
         <div class='alert alert-success'>
           <strong>¿Aún no has iniciado sesión?</strong><p>Puedes iniciar sesión para completar tus datos personales con tu perfil o crea una cuenta para estar en contacto contigo.</p>
         </div>
-        <h4 class="mb-3">Datos personales</h4>
-        <form class="needs-validation" novalidate="">
+         <h4 class="mb-3">Datos personales</h4>
+        <s:form  theme="simple" cssClass="needs-validation" action = "reservacion_vehiculo" id="registration_form" method = "post">
           <div class="row">
             <div class="col-md-4 mb-3">
-              <label for="firstName">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <label for="id">Cédula</label>
+              <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+              <div class="invalid-feedback">
+                Este campo es requerido.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="firstname">Nombre</label>
+              <s:textfield type = "text" cssClass="form-control" id="firstname" name = "cr.nombre" placeholder="Nombre" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <label for="lastName">Apellidos</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <s:textfield type = "text" cssClass="form-control" id="lastName" name = "cr.apellido" placeholder="Apellidos" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <label for="phone">Teléfono</label>
-              <input type="text" class="form-control" id="phone" placeholder="" value="" required="">
+              <s:textfield type = "text" cssClass="form-control" id="phone" name = "cr.telefono" placeholder="12345678" required="required"></s:textfield>
+              <!--<input type="text" class="form-control" id="phone" placeholder="" value="" required="">-->
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
@@ -112,7 +126,8 @@
 
           <div class="mb-3">
             <label for="email">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="ticobooking@correo.com" value="" required="">
+            <s:textfield type = "text" cssClass="form-control" id="email" name = "cr.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+            <!--<input type="email" class="form-control" id="email" placeholder="" value="" required="">-->
             <div class="invalid-feedback">
               Este campo es requerido.
             </div>
@@ -132,14 +147,14 @@
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="check-in">Fecha de Pick-up</label>
-              <input type="date" class="form-control" id="check-in" placeholder="" required="">
+              <s:textfield type = "date" cssClass="form-control" id="check-in" name = "cr.fentrada" placeholder="Fecha de entrada" required="required"></s:textfield>
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <label for="check-in">Hora de Pick-up</label>
-              <input type="time" class="form-control" id="check-in" placeholder="" required="">
+              <s:textfield type = "time" cssClass="form-control" id="check-in" name = "cr.hentrada" placeholder="Hora de entrada" required="required"></s:textfield>
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
@@ -149,14 +164,14 @@
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="check-out">Fecha de Drop-off</label>
-              <input type="date" class="form-control" id="check-out" placeholder="" required="">
+              <s:textfield type = "date" cssClass="form-control" id="check-in" name = "cr.fsalida" placeholder="Fecha de entrada" required="required"></s:textfield>
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <label for="check-in">Hora de Drop-off</label>
-              <input type="time" class="form-control" id="check-in" placeholder="" required="">
+              <s:textfield type = "time" cssClass="form-control" id="check-in" name = "cr.hsalida" placeholder="Fecha de entrada" required="required"></s:textfield>
               <div class="invalid-feedback">
                 Este campo es requerido.
               </div>
@@ -165,7 +180,7 @@
 
            <div class="mb-3">
             <label for="pick-place">Lugar de Pick-up / Drop-off</label>
-            <input type="text" class="form-control" id="pick-place" placeholder="" value="" required="">
+           <s:textfield type = "text" cssClass="form-control" id="check-in" name = "cr.lugar" placeholder="Fecha de entrada" required="required"></s:textfield>
             <div class="invalid-feedback">
               Este campo es requerido.
             </div>
@@ -174,7 +189,7 @@
           <hr class="mb-4">
 
           <button class="btn btn-success btn-lg btn-block" type="submit">Reservar</button>
-        </form>
+        </s:form>
         
       </div>
     </div>

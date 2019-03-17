@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarDBModelStoreContainer" CdmEntityContainer="CarDBEntities">
+    <EntitySetMapping Name="CarReservations">
+      <EntityTypeMapping TypeName="CarDBModel.CarReservation">
+        <MappingFragment StoreEntitySet="CarReservations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="idVehiculo" ColumnName="idVehiculo" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="horaentrada" ColumnName="horaentrada" />
+          <ScalarProperty Name="horasalida" ColumnName="horasalida" />
+          <ScalarProperty Name="fechaentrada" ColumnName="fechaentrada" />
+          <ScalarProperty Name="fechasalida" ColumnName="fechasalida" />
+          <ScalarProperty Name="lugar" ColumnName="lugar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="CarDBModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="cantpasajeros" ColumnName="cantpasajeros" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="servicios" ColumnName="servicios" />
+          <ScalarProperty Name="extras" ColumnName="extras" />
+          <ScalarProperty Name="restricciones" ColumnName="restricciones" />
+          <ScalarProperty Name="transmision" ColumnName="transmision" />
+          <ScalarProperty Name="kilometraje" ColumnName="kilometraje" />
+          <ScalarProperty Name="empresa" ColumnName="empresa" />
+          <ScalarProperty Name="precioxdia" ColumnName="precioxdia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

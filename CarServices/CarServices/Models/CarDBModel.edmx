@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CarDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CarReservations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idVehiculo" Type="int" Nullable="false" />
+          <Property Name="idCliente" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="horaentrada" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="horasalida" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaentrada" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechasalida" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="lugar" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="modelo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="cantpasajeros" Type="int" Nullable="false" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="servicios" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="extras" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="restricciones" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="transmision" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="kilometraje" Type="int" Nullable="false" />
+          <Property Name="empresa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="precioxdia" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CarDBModelStoreContainer">
+          <EntitySet Name="CarReservations" EntityType="Self.CarReservations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CarDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CarReservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="idVehiculo" Type="Int32" Nullable="false" />
+          <Property Name="idCliente" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="horaentrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="horasalida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechaentrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fechasalida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lugar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="modelo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cantpasajeros" Type="Int32" Nullable="false" />
+          <Property Name="ubicacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="servicios" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="extras" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="restricciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="transmision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="kilometraje" Type="Int32" Nullable="false" />
+          <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="precioxdia" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CarDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CarReservations" EntityType="Self.CarReservation" />
+          <EntitySet Name="Cars" EntityType="Self.Car" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CarDBModelStoreContainer" CdmEntityContainer="CarDBEntities">
+          <EntitySetMapping Name="CarReservations">
+            <EntityTypeMapping TypeName="CarDBModel.CarReservation">
+              <MappingFragment StoreEntitySet="CarReservations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="idVehiculo" ColumnName="idVehiculo" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="horaentrada" ColumnName="horaentrada" />
+                <ScalarProperty Name="horasalida" ColumnName="horasalida" />
+                <ScalarProperty Name="fechaentrada" ColumnName="fechaentrada" />
+                <ScalarProperty Name="fechasalida" ColumnName="fechasalida" />
+                <ScalarProperty Name="lugar" ColumnName="lugar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars">
+            <EntityTypeMapping TypeName="CarDBModel.Car">
+              <MappingFragment StoreEntitySet="Cars">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="cantpasajeros" ColumnName="cantpasajeros" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="servicios" ColumnName="servicios" />
+                <ScalarProperty Name="extras" ColumnName="extras" />
+                <ScalarProperty Name="restricciones" ColumnName="restricciones" />
+                <ScalarProperty Name="transmision" ColumnName="transmision" />
+                <ScalarProperty Name="kilometraje" ColumnName="kilometraje" />
+                <ScalarProperty Name="empresa" ColumnName="empresa" />
+                <ScalarProperty Name="precioxdia" ColumnName="precioxdia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

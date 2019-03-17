@@ -1,17 +1,15 @@
-
 package controller;
 
+import bean.car_reservation;
 import bean.hotels;
 import bean.reservaciones;
 import bean.usuarios;
+import carservices.*;
 import static com.opensymphony.xwork2.Action.SUCCESS;
-import com.opensymphony.xwork2.ActionContext;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import model.Hotel;
 import model.model_services;
-import org.apache.struts2.ServletActionContext;
 
 
 public class controller_services {
@@ -116,4 +114,110 @@ public class controller_services {
         hotel_info = da.selectOneHotel(id).getHotel();        
         return SUCCESS;
     }
+    
+        //----------------Insert de Reservaciones Vehiculos
+    private int id_vehiculo;
+
+    public int getId_vehiculo() {
+        return id_vehiculo;
+    }
+
+    public void setId_vehiculo(int id_vehiculo) {
+        this.id_vehiculo = id_vehiculo;
+    }
+
+    private car_reservation cr = new car_reservation();
+
+    public car_reservation getCr() {
+        return cr;
+    }
+
+    public void setCr(car_reservation cr) {
+        this.cr = cr;
+    }
+    
+    String submitType;
+    
+    private List<Car> car_info = new ArrayList<>();
+
+    public List<Car> getCar_info() {
+        return car_info;
+    }
+
+    public void setCar_info(List<Car> car_info) {
+        this.car_info = car_info;
+    }
+    
+    public String getSubmitType() {
+        return submitType;
+    }
+
+    public void setSubmitType(String submitType) {
+        this.submitType = submitType;
+    }
+        
+    public String insertCarReservacion() {  
+
+        try {
+            if (submitType.equals("updatedata")) {
+                model_services de = new model_services();
+                car_info = de.selectOneCar(id_vehiculo).getCar();
+            } else {
+                model_services da = new model_services();
+                da.insertCarReservations(getCr(), id_vehiculo);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return SUCCESS;
+    }
+
+    //----------------Select de Vehiculos
+    private Car c = new Car();
+
+    public Car getC() {
+        return c;
+    }
+
+    public void setC(Car c) {
+        this.c = c;
+    }
+
+    private List<Car> car_list = new ArrayList<>();
+
+    public List<Car> getCar_list() {
+        return car_list;
+    }
+
+    public void setCar_list(List<Car> car_list) {
+        this.car_list = car_list;
+    }
+
+    public String selectCars() {
+        model_services dg = new model_services();
+        car_list = dg.selectCars().getCar();
+
+        return SUCCESS;
+    }
+
+    //----------------Select de un Vehiculo
+    private int idVehiculo;
+
+    public int getIdVehiculo() {
+        return idVehiculo;
+    }
+
+    public void setIdVehiculo(int idVehiculo) {
+        this.idVehiculo = idVehiculo;
+    }
+
+    public String selectCar() {
+        model_services de = new model_services();
+        car_info = de.selectOneCar(idVehiculo).getCar();
+        return SUCCESS;
+    }
 }
+
+
