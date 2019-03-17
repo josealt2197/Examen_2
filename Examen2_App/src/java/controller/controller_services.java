@@ -49,10 +49,15 @@ public class controller_services extends ActionSupport{
     }   
     
     public String insertReservacion(){
+        boolean result; 
         model_services da = new model_services();
-        da.insertReservations(getR(), id_hotel);
-
-        return SUCCESS;
+        result=da.insertReservations(getR(), id_hotel);
+        
+        if(result==false){
+           return SUCCESS;
+        }else{
+           return INPUT;
+        }
     }
     
     //----------------Select de Hoteles

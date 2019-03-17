@@ -68,9 +68,10 @@
                         <div class="ui-body ui-body-d">
 
                             <div class='alert alert-success'>
-                                <strong>¿Aún no has iniciado sesión?</strong><p>Puedes <a href="login.jsp" rel="external" style="text-decoration: none;">iniciar sesión</a> para completar tus datos personales con tu perfil o <a href="pre_register.jsp" rel="external" style="text-decoration: none;">crea una cuenta</a> para estar en contacto contigo.</p>
+                                <strong>¿Aún no has iniciado sesión?</strong><br><p>Puedes <a href="login.jsp" rel="external" style="text-decoration: none;">iniciar sesión</a> para completar tus datos personales con tu perfil o <a href="pre_register.jsp" rel="external" style="text-decoration: none;">crea una cuenta</a> para estar en contacto contigo.</p>
                             </div>
                             <h4 class="mb-3">Datos personales</h4>
+                            <s:fielderror/>
                             <s:form  theme="simple" cssClass="needs-validation" action = "registrar_reservacion" id="registration_form" method = "post">
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
