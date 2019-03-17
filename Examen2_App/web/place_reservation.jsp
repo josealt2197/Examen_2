@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="shortcut icon" href="./img/costa-rica64.png">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+
         <script src="jqmobile/demos/js/jquery.js"></script>
         <script src="jqmobile/demos/_assets/js/index.js"></script>
         <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -109,18 +112,18 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="check-in">Fecha de entrada</label>
-                                            <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
+                                        <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="check-out">Fecha de salida</label>
-                                            <s:textfield type = "date" cssClass="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required="required"></s:textfield>
+                                        <s:textfield type = "date" cssClass="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required="required"></s:textfield>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <label for="persons">Cantidad de huéspedes</label>
-                                            <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
+                                        <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
                                         </div> 
                                     </div>
                                     <hr class="mb-4">
@@ -129,7 +132,7 @@
                                     <div class="row">
                                         <div class="col-md-12 mb-3">
                                             <label for="comments">Comentarios</label>
-                                            <s:textarea id="comments" cssClass="form-control" cols="30" rows="8"></s:textarea>
+                                        <s:textarea id="comments" cssClass="form-control" cols="30" rows="8"></s:textarea>
                                             <small class="text-muted">Las peticiones especiales no se pueden garantizar, pero haremos todo lo posible para atender tu solicitud de la mejor manera. 
                                                 ¡También puedes enviarnos tu petición especial cuando hayas realizado la reserva!</small>
                                         </div>
