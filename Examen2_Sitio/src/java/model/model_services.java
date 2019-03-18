@@ -57,5 +57,20 @@ public class model_services {
         return WebService.getBasicHttpBindingIHotelGeneratorService().searchHotel(id);
     }
     
+    //BANCO CENTRAL
+    
+    public String getCambioCompra(String fecha){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().getTipoCambioCompra(fecha);
+    }
+    
+    public String getCambioVenta(String fecha){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().getTipoCambioVenta(fecha);
+    }
 }
 

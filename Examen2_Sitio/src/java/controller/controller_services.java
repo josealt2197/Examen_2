@@ -5,14 +5,11 @@ import bean.hotels;
 import bean.reservaciones;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
-import com.opensymphony.xwork2.ActionContext;
+import static com.sun.xml.bind.util.CalendarConv.formatter;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import model.Hotel;
 import model.model_services;
-import org.apache.struts2.ServletActionContext;
-
 
 public class controller_services {
     
@@ -116,4 +113,21 @@ public class controller_services {
         hotel_info = da.selectOneHotel(id).getHotel();        
         return SUCCESS;
     }
+    
+     /*----------------Get tipo de cambio
+    private String fecha;
+    
+    java.util.Date date = new java.util.Date();  
+    
+    public String getCambioCompra(){   
+        fecha = formatter.format(date);
+        model_services da = new model_services();                
+        return da.getCambioCompra(fecha);
+    }
+    
+    public String getCambioVenta(){  
+        fecha = formatter.format(date);
+        model_services da = new model_services();        
+        return da.getCambioVenta(fecha);
+    }*/
 }

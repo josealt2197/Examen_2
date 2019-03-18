@@ -1,4 +1,5 @@
 ﻿using HotelService.Models;
+using System;
 using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
@@ -30,6 +31,12 @@ namespace HotelService
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/select_hotel", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         List<Hotel> SearchHotel(int id);
+
+        [OperationContract]
+        String getTipoCambioCompra(string fecha);
+
+        [OperationContract]
+        String getTipoCambioVenta(string fecha);
 
     }
 }
