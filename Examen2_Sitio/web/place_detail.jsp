@@ -69,7 +69,7 @@
                         <p class="lead my-3"><s:property value="UbicacionExacta.getValue()"></s:property></p>
                     </div>
                     <div class="col-md-3">
-                        <a class="btn btn-success btn-lg btn-block" type="submit" href="registrar_reservacion.action?id_hotel=<s:property value="id"></s:property>">Reservar</a>
+                        <a class="btn btn-success btn-lg btn-block" type="submit" href="registrar_reservacion.action?submitType=updatedata&id_hotel=<s:property value="id"></s:property>">Reservar</a>
                     </div>
                 </div>
                 <img src="<s:property value="ImagenDetail.getValue()"></s:property>" data-highres="<s:property value="ImagenDetail.getValue()"></s:property>" alt="Imagen" width="800px" height="300px">

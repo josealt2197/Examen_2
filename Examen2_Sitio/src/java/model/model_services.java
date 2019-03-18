@@ -6,29 +6,40 @@ import bean.usuarios;
 import bean.reservaciones;
 import carservices.ArrayOfCar;
 import carservices.CarService;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import static model.conexion.getConnection;
 
 public class model_services {
-    public boolean insertU(usuarios u){
+    /*PARTE LOCAL*/
+    private String insertsql = "insert into Register_Usuario(IDUsuario, NombreCompleto, Telefono, Correo, FechaNac, Password) values(?, ?, ?, ?, ?, ?);";
+    public boolean insertU(usuarios u) throws SQLException{
         boolean resultado = false;        
         
-        int id = u.getCedula();
-        String fullname = u.getFullnombre();
-        String phone = u.getTelefono();
-        String mail = u.getCorreo();
-        String date = u.getFechanacimiento();
-        String password = u.getPassword();
+        Connection con = conexion.getConnection();
+        PreparedStatement ps = con.prepareStatement(insertsql);
+        ps.setInt(1, u.getCedula());
+        ps.setString(2, u.getFullnombre());
+        ps.setString(3, u.getTelefono());
+        ps.setString(4, u.getCorreo());
+        ps.setString(5, u.getFechanacimiento());
+        ps.setString(6, u.getPassword());
 
-        HotelGeneratorService WebService = new HotelGeneratorService();        
-        
-        WebService.getBasicHttpBindingIHotelGeneratorService().insertClient(id, fullname, mail, phone, date, password);
+        if (ps.executeUpdate() == 1) {
+            resultado = true;
+            ps.close();
+            con.close();
+        }
         
         return resultado;
     }
+    /*PARTE WEB SERVICES*/ 
     
     public boolean insertReservations(reservaciones r, int id_hotel){
         boolean resultado = false;        
         
-        int id_hospedaje = id_hotel;
+        int id_hospedaje = r.getId_hospedaje();
         int id_cliente = r.getId_cliente();
         String nombre = r.getNombre();
         String apellido = r.getApellido();
