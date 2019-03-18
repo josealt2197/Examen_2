@@ -41,6 +41,9 @@
                     <center>
                         <a href="viewrecords" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar Hoteles</a>
                     </center>
+                    <center>
+                        <a href="viewcar_list" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar Vehículos</a>
+                    </center>
                 </form> 
             </center>
             <br><br>
