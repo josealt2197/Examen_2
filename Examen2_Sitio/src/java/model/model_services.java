@@ -59,10 +59,10 @@ public class model_services {
     }
     
      /////////////////////////////////////////////////////////////////////////////////////
-    public boolean insertCarReservations(car_reservation cr, int id) {
+    public boolean insertCarReservations(car_reservation cr) {
         boolean resultado = false;
 
-        int idVehiculo = id;
+        int idVehiculo = cr.getId_vehiculo();
         int idCliente = cr.getId_cliente();
         String nombre = cr.getNombre();
         String apellidos = cr.getApellido();
