@@ -164,7 +164,7 @@ public class controller_services {
                 car_info = de.selectOneCar(id_vehiculo).getCar();
             } else {
                 model_services da = new model_services();
-                da.insertCarReservations(getCr(), id_vehiculo);
+                da.insertCarReservations(getCr());
             }
 
         } catch (Exception e) {
