@@ -25,19 +25,18 @@
         </div><!-- /header -->
 
         <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h1 style="color:#28A745;">TicoBooking</h1>
                 <h2 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Iniciar Sesión</h2>
 
-            <s:form action="login" method="post">
+            <s:form theme="simple" cssClass="form-signin" action="login" method="post">
                 <label for="ident">Correo Electrónico:</label>
                 <s:textfield type="text" name="u.cedula" value=""></s:textfield>
                 <label for="password">Contraseña:</label>
-                <s:textfield type="password" name="u.password" value="" autocomplete="off"></s:textfield>
+                <s:textfield type="password" name="u.password" value=""></s:textfield>
                 <center>
                     <a href="">Regístrate</a><br>
                     <s:submit type="submit" data-role="button" data-theme="b" data-inline="true" value="Ingresar"></s:submit>
                 </center>
-            <s:form>    
+            </s:form>    
         </div>	
         <br>
         <br>

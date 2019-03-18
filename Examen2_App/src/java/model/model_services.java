@@ -21,10 +21,10 @@ public class model_services {
         return resultado;
     }
     
-    public boolean insertReservations(reservaciones r, int id_hotel){
+    public boolean insertReservations(reservaciones r){
         boolean resultado = false;        
         
-        int id_hospedaje = id_hotel;
+        int id_hospedaje = r.getId_hospedaje();
         int id_cliente = r.getId_cliente();
         String nombre = r.getNombre();
         String apellido = r.getApellido();
@@ -37,7 +37,7 @@ public class model_services {
 
         HotelGeneratorService WebService = new HotelGeneratorService();        
         
-        WebService.getBasicHttpBindingIHotelGeneratorService().insertReservation(12, id_cliente, nombre, apellido, telefono, correo, entrada, salida, cantidad, costo);
+        WebService.getBasicHttpBindingIHotelGeneratorService().insertReservation(id_hospedaje, id_cliente, nombre, apellido, telefono, correo, entrada, salida, cantidad, costo);
         
         return resultado;
     }

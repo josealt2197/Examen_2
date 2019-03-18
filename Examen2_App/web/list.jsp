@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
     <link rel="shortcut icon" href="./img/costa-rica64.png">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="jqmobile/demos/js/jquery.js"></script>
     <script src="jqmobile/demos/_assets/js/index.js"></script>
     <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -68,11 +68,11 @@
                         <div class="ui-block-b">
                             <div class="ui-body ui-body-d">
                                 <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="NombreHos.getValue()"></s:property></h1>
-                            <i class="fas fa-map-marker-alt"><span class="pl-2"><s:property value="UbicacionExacta.getValue()"></s:property></span></i>
-                                <i class="fas fa-users"><s:property value="CantidadHuespedes"></s:property></i>
-                                <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="Precio"></s:property></i>
+                            <i class="fas fa-map-marker-alt pr-2" style="color: #28a745;"></i><span><s:property value="UbicacionExacta.getValue()"></s:property></span><br>
+                                <i class="fas fa-users pr-2" style="color: #28a745;"></i><span><s:property value="CantidadHuespedes"></s:property></span>
+                                <i class="fas fa-money-bill pr-1 pl-2" style="color: #4caf50; margin-top: 15px;"></i> ₡ <s:property value="Precio"></s:property><br>
                                 <center>
-                                    <a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
+                                    <a class="btn" data-role="button" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
                                 </center>
                             </div> 
                         </div>
@@ -83,76 +83,16 @@
             <br><hr><br>
             </s:iterator>
 
-
-<!--            <div class="ui-corner-all custom-corners">
-                <div class="ui-bar ui-bar-a">
-                    <h2>Hotel</h2>
-                </div>
-                <div class="ui-body ui-body-a">
-                    <div class="ui-grid-a ui-responsive">
-                        <div class="ui-block-a">
-                            <div class="ui-body ui-body-d">                    
-                                <center>
-                                    <img width="300px" src="img/bg-showcase-2.jpg"><br>
-                                </center>
-                            </div>
-                        </div>
-                        <div class="ui-block-b">
-                            <div class="ui-body ui-body-d">
-                                <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Hotel Termales del Bosque</h1>
-                                <h3><i class="fas fa-map-marker-alt"> La Marina</h3></i>
-                                <p>El Hotel Termales del Bosque ofrece habitaciones con aire acondicionado en La Marina. El establecimiento alberga un restaurante, un centro de fitness y un jardín. El hotel alberga un salón compartido.</p>
-                                <center>
-                                    <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
-                                </center>
-                            </div> 
-                        </div>
-                    </div> /grid-a 
-                </div>
-            </div>
-
-            <br><hr><br>
-
-            <div class="ui-corner-all custom-corners">
-                <div class="ui-bar ui-bar-a">
-                    <h2>Hotel</h2>
-                </div>
-                <div class="ui-body ui-body-a">
-                    <div class="ui-grid-a ui-responsive">
-                        <div class="ui-block-a">
-                            <div class="ui-body ui-body-d">                    
-                                <center>
-                                    <img width="300px" src="img/bg-showcase-2.jpg"><br>
-                                </center>
-                            </div>
-                        </div>
-                        <div class="ui-block-b">
-                            <div class="ui-body ui-body-d">
-                                <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Hotel Samara Paraíso</h1>
-                                <h3><i class="fas fa-map-marker-alt"> Sámara</h3></i>
-                                <p>El Hotel Samara Paraíso está rodeado de un bosque tropical y se encuentra a sólo 600 metros de la playa de Izquierda. Cuenta con piscina al aire libre, jardines exuberantes y casas y estudios con aire acondicionado y conexión Wi-Fi gratuita.</p>
-                                <center>
-                                    <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
-                                </center>
-                            </div> 
-                        </div>
-                    </div> /grid-a 
-                </div>
-            </div>-->
-
-
         </div><!-- /content -->
 
-        <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
-
-            <ul data-role="listview">
-                <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                <li><a href="index.jsp" rel="external">Inicio</a></li>
-                <li><a href="index.jsp" rel="external">Hospedaje</a></li>
-                <li><a href="index.jsp" rel="external">Vehículos</a></li>
-                <li><a href="index.jsp" rel="external">Ayuda</a></li>
-            </ul>
-        </div>
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
+                    <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
+                    <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
+                    <li><a href="login.jsp" rel="external">Ingresar</a></li>
+                </ul>
+            </div>
 
         <div data-role="footer" data-theme="b" class="ui-footer ui-bar-a" role="contentinfo">
             <center>

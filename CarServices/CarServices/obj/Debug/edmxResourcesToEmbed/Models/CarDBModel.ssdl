@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarReservations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idVehiculo" Type="int" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="horaentrada" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="horasalida" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaentrada" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechasalida" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lugar" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cantpasajeros" Type="int" Nullable="false" />
+    <Property Name="ubicacion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="servicios" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="extras" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="restricciones" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="transmision" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="kilometraje" Type="int" Nullable="false" />
+    <Property Name="empresa" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="precioxdia" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CarDBModelStoreContainer">
+    <EntitySet Name="CarReservations" EntityType="Self.CarReservations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

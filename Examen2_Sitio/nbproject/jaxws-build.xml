@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/model"/>
         <delete dir="${build.generated.dir}/jax-wsCache/HotelGeneratorService"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-HotelGeneratorService"/>
+    <target name="wsimport-client-CarService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CarService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CarService" destdir="${build.generated.dir}/jax-wsCache/CarService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CarService/wsdl/localhost_58401/CarService.svc.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:58401/CarService.svc?wsdl" xnocompile="true" xendorsed="true" package="carservices">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CarService/wsdl/localhost_58401/CarService.svc.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CarService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CarService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CarService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/carservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CarService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-HotelGeneratorService, wsimport-client-CarService"/>
 </project>

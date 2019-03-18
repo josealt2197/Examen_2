@@ -29,7 +29,7 @@
 <body>
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
-    <a class="navbar-brand" href="index.html"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
+    <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,19 +39,19 @@
       </ul>
       <form class="form-inline mt-2 mt-md-0">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">¿Necesitas ayuda?</a>
+           <li class="nav-item active">
+            <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Ingresar</a>
+            <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.jsp">Ingresar</a>
           </li>
         </ul>
       </form>
     </div>
   </nav>
-
-
-
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
@@ -100,8 +100,8 @@
                   <div class="col-md-12">
                     <input type="text" class="form-control form-control-lg" placeholder="¿Dónde necesitas el vehículo?">
                   </div><br>
-                  <div class="col-md-4 mx-auto">
-                    <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar Vehículos</button>
+                  <div class="col-md-4 mx-auto"><br>
+                    <a href="viewcar_list" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar Vehículos</a>
                   </div>
                 </div>
               </form>

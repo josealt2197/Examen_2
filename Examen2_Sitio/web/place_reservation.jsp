@@ -35,18 +35,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hospedaje</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Vehículos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ayuda</a>
-        </li>
+        <li class="nav-item"></li>
       </ul>
       <form class="form-inline mt-2 mt-md-0">
         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+            <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="login.jsp">Ingresar</a>
           </li>
@@ -54,6 +52,7 @@
       </form>
     </div>
   </nav>
+    
   <div class="container">
     <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -187,7 +186,7 @@
           </div> 
 
           <hr class="mb-4">
-          <button class="btn btn-success btn-lg btn-block" type="submit">Reservar</button>
+          <button class="btn btn-success btn-lg btn-block" name="submitType" type="submit">Reservar</button>
         </s:form>
         
       </div>
