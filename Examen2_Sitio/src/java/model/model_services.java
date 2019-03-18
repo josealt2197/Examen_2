@@ -1,9 +1,11 @@
+
 package model;
 
 import bean.car_reservation;
 import bean.usuarios;
 import bean.reservaciones;
-import carservices.*;
+import carservices.ArrayOfCar;
+import carservices.CarService;
 
 public class model_services {
     public boolean insertU(usuarios u){
@@ -58,7 +60,23 @@ public class model_services {
         return WebService.getBasicHttpBindingIHotelGeneratorService().searchHotel(id);
     }
     
-     /////////////////////////////////////////////////////////////////////////////////////
+    //BANCO CENTRAL
+    
+    public String getCambioCompra(String fecha){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().getTipoCambioCompra(fecha);
+    }
+    
+    public String getCambioVenta(String fecha){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().getTipoCambioVenta(fecha);
+    }
+    
+         /////////////////////////////////////////////////////////////////////////////////////
     public boolean insertCarReservations(car_reservation cr) {
         boolean resultado = false;
 

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\joma2\Desktop\ProyectoWCF\Prueba\CarServices\CarServices\Models\CarDBModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\joma2\Desktop\Examen_2\Examen_2\CarServices\CarServices\Models\CarDBModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

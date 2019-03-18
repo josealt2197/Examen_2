@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -152,6 +153,28 @@ namespace HotelService
 
             }
             return list;
+        }
+
+        //BANCO CENTRAL
+
+        public String getTipoCambioCompra(String fecha)
+        {
+            cr.fi.bccr.gee.wsIndicadoresEconomicos cliente = new cr.fi.bccr.gee.wsIndicadoresEconomicos();
+            DataSet tipoCambio = cliente.ObtenerIndicadoresEconomicos("317", fecha, fecha, "JBS", "N");
+            double resultado = Convert.ToDouble(tipoCambio.Tables[0].Rows[0].ItemArray[2]);
+            double cambio = Math.Round((Double)resultado, 2);
+            string exchangeAmt = cambio.ToString();
+            return exchangeAmt;
+        }
+
+        public String getTipoCambioVenta(String fecha)
+        {
+            cr.fi.bccr.gee.wsIndicadoresEconomicos cliente = new cr.fi.bccr.gee.wsIndicadoresEconomicos();
+            DataSet tipoCambio = cliente.ObtenerIndicadoresEconomicos("318", fecha, fecha, "JBS", "N");
+            double resultado = Convert.ToDouble(tipoCambio.Tables[0].Rows[0].ItemArray[2]);
+            double cambio = Math.Round((Double)resultado, 2);
+            string exchangeAmt = cambio.ToString();
+            return exchangeAmt;
         }
 
     }

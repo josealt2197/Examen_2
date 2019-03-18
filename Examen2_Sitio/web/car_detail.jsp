@@ -65,7 +65,8 @@
                                 <a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vehiculo.action?submitType=updatedata&id_vehiculo=<s:property value="idVehiculo"></s:property>">Reservar</a>
                             </div>
                         </div>
-                        <img src="img/tahoe.png" width="800px" >
+<!--                        <img src="img/tahoe.png" width="800px" >-->
+                        <img src="<s:property value="imagen.getValue()"></s:property>" data-highres="<s:property value="ImagenDetail.getValue()"></s:property>" alt="Imagen" width="700px">
                     </div>
 
                     <div class="row">

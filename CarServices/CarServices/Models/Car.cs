@@ -26,5 +26,6 @@ namespace CarServices.Models
         public int kilometraje { get; set; }
         public string empresa { get; set; }
         public double precioxdia { get; set; }
+        public string imagen { get; set; }
     }
 }

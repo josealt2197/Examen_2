@@ -38,6 +38,7 @@
           <Property Name="kilometraje" Type="int" Nullable="false" />
           <Property Name="empresa" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="precioxdia" Type="float" Nullable="false" />
+          <Property Name="imagen" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityContainer Name="CarDBModelStoreContainer">
           <EntitySet Name="CarReservations" EntityType="Self.CarReservations" Schema="dbo" store:Type="Tables" />
@@ -80,6 +81,7 @@
           <Property Name="kilometraje" Type="Int32" Nullable="false" />
           <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="precioxdia" Type="Double" Nullable="false" />
+          <Property Name="imagen" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="CarDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CarReservations" EntityType="Self.CarReservation" />
@@ -112,6 +114,7 @@
           <EntitySetMapping Name="Cars">
             <EntityTypeMapping TypeName="CarDBModel.Car">
               <MappingFragment StoreEntitySet="Cars">
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="modelo" ColumnName="modelo" />
                 <ScalarProperty Name="tipo" ColumnName="tipo" />
