@@ -72,11 +72,11 @@
                             </div>
                             <h4 class="mb-3">Datos personales</h4>
                             <s:fielderror/>
-                            <s:form  theme="simple" cssClass="needs-validation" action = "registrar_reservacion" id="registration_form" method = "post">
+                            <s:form theme="simple" cssClass="needs-validation" action = "registrar_reservacion" method = "post">
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
                                         <label for="id">Cédula</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="id" name = "r.id_cliente" placeholder="Cédula" required="required"></s:textfield>
+                                        <s:textfield type = "text" cssClass="form-control" name = "r.id_cliente" placeholder="Cédula" required="required"></s:textfield>
                                             <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                             <div class="invalid-feedback">
                                                 Este campo es requerido.
@@ -84,19 +84,19 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="firstName">Nombre</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="firstname" name = "r.nombre" placeholder="Nombre" required="required"></s:textfield>
+                                        <s:textfield type = "text" cssClass="form-control" name = "r.nombre" placeholder="Nombre" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="lastName">Apellidos</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="lastName" name = "r.apellido" placeholder="Apellidos" required="required"></s:textfield>
+                                        <s:textfield type = "text" cssClass="form-control" name = "r.apellido" placeholder="Apellidos" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="phone">Teléfono</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="phone" name = "r.telefono" placeholder="83120203" required="required"></s:textfield>
+                                        <s:textfield type = "text" cssClass="form-control" name = "r.telefono" placeholder="83120203" required="required"></s:textfield>
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
+                                    <div class="mb-3" style="display: none;">
                                         <label for="idhotel">ID Hotel</label>
                                         <input type="text" name="r.id_hospedaje" value='<s:property value="id_hotel"/>'>
                                     </div>
@@ -104,7 +104,7 @@
 
                                     <div class="mb-3">
                                         <label for="email">Correo electrónico</label>
-                                    <s:textfield type = "text" cssClass="form-control" id="email" name = "r.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+                                    <s:textfield type = "text" cssClass="form-control" name = "r.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
                                     </div>
 
                                     <div class="mb-3">
@@ -118,18 +118,18 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="check-in">Fecha de entrada</label>
-                                        <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
+                                        <s:textfield type = "date" cssClass="form-control" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="check-out">Fecha de salida</label>
-                                        <s:textfield type = "date" cssClass="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required="required"></s:textfield>
+                                        <input type = "date" class="form-control"name = "r.salida" placeholder="Fecha de salida" required>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <label for="persons">Cantidad de huéspedes</label>
-                                        <s:select cssClass="custom-select d-block w-100" headerKey="-1" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
+                                        <s:select cssClass="custom-select d-block w-100" headerKey="-1" list="{1,2,3,4,5,6,7,8,9}" name="r.cantidad"></s:select>
                                         </div> 
                                     </div>
                                     <hr class="mb-4">
@@ -138,7 +138,7 @@
                                     <div class="row">
                                         <div class="col-md-12 mb-3">
                                             <label for="comments">Comentarios</label>
-                                        <s:textarea id="comments" cssClass="form-control" cols="30" rows="8"></s:textarea>
+                                        <s:textarea cssClass="form-control" cols="30" rows="8"></s:textarea>
                                             <small class="text-muted">Las peticiones especiales no se pueden garantizar, pero haremos todo lo posible para atender tu solicitud de la mejor manera. 
                                                 ¡También puedes enviarnos tu petición especial cuando hayas realizado la reserva!</small>
                                         </div>
@@ -146,7 +146,7 @@
 
                                     <hr class="mb-4">
                                     <center>
-                                        <button class="btn btn-success btn-lg btn-block" style="max-width:200px;" type="submit">Reservar</button>
+                                        <button class="btn btn-success btn-lg btn-block" name="submitType" style="max-width:200px;" type="submit">Reservar</button>
                                     </center>
                             </s:form>
 

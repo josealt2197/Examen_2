@@ -187,7 +187,7 @@
           </div> 
 
           <hr class="mb-4">
-          <button class="btn btn-success btn-lg btn-block" type="submit">Reservar</button>
+          <button class="btn btn-success btn-lg btn-block" name="submitType" type="submit">Reservar</button>
         </s:form>
         
       </div>

@@ -21,7 +21,7 @@ public class model_services {
         return resultado;
     }
     
-    public boolean insertReservations(reservaciones r, int id_hotel){
+    public boolean insertReservations(reservaciones r){
         boolean resultado = false;        
         
         int id_hospedaje = r.getId_hospedaje();
