@@ -1,7 +1,9 @@
 package model;
 
+import bean.car_reservation;
 import bean.usuarios;
 import bean.reservaciones;
+import carservices.*;
 
 public class model_services {
         public boolean insertU(usuarios u){
@@ -54,5 +56,42 @@ public class model_services {
         HotelGeneratorService WebService = new HotelGeneratorService();       
         
         return WebService.getBasicHttpBindingIHotelGeneratorService().searchHotel(id);
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////////
+    public boolean insertCarReservations(car_reservation cr) {
+        boolean resultado = false;
+
+        int idVehiculo = cr.getId_vehiculo();
+        int idCliente = cr.getId_cliente();
+        String nombre = cr.getNombre();
+        String apellidos = cr.getApellido();
+        String telefono = cr.getTelefono();
+        String correo = cr.getCorreo();
+        String hentrada = cr.getHentrada();
+        String hsalida = cr.getHsalida();
+        String fentrada = cr.getFentrada();
+        String fsalida = cr.getFsalida();
+        String lugar = cr.getLugar();
+
+        CarService WebService = new CarService();
+
+        WebService.getBasicHttpBindingICarService().insertCarReservation(idVehiculo, idCliente, nombre, apellidos, telefono, correo, hentrada, hsalida, fentrada, fsalida, lugar);
+
+        return resultado;
+    }
+
+    public ArrayOfCar selectCars() {
+
+        CarService WebService = new CarService();
+
+        return WebService.getBasicHttpBindingICarService().selectCar();
+    }
+
+    public ArrayOfCar selectOneCar(int id) {
+
+        CarService WebService = new CarService();
+
+        return WebService.getBasicHttpBindingICarService().searchCar(id);
     }
 }

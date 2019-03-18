@@ -91,12 +91,12 @@
                                     <div class="mb-1">
                                         <i class="pr-4 fas fa-map-marker-alt" style="color: #4caf50; margin-top: 15px;"> <s:property value="ubicacion.getValue()"></s:property></i>                                        
                                     <i class="pr-4 fas fa-users" style="color: #4caf50; margin-top: 15px;"> <s:property value="cantpasajeros"></s:property></i>
-                                    <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="precioxdia"></s:property></i>
+                                    <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> $ <s:property value="precioxdia"></s:property></i>
                                     </div>                      
                                     <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="servicios.getValue()"></s:property></p>
                                     <a class="btn btn-success" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
                                 </div>
-                                <img class="card-img-right flex-auto d-none d-md-block" width="400px" height="300px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="Card image cap">                          
+                                <img class="card-img-right flex-auto d-none d-md-block" width="350px" height="225px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="Card image cap">                          
                             </div>
                         </div>
                     </div>

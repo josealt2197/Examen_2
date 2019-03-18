@@ -70,7 +70,7 @@
                             </h4>
                             <div class="mb-3">
                                 <div class="mx-auto">
-                                    <img src="" alt="ImagenVehiculo" width="64px" height="64px">
+                                    <center><img class="card-img-right flex-auto d-none d-md-block" width="220px" height="175px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_vehiculo"></center>                          
                                     <div class="list-group-item">
                                         <h6 class="text-success">Precio por día: <s:property value="precioxdia"></s:property></h6>
                                     </div>
