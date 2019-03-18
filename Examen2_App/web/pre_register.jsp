@@ -41,17 +41,6 @@
                 </div>
             </div>
 
-            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
-
-                <ul data-role="listview">
-                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                    <li><a href="index.jsp" rel="external">Inicio</a></li>
-                    <li><a href="index.jsp" rel="external">Hospedaje</a></li>
-                    <li><a href="index.jsp" rel="external">Vehículos</a></li>
-                    <li><a href="index.jsp" rel="external">Ayuda</a></li>
-                </ul>
-            </div>
-
             <div data-role="footer" data-theme="b" class="ui-footer ui-bar-a" role="contentinfo">
                 <center>
                     <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:150px;"><br>

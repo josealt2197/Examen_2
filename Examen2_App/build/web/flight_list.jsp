@@ -144,16 +144,14 @@
 
         </div>
 
-        <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
-
-            <ul data-role="listview">
-                <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                <li><a href="index.jsp" rel="external">Inicio</a></li>
-                <li><a href="index.jsp" rel="external">Hospedaje</a></li>
-                <li><a href="index.jsp" rel="external">Vehículos</a></li>
-                <li><a href="index.jsp" rel="external">Ayuda</a></li>
-            </ul>
-        </div>
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
+                    <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
+                    <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
+                    <li><a href="login.jsp" rel="external">Ingresar</a></li>
+                </ul>
+            </div>
 
         <div data-role="footer" data-theme="b" class="ui-footer ui-bar-a" role="contentinfo">
             <center>

@@ -38,28 +38,30 @@
                 <div class="ui-grid-a ui-responsive">
                     <div class="ui-block-a">
                         <div class="ui-body ui-body-d">                    
-
-                            <div>
+                            <s:iterator value="hotel_info">
                                 <div>
-                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Park Inn San Jose by Radisson</h1><br>
                                     <div>
+                                        <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="NombreHos.getValue()"></s:property></h1><br>
                                         <div>
-                                            <center>
-                                                <img width="450px" src="img/bg-showcase-2.jpg"><br>
-                                            </center>
-                                            <ul style="list-style-type: none;">
-                                                <h2>Ubicación</h2>
-                                                <li>Calle Central y Tercera Av 15, Barrio Tournon, 00001 San José, Costa Rica</li>
-                                            </ul>
-                                            <ul style="list-style-type: none;" >
-                                                <h2>Detalles</h2>
-                                                <li>Está en nuestra selección para San José</li>
-                                                <li>Tiene 2 restaurantes</li>
-                                            </ul>
+                                            <div>
+                                                <center>
+                                                    <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
+                                                </center>
+                                                <ul style="list-style-type: none;">
+                                                    <h2>Ubicación</h2>
+                                                    <li><s:property value="UbicacionExacta.getValue()"></s:property></li>
+                                                </ul>
+                                                <ul style="list-style-type: none;" >
+                                                    <h2>Detalles</h2>
+                                                    <li>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></li>
+                                                    <h2>Incluye</h2>
+                                                    <li><s:property value="ServiciosIncluidos.getValue()"></s:property></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </s:iterator>
                         </div>
                         <hr><hr>
                     </div>
@@ -99,11 +101,11 @@
                                     <div class="mb-3" style="display: none;">
                                         <label for="idhotel">ID Hotel</label>
                                         <input type="text" name="r.id_hospedaje" value='<s:property value="id_hotel"/>'>
-                                    </div>
+                                </div>
 
 
-                                    <div class="mb-3">
-                                        <label for="email">Correo electrónico</label>
+                                <div class="mb-3">
+                                    <label for="email">Correo electrónico</label>
                                     <s:textfield type = "text" cssClass="form-control" name = "r.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
                                     </div>
 
@@ -122,7 +124,7 @@
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="check-out">Fecha de salida</label>
-                                        <input type = "date" class="form-control"name = "r.salida" placeholder="Fecha de salida" required>
+                                            <input type = "date" class="form-control"name = "r.salida" placeholder="Fecha de salida" required>
                                         </div>
                                     </div>
 
@@ -158,13 +160,11 @@
             </div><!-- /content -->
 
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
-
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                    <li><a href="index.jsp" rel="external">Inicio</a></li>
-                    <li><a href="index.jsp" rel="external">Hospedaje</a></li>
-                    <li><a href="index.jsp" rel="external">Vehículos</a></li>
-                    <li><a href="index.jsp" rel="external">Ayuda</a></li>
+                    <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
+                    <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
+                    <li><a href="login.jsp" rel="external">Ingresar</a></li>
                 </ul>
             </div>
 
