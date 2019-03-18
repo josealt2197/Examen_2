@@ -95,7 +95,7 @@
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="id">Cédula</label>
-                                <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required"></s:textfield>
+                                <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
                                     <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
