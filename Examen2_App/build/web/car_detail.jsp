@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,51 +29,59 @@
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
                 <h2 class="ui-title" data-role="heading" style="font-weight: 700; color:#0071bc;">Detalles</h2>
 
-                <div class="ui-body ui-body-a ui-corner-all">
-                    <h2>Ford Fiesta</h2>
-                    <small>Enterprise Rent-A-Car</small><br>
-                    <small>Compacto</small>
-                    <img src="./img/info.png" alt="rss" style="display: block; margin: 30px auto;"><br>
-                </div>
-
-                <form>
-                    <div class="ui-grid-b ui-responsive center" style="margin: 0 auto;">
-                        <div class="ui-block-b">
-                            <input type="button" data-icon="check" data-iconpos="right" value="Reservar">
-                        </div>
+                <s:iterator value="car_info">
+                    <div class="ui-body ui-body-a ui-corner-all">
+                        <h2><s:property value="modelo.getValue()"></s:property></h2>
+                        <span class="badge badge-primary"><s:property value="empresa.getValue()"></s:property></span>
+                        <span class="badge badge-success"><s:property value="tipo.getValue()"></s:property></span>
+                        <span class="badge badge-secondary"><s:property value="ubicacion.getValue()"></s:property></span><br>
+                        <img src="<s:property value="imagen.getValue()"></s:property>" width="300px" height="250px" alt="Imagen Vehículo" style="display: block; margin: 30px auto;"><br>
                     </div>
-                </form>
 
-                <div class="ui-grid-a ui-responsive">
-                    <div class="ui-block-a" data-theme="b" style="padding-right: 10px; margin-bottom: 10px;">
-                        <div class="ui-bar ui-bar-a">
-                            <h3>Descripción</h3>
-                            <hr/>
-                            <!--                         Este vehículo contiene transmisión manual, kilometraje es ilimitado, puede llevar hasta 5 pasajeros, aire acondicionado y 4 puertas, todo para atender tus necesidades de transporte.<br><br> -->
-                            Se debe recoger el vehículo en el Aeropuerto del Prat, Prat De Llobregat El, ESP 08820 entre las 
-                            7:00 am - 11:59 pm, de igual forma se debe dejar en el mismo lugar a las mismas horas de operación<br><br>
-
-                            Los conductores menores de 30 años o mayores de 70 años deben pagar una tarifa adicional.<br><br>
+                    <form>
+                        <div class="ui-grid-b ui-responsive center" style="margin: 0 auto;">
+                            <div class="ui-block-b">
+                                <input type="button" data-icon="check" data-iconpos="right" value="Reservar">
+                            </div>
                         </div>
+                    </form>
 
-                    </div>
-                    <div class="ui-block-b" data-theme="b" style="margin-bottom: 10px;">
-                        <div class="ui-bar ui-bar-a">
-                            <h3>Servicios incluidos</h3>
-                            <hr/>
-                            <ul data-role="listview">
-                                <li>Transmisión manual</li>
-                                <li>kilometraje ilimitado</li>
-                                <li>Capacidad de 5 pasajeros</li>
-                                <li>Aire acondicionado</li>
-                                <li>4 puertas</li>
-                                <li>Reserve ahora, pague después</li>
-                            </ul>
+                    <div class="ui-grid-a ui-responsive">
+                        <div class="ui-block-a" data-theme="b" style="padding-right: 10px; margin-bottom: 10px;">
+                            <div class="ui-bar ui-bar-a">
+                                <h3>Características y Condiciones</h3>
+                                <hr/>
+                                <!--                         Este vehículo contiene transmisión manual, kilometraje es ilimitado, puede llevar hasta 5 pasajeros, aire acondicionado y 4 puertas, todo para atender tus necesidades de transporte.<br><br> -->
+                                <h4>Kilometraje</h4>
+                                <p><s:property value="kilometraje.getValue()"></s:property></p>
+                                <h4>Restricciones</h4>
+                                <p><s:property value="restricciones.getValue()"></s:property></p>
+                                <h4>Extras</h4>
+                                <p><s:property value="extras.getValue()"></s:property></p>Se debe recoger el vehículo en el Aeropuerto del Prat, Prat De Llobregat El, ESP 08820 entre las 
+                                7:00 am - 11:59 pm, de igual forma se debe dejar en el mismo lugar a las mismas horas de operación<br><br>
+
+                                Los conductores menores de 30 años o mayores de 70 años deben pagar una tarifa adicional.<br><br>
+                            </div>
 
                         </div>
+                        <div class="ui-block-b" data-theme="b" style="margin-bottom: 10px;">
+                            <div class="ui-bar ui-bar-a">
+                                <h3>Servicios incluidos</h3>
+                                <hr/>
+                                <ul data-role="listview">
+                                    <li>Transmisión manual</li>
+                                    <li>kilometraje ilimitado</li>
+                                    <li>Capacidad de 5 pasajeros</li>
+                                    <li>Aire acondicionado</li>
+                                    <li>4 puertas</li>
+                                    <li>Reserve ahora, pague después</li>
+                                </ul>
 
+                            </div>
+
+                        </div>
                     </div>
-                </div>
+                </s:iterator>
 
                 <ul data-role="listview" data-inset="true">
                     <li data-role="list-divider">Reseñas 

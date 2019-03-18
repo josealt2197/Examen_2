@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="cantpasajeros" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="empresa" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="extras" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="imagen" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="kilometraje" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="modelo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="precioxdia" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
@@ -45,6 +46,7 @@ import javax.xml.bind.annotation.XmlType;
     "cantpasajeros",
     "empresa",
     "extras",
+    "imagen",
     "kilometraje",
     "modelo",
     "precioxdia",
@@ -63,6 +65,8 @@ public class Car {
     protected JAXBElement<String> empresa;
     @XmlElementRef(name = "extras", namespace = "http://schemas.datacontract.org/2004/07/CarServices.Models", type = JAXBElement.class, required = false)
     protected JAXBElement<String> extras;
+    @XmlElementRef(name = "imagen", namespace = "http://schemas.datacontract.org/2004/07/CarServices.Models", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> imagen;
     protected Integer kilometraje;
     @XmlElementRef(name = "modelo", namespace = "http://schemas.datacontract.org/2004/07/CarServices.Models", type = JAXBElement.class, required = false)
     protected JAXBElement<String> modelo;
@@ -172,6 +176,30 @@ public class Car {
      */
     public void setExtras(JAXBElement<String> value) {
         this.extras = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad imagen.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getImagen() {
+        return imagen;
+    }
+
+    /**
+     * Define el valor de la propiedad imagen.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setImagen(JAXBElement<String> value) {
+        this.imagen = value;
     }
 
     /**

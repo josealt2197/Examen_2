@@ -66,6 +66,7 @@ public class ObjectFactory {
     private final static QName _SearchCarResponseSearchCarResult_QNAME = new QName("http://tempuri.org/", "SearchCarResult");
     private final static QName _CarEmpresa_QNAME = new QName("http://schemas.datacontract.org/2004/07/CarServices.Models", "empresa");
     private final static QName _CarExtras_QNAME = new QName("http://schemas.datacontract.org/2004/07/CarServices.Models", "extras");
+    private final static QName _CarImagen_QNAME = new QName("http://schemas.datacontract.org/2004/07/CarServices.Models", "imagen");
     private final static QName _CarModelo_QNAME = new QName("http://schemas.datacontract.org/2004/07/CarServices.Models", "modelo");
     private final static QName _CarRestricciones_QNAME = new QName("http://schemas.datacontract.org/2004/07/CarServices.Models", "restricciones");
     private final static QName _CarServicios_QNAME = new QName("http://schemas.datacontract.org/2004/07/CarServices.Models", "servicios");
@@ -501,6 +502,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/CarServices.Models", name = "extras", scope = Car.class)
     public JAXBElement<String> createCarExtras(String value) {
         return new JAXBElement<String>(_CarExtras_QNAME, String.class, Car.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/CarServices.Models", name = "imagen", scope = Car.class)
+    public JAXBElement<String> createCarImagen(String value) {
+        return new JAXBElement<String>(_CarImagen_QNAME, String.class, Car.class, value);
     }
 
     /**

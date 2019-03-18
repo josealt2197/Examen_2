@@ -12,11 +12,11 @@
         <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="shortcut icon" href="./img/costa-rica64.png">
-        
+
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-        
+
         <script src="jqmobile/demos/js/jquery.js"></script>
         <script src="jqmobile/demos/_assets/js/index.js"></script>
         <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -66,104 +66,108 @@
                                     <div class="ui-body ui-body-d">                    
                                         <center>
                                             <img width="290px" height="200px" src="<s:property value="imagen.getValue()"></s:property>" alt="Imagen vehículo"><br>
-                                        </center>
+                                            </center>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="ui-block-b">
-                                    <div class="ui-body ui-body-d">
-                                        <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="modelo.getValue()"></s:property></h1>
-                                        <div class="mb-1">
-                                            <span class="badge badge-primary"><s:property value="empresa.getValue()"></s:property></span>
-                                            <span class="badge badge-success"><s:property value="tipo.getValue()"></s:property></span><br>
-                                            <i class="pr-4 fas fa-chair"><span class="pl-2">Para <s:property value="cantpasajeros"></s:property> pasajeros</span></i>
-                                            <i class="pr-4 fas fa-cogs"><span class="pl-2"><s:property value="transmision.getValue()"></s:property></span></i>
-                                            <i class="fas fa-money-bill"> ₡ <s:property value="precioxdia"></s:property></i>
-                                        </div>
-                                        <div class="mb-1">
-                                            <i class="fas fa-wind"><span class="pl-2"><s:property value="servicios.getValue()"></s:property></span></i>
-                                        </div>
-                                        <center>
-                                            <a class="btn" data-role="button" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
-                                        </center>
-                                    </div> 
-                                </div>
-                            </div><!-- /grid-a -->
-                        </div>
-                    </div>
+                                    <div class="ui-block-b">
+                                        <div class="ui-body ui-body-d">
+                                            <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="modelo.getValue()"></s:property></h1>
+                                            <div class="mb-1">
+                                                <span class="badge badge-primary"><s:property value="empresa.getValue()"></s:property></span>
+                                            <span class="badge badge-success"><s:property value="tipo.getValue()"></s:property></span><br><br>
+                                            <i class="pr-2 fas fa-car-side" style="color: #28a745;"></i><span>Para <s:property value="cantpasajeros"></s:property> pasajeros</span><br>
+                                            <i class="pr-2 fas fa-cogs" style="color: #28a745;"></i><span><s:property value="transmision.getValue()"></s:property></span><br>
+                                            </div>
+                                            <div class="mb-1">
+                                                <i class="pr-2 fas fa-wind" style="color: #28a745;"></i><span><s:property value="servicios.getValue()"></s:property></span>
+                                            </div>
 
-                    <br><hr><br>
+                                            <div class="mb-1">
+                                                <span style="width: 100%; height: 5px; display: flex; align-items: center; background-color:#7CC543; margin: 0 auto; margin-top: 15px;"></span><br>
+                                                <i class="pr-2 fas fa-money-bill" style="color: #28a745;"></i><span>₡ <s:property value="precioxdia"></s:property> por día</span> 
+                                            </div>
+                                            <center>
+                                                <a class="btn btn-success" style="margin: 20px auto; color:#fff; text-decoration: none;" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
+                                            </center>
+                                        </div> 
+                                    </div>
+                                </div><!-- /grid-a -->
+                            </div>
+                        </div>
+
+                        <br><hr><br>
                 </s:iterator>
 
-<!--                <div class="ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a">
-                        <h2>Transporte</h2>
-                    </div>
-                    <div class="ui-body ui-body-a">
-                        <div class="ui-grid-a ui-responsive">
-                            <div class="ui-block-a">
-                                <div class="ui-body ui-body-d">                    
-                                    <center>
-                                        <img width="300px" src="img/ford.jpg"><br>
-                                    </center>
+                <!--                <div class="ui-corner-all custom-corners">
+                                    <div class="ui-bar ui-bar-a">
+                                        <h2>Transporte</h2>
+                                    </div>
+                                    <div class="ui-body ui-body-a">
+                                        <div class="ui-grid-a ui-responsive">
+                                            <div class="ui-block-a">
+                                                <div class="ui-body ui-body-d">                    
+                                                    <center>
+                                                        <img width="300px" src="img/ford.jpg"><br>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                            <div class="ui-block-b">
+                                                <div class="ui-body ui-body-d">
+                                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Toyota Yaris 1.3</h1>
+                                                    <div class="mb-1">
+                                                        <span class="badge badge-primary">Keddy By Europcar</span>
+                                                        <span class="badge badge-success">Compacto</span><br>
+                                                        <i class="pr-4 fas fa-chair"><span class="pl-2">4 asientos</span></i>
+                                                        <i class="pr-4 fas fa-cogs"><span class="pl-2">Manual</span></i>
+                                                        <i class="fas fa-door-closed"><span class="pl-2">4 puertas</span></i>
+                                                    </div>
+                                                    <center>
+                                                        <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
+                                                    </center>
+                                                </div> 
+                                            </div>
+                                        </div> /grid-a 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="ui-block-b">
-                                <div class="ui-body ui-body-d">
-                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Toyota Yaris 1.3</h1>
-                                    <div class="mb-1">
-                                        <span class="badge badge-primary">Keddy By Europcar</span>
-                                        <span class="badge badge-success">Compacto</span><br>
-                                        <i class="pr-4 fas fa-chair"><span class="pl-2">4 asientos</span></i>
-                                        <i class="pr-4 fas fa-cogs"><span class="pl-2">Manual</span></i>
-                                        <i class="fas fa-door-closed"><span class="pl-2">4 puertas</span></i>
+                
+                                <br><hr><br>
+                
+                                <div class="ui-corner-all custom-corners">
+                                    <div class="ui-bar ui-bar-a">
+                                        <h2>Transporte</h2>
                                     </div>
-                                    <center>
-                                        <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
-                                    </center>
-                                </div> 
-                            </div>
-                        </div> /grid-a 
-                    </div>
-                </div>
-
-                <br><hr><br>
-
-                <div class="ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a">
-                        <h2>Transporte</h2>
-                    </div>
-                    <div class="ui-body ui-body-a">
-                        <div class="ui-grid-a ui-responsive">
-                            <div class="ui-block-a">
-                                <div class="ui-body ui-body-d">                    
-                                    <center>
-                                        <img width="300px" src="img/ford.jpg"><br>
-                                    </center>
+                                    <div class="ui-body ui-body-a">
+                                        <div class="ui-grid-a ui-responsive">
+                                            <div class="ui-block-a">
+                                                <div class="ui-body ui-body-d">                    
+                                                    <center>
+                                                        <img width="300px" src="img/ford.jpg"><br>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                            <div class="ui-block-b">
+                                                <div class="ui-body ui-body-d">
+                                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Toyota Corolla Sedan</h1>
+                                                    <div class="mb-1">
+                                                        <span class="badge badge-primary">Sixt</span>
+                                                        <span class="badge badge-success">Económico</span><br>
+                                                        <i class="pr-4 fas fa-chair"><span class="pl-2">4 asientos</span></i>
+                                                        <i class="pr-4 fas fa-cogs"><span class="pl-2">Manual</span></i>
+                                                        <i class="fas fa-door-closed"><span class="pl-2">4 puertas</span></i>
+                                                    </div>
+                                                    <div class="mb-1">
+                                                        <i class="fas fa-wind"><span class="pl-2">Aire acondicionado</span></i>
+                                                    </div>
+                                                    <center>
+                                                        <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
+                                                    </center>
+                                                </div> 
+                                            </div>
+                                        </div> /grid-a 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="ui-block-b">
-                                <div class="ui-body ui-body-d">
-                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Toyota Corolla Sedan</h1>
-                                    <div class="mb-1">
-                                        <span class="badge badge-primary">Sixt</span>
-                                        <span class="badge badge-success">Económico</span><br>
-                                        <i class="pr-4 fas fa-chair"><span class="pl-2">4 asientos</span></i>
-                                        <i class="pr-4 fas fa-cogs"><span class="pl-2">Manual</span></i>
-                                        <i class="fas fa-door-closed"><span class="pl-2">4 puertas</span></i>
-                                    </div>
-                                    <div class="mb-1">
-                                        <i class="fas fa-wind"><span class="pl-2">Aire acondicionado</span></i>
-                                    </div>
-                                    <center>
-                                        <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
-                                    </center>
-                                </div> 
-                            </div>
-                        </div> /grid-a 
-                    </div>
-                </div>
-
-                <br><hr><br>-->
+                
+                                <br><hr><br>-->
 
             </div><!-- /content -->
 
