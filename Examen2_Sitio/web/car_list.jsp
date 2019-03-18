@@ -94,10 +94,9 @@
                                     <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="precioxdia"></s:property></i>
                                     </div>                      
                                     <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="servicios.getValue()"></s:property></p>
-                                <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="extras.getValue()"></s:property></p>
-                                <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="restricciones.getValue()"></s:property></p>
-                                <br><a class="btn btn-success" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
+                                    <a class="btn btn-success" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
                                 </div>
+                                <img class="card-img-right flex-auto d-none d-md-block" width="400px" height="300px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="Card image cap">                          
                             </div>
                         </div>
                     </div>

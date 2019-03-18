@@ -22,6 +22,7 @@
     <EntitySetMapping Name="Cars">
       <EntityTypeMapping TypeName="CarDBModel.Car">
         <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="modelo" ColumnName="modelo" />
           <ScalarProperty Name="tipo" ColumnName="tipo" />

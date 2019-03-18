@@ -33,6 +33,7 @@
     <Property Name="kilometraje" Type="Int32" Nullable="false" />
     <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="precioxdia" Type="Double" Nullable="false" />
+    <Property Name="imagen" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="CarDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CarReservations" EntityType="Self.CarReservation" />
