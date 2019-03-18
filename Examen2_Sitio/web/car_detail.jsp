@@ -39,10 +39,13 @@
                 <form class="form-inline mt-2 mt-md-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">¿Necesitas ayuda?</a>
+                            <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Ingresar</a>
+                            <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.jsp">Ingresar</a>
                         </li>
                     </ul>
                 </form>
@@ -57,43 +60,43 @@
                             <h1 class="display-5 font-italic"><s:property value="modelo.getValue()"></s:property></h1>
                             <span class="badge badge-primary badge-pill"><s:property value="tipo.getValue()"></s:property></span><span class="ml-3 badge badge-info">Ideal para dos viajeros</span>
                             <p class="lead my-3"><s:property value="ubicacion.getValue()"></s:property></p>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vehiculo.action?submitType=updatedata&id_vehiculo=<s:property value="idVehiculo"></s:property>">Reservar</a>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vehiculo.action?submitType=updatedata&id_vehiculo=<s:property value="idVehiculo"></s:property>">Reservar</a>
-                        </div>
-                    </div>
                         <img src="img/tahoe.png" width="800px" >
-                </div>
+                    </div>
 
-                <div class="row">
-                    <div class="col-md-8 blog-main">
-                        <h3 class="pb-4 mb-4 font-italic border-bottom">
-                            Características y Condiciones
-                        </h3>
-                        <div class="blog-post">
+                    <div class="row">
+                        <div class="col-md-8 blog-main">
+                            <h3 class="pb-4 mb-4 font-italic border-bottom">
+                                Características y Condiciones
+                            </h3>
+                            <div class="blog-post">
 
-                            <p>Servicios incluidos: <s:property value="servicios.getValue()"></s:property></p>
+                                <p>Servicios incluidos: <s:property value="servicios.getValue()"></s:property></p>
                             <p>Extras: <s:property value="extras.getValue()"></s:property></p>
                             <p>Restricciones: <s:property value="restricciones.getValue()"></s:property></p>
-                           
-                            <hr>
+
+                                <hr>
+
+                            </div>
 
                         </div>
-                            
-                    </div>
 
-                    <aside class="col-md-4 blog-sidebar">
-                        <div class="p-4 mb-3 bg-light rounded">
-                            <h4 class="font-italic">Información General</h4>
-                            <p class="mb-0">Empresa: <s:property value="empresa.getValue()"></s:property></p>
+                        <aside class="col-md-4 blog-sidebar">
+                            <div class="p-4 mb-3 bg-light rounded">
+                                <h4 class="font-italic">Información General</h4>
+                                <p class="mb-0">Empresa: <s:property value="empresa.getValue()"></s:property></p>
                             <p class="mb-0">Pasajeros: <s:property value="cantpasajeros"></s:property></p>
                             <p class="mb-0">Kilometraje: <s:property value="kilometraje"></s:property></p>
                             <p class="mb-0">Transmision: <s:property value="transmision.getValue()"></s:property></p>
                             <p class="mb-0">Precio por día: <s:property value="precioxdia"></s:property></p>          
-                        </div>
-                    </aside>
+                            </div>
+                        </aside>
 
-                </div>
+                    </div>
             </s:iterator> 
 
             <div class="my-3 p-3 bg-white rounded shadow-sm mb-4">
