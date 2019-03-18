@@ -6,6 +6,7 @@ import bean.reservaciones;
 import bean.usuarios;
 import carservices.*;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Hotel;
@@ -25,7 +26,7 @@ public class controller_services {
         this.u = u;
     }
     
-    public String insertUsuario(){
+    public String insertUsuario() throws SQLException{
         model_services da = new model_services();
         da.insertU(getU());
 
@@ -54,10 +55,23 @@ public class controller_services {
     }   
     
     public String insertReservacion(){
-        model_services da = new model_services();
-        da.insertReservations(getR(), id_hotel);
+        String result = "";
+        try {
+            if (submitType.equals("updatedata")) {
+                model_services da = new model_services();
+                hotel_info = da.selectOneHotel(id_hotel).getHotel();  
+                result = "reservation";
+            } else {
+                model_services da = new model_services();
+                da.insertReservations(getR(), id_hotel);
+                result = "success";
+            }
 
-        return SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
     
     //----------------Select de Hoteles
