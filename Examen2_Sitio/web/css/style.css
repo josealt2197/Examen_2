@@ -533,3 +533,25 @@ body {
     background-position: 50% 10%;
     background-size: cover;    
 }
+
+/*---------------------------------------------------------------------*/
+
+.form-redirect-error {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 4px solid #AC2A2A;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.text-red{
+    color: #AC2A2A;
+}
+
+.btn-error{
+    background-color: #AC2A2A;
+    color: white;
+}
