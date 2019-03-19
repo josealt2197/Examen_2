@@ -32,7 +32,7 @@
 
             <s:form theme="simple" cssClass="form-signin" action="login" method="post">
                 <label for="ident">Correo Electrónico:</label>
-                <s:textfield type="text" name="u.cedula" value=""></s:textfield>
+                <s:textfield type="text" name = "u.correo" value=""></s:textfield>
                 <label for="password">Contraseña:</label>
                 <s:textfield type="password" name="u.password" value=""></s:textfield>
                 <center>

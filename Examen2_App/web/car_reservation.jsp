@@ -153,10 +153,21 @@
                                         </div>
                                     </div>
 
-                                    <hr class="mb-4">
-                                    <center>
-                                        <button class="btn btn-success btn-lg btn-block" style="max-width:200px;" name="submitType" type="submit">Reservar</button>
-                                    </center>
+<!--                                COSTO DE VEHICULOS->AGREGAR A TABLA Y MVC STRUTS-->
+                                <s:iterator  value="car_info">
+                                    <div class="mb-3">
+                                        <label for="pick-place">Costo</label>
+                                        <input type="text" class="form-control" name="cr.id_vehiculo" value="<s:property value="precioxdia"></s:property>" >
+                                        <div class="invalid-feedback">
+                                            Este campo es requerido.
+                                        </div>
+                                    </div>
+                                </s:iterator>
+
+                                <hr class="mb-4">
+                                <center>
+                                    <button class="btn btn-success btn-lg btn-block" style="max-width:200px;" name="submitType" type="submit">Reservar</button>
+                                </center>
                             </s:form>
 
 

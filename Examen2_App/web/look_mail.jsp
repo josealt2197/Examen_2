@@ -43,7 +43,7 @@
                                 </svg></center>
                             <div class="checkbox mb-3">
                                 <center>
-                                    <h5 class="font-weight-normal">En caso de no recibir el correo intenta de nuevo. Verifica que este escrito correctamente.
+                                    <h5 class="font-weight-normal">En caso de no recibir el correo verifica que esté escrito correctamente e intenta de nuevo.
                                         <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_register.jsp'">Regresar</a>
                                     </h5>
                                 </center>
