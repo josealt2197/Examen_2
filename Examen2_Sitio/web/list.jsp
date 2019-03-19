@@ -60,24 +60,20 @@
             <section class="list-search text-white text-center">
                 <div class="overlay"></div>
                 <div class="container">
-                    <form>
+
                         <div class="form-row ">
                             <div class="col-md-6 mx-auto">
-                                <h4>Realizar otra busqueda</h4>
-                                <select class="form-control form-control-lg" >
-                                    <option>¿Qué andas buscando?</option>
-                                    <option>Hospedaje</option>
-                                    <option>Vehículos</option>
-                                </select><br>
-                                <input type="text" class="form-control form-control-lg" placeholder="¿Donde lo necesitas?">
+                                <h1 class="mb-3" style="color:#4caf50;">Hospedaje<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
+                                <h4>¿Donde lo necesitas?</h4>
+                                <input type="text" class="form-control form-control-lg" id="search-criteria" placeholder="¿Donde lo necesitas?">
                             </div><br>
                         </div>
                         <div class="form-row mx-auto">
                             <div class="col-md-2 mx-auto">
-                                <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar</button>
+                                <br><button id="search" class="btn btn-block btn-lg btn-success">Buscar</button>
                             </div>
                         </div>
-                    </form>
+
                 </div>
             </section><br>
             
@@ -85,6 +81,7 @@
             
             <!--A PARTIR DE AQUI-->
             <s:iterator  value="hotels_list"> 
+            <div class="place-data">
                 <div class="row mb-2 ">
                     <div class="col-md-8 mx-auto">
                         <div class="card flex-md-row mb-4 box-shadow h-md-250">
@@ -106,6 +103,7 @@
                         </div>
                     </div>
                 </div>
+            </div>            
         </s:iterator>  
         <!--HASTA AQUI-->
         
@@ -140,6 +138,16 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    
+    
+    <script>
+        $('.place-data').hide();
+        $('#search').click(function () {
+            $('.place-data').hide();
+            var txt = $('#search-criteria').val();
+            $('.place-data:contains("' + txt + '")').show();
+        });
+    </script>
     
 </body>
 </html>
