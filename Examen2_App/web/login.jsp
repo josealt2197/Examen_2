@@ -29,7 +29,7 @@
 
         <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
                 <h2 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Iniciar Sesión</h2>
-
+            <s:fielderror cssClass="error_form"/>
             <s:form theme="simple" cssClass="form-signin" action="login" method="post">
                 <label for="ident">Correo Electrónico:</label>
                 <s:textfield type="text" name = "u.correo" value=""></s:textfield>
