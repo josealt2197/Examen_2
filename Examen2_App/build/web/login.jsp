@@ -33,7 +33,7 @@
                 <label for="password">Contraseña:</label>
                 <s:textfield type="password" name="u.password" value=""></s:textfield>
                 <center>
-                    <a href="">Regístrate</a><br>
+                    <a href="pre_register.jsp">Regístrate</a><br>
                     <s:submit type="submit" data-role="button" data-theme="b" data-inline="true" value="Ingresar"></s:submit>
                 </center>
             </s:form>    

@@ -9,8 +9,8 @@ public class conexion {
 
      private static final String ipAddress = "localhost"; //nota: localhost= 127.0.0.1
     private static final String dbName = "Usuarios"; //Nombre de tu base de datos
-    private static final String user = "StevenZiga";//Nombre del usuario que utilizas en SQL SERVER
-    private static final String password = "progra";//Contraseña con el que ingresar al SQL Server
+    private static final String user = "Brayanjbs";//Nombre del usuario que utilizas en SQL SERVER
+    private static final String password = "progra2019";//Contraseña con el que ingresar al SQL Server
     private static final String service = "1433";
 
     public static Connection getConnection() throws SQLException {

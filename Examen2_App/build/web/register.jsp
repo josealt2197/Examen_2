@@ -37,7 +37,7 @@
 
                     <div>
                         <label for="firstName">Nombre Completo</label>
-                        <s:textfield type="text" cssClass="form-control" placeholder="Nombre y Apellidos" value="" required="required"></s:textfield>
+                        <s:textfield type="text" cssClass="form-control" id="firstName" name = "u.fullnombre" placeholder="Nombre y Apellidos" value="" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Un nombre valido es requerido.
                             </div>
@@ -45,7 +45,7 @@
 
                         <div>
                             <label for="lastName">Cédula</label>
-                        <s:textfield type="text" cssClass="form-control" id="lastName" placeholder="Número de Cédula" value="" required="required"></s:textfield>
+                        <s:textfield type="text" cssClass="form-control" id="lastName" name = "u.cedula" placeholder="Número de Cédula" value="" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Una Cédula valida es requerida.
                             </div>
@@ -53,7 +53,7 @@
 
                         <div>
                             <label for="email">Correo Electrónico</label>
-                        <s:textfield type="email" cssClass="form-control" id="email" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+                        <s:textfield type="email" cssClass="form-control" id="email" name = "u.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Un Correo Electrónico valido es requerido.
                             </div>
@@ -61,7 +61,7 @@
 
                         <div>
                             <label for="pass">Contraseña</label>
-                        <s:textfield type="password" cssClass="form-control" id="pass" placeholder="Contraseña" required="required"></s:textfield>
+                        <s:textfield type="password" cssClass="form-control" id="pass" name = "u.password" placeholder="Contraseña" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Este campo es requerido.
                             </div>
@@ -76,16 +76,16 @@
                         </div>
 
                         <div>
-                            <label for="birth">Fecha de Nacimiento</label>
-                        <s:textfield type="date" cssClass="form-control" id="pass2" placeholder="Confirmar Contraseña" required="required"></s:textfield>
+                            <label for="form_date">Fecha de Nacimiento</label>
+                        <s:textfield type="date" cssClass="form-control" id="form_date" name = "u.fechanacimiento" placeholder="Fecha de nacimiento" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Este campo es requerido.
                             </div>
                         </div>
 
                         <div>
-                            <label for="phone">Teléfono</label>
-                        <s:textfield type="number" cssClass="form-control" placeholder="85602135" required="required"></s:textfield>
+                            <label for="form_phone">Teléfono</label>
+                        <s:textfield type="number" cssClass="form-control" id="form_phone" name = "u.telefono" placeholder="85602135" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Este campo es requerido.
                             </div>

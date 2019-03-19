@@ -42,7 +42,7 @@ public class model_services {
         public int sendEmail(usuarios u){
         String subject = "TicoBooking - Registro";
         String to = u.getCorreo();
-        String link = "http://localhost:8080/Examen2_Sitio/register.jsp";
+        String link = "http://localhost:8080/Examen2_App/register.jsp";
         String body = "<div style='background-color: #4caf50; padding:20px'>" +
                             "<div class='logo-right' align='right' id='emb-email-header'><img style = 'display: block;height: auto;width: 100%;border: 0;max-width: 227px;' src='https://i2.createsend1.com/ei/t/32/194/D85/123735/csfinal/logo1-9900000000028a3c.png' alt=''></div>" +
                             "<div style = 'mso-line-height-rule: exactly;mso-text-raise: 4px;'>" +
