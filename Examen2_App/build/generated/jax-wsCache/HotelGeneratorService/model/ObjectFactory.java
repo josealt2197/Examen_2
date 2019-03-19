@@ -69,6 +69,8 @@ public class ObjectFactory {
     private final static QName _UpdateClientResponseUpdateClientResult_QNAME = new QName("http://tempuri.org/", "UpdateClientResult");
     private final static QName _SelectHotelsResponseSelectHotelsResult_QNAME = new QName("http://tempuri.org/", "SelectHotelsResult");
     private final static QName _SearchHotelResponseSearchHotelResult_QNAME = new QName("http://tempuri.org/", "SearchHotelResult");
+    private final static QName _GetTipoCambioCompraResponseGetTipoCambioCompraResult_QNAME = new QName("http://tempuri.org/", "getTipoCambioCompraResult");
+    private final static QName _GetTipoCambioVentaResponseGetTipoCambioVentaResult_QNAME = new QName("http://tempuri.org/", "getTipoCambioVentaResult");
     private final static QName _HotelDescripcionHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "DescripcionHos");
     private final static QName _HotelHoraEntradaHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "HoraEntradaHos");
     private final static QName _HotelHoraSalidaHos_QNAME = new QName("http://schemas.datacontract.org/2004/07/HotelService.Models", "HoraSalidaHos");
@@ -217,6 +219,38 @@ public class ObjectFactory {
      */
     public SearchHotelResponse createSearchHotelResponse() {
         return new SearchHotelResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetTipoCambioCompra }
+     * 
+     */
+    public GetTipoCambioCompra createGetTipoCambioCompra() {
+        return new GetTipoCambioCompra();
+    }
+
+    /**
+     * Create an instance of {@link GetTipoCambioCompraResponse }
+     * 
+     */
+    public GetTipoCambioCompraResponse createGetTipoCambioCompraResponse() {
+        return new GetTipoCambioCompraResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetTipoCambioVenta }
+     * 
+     */
+    public GetTipoCambioVenta createGetTipoCambioVenta() {
+        return new GetTipoCambioVenta();
+    }
+
+    /**
+     * Create an instance of {@link GetTipoCambioVentaResponse }
+     * 
+     */
+    public GetTipoCambioVentaResponse createGetTipoCambioVentaResponse() {
+        return new GetTipoCambioVentaResponse();
     }
 
     /**
@@ -621,6 +655,42 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "SearchHotelResult", scope = SearchHotelResponse.class)
     public JAXBElement<ArrayOfHotel> createSearchHotelResponseSearchHotelResult(ArrayOfHotel value) {
         return new JAXBElement<ArrayOfHotel>(_SearchHotelResponseSearchHotelResult_QNAME, ArrayOfHotel.class, SearchHotelResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "fecha", scope = GetTipoCambioCompra.class)
+    public JAXBElement<String> createGetTipoCambioCompraFecha(String value) {
+        return new JAXBElement<String>(_InsertClientFecha_QNAME, String.class, GetTipoCambioCompra.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "getTipoCambioCompraResult", scope = GetTipoCambioCompraResponse.class)
+    public JAXBElement<String> createGetTipoCambioCompraResponseGetTipoCambioCompraResult(String value) {
+        return new JAXBElement<String>(_GetTipoCambioCompraResponseGetTipoCambioCompraResult_QNAME, String.class, GetTipoCambioCompraResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "fecha", scope = GetTipoCambioVenta.class)
+    public JAXBElement<String> createGetTipoCambioVentaFecha(String value) {
+        return new JAXBElement<String>(_InsertClientFecha_QNAME, String.class, GetTipoCambioVenta.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "getTipoCambioVentaResult", scope = GetTipoCambioVentaResponse.class)
+    public JAXBElement<String> createGetTipoCambioVentaResponseGetTipoCambioVentaResult(String value) {
+        return new JAXBElement<String>(_GetTipoCambioVentaResponseGetTipoCambioVentaResult_QNAME, String.class, GetTipoCambioVentaResponse.class, value);
     }
 
     /**

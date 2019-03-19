@@ -11,7 +11,10 @@ import flightservices.ArrayOfFlight;
 import flightservices.FlightService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.Session;
@@ -92,6 +95,36 @@ public class model_services {
             e.printStackTrace();
             return -1;
         }
+    }
+    
+    private String sql1 = "SELECT Correo, Password FROM Register_Usuario WHERE Correo = ?;";
+
+    public String consulta_inicio(usuarios u) throws SQLException {
+        String result = "";
+        String mail = "";
+        String pass = "";
+        Connection con = conexion.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql1);
+        ps.setString(1, u.getCorreo());
+        
+        ResultSet res = ps.executeQuery();
+
+        while (res.next()) {            
+            mail = res.getString(1);
+            pass = res.getString(2);
+        }
+        
+        if(u.getPassword().equals(pass) && u.getCorreo().equals(mail)){
+            result = "correcto";
+        }else{
+            result = "incorrecto";
+        }
+
+        ps.close();
+        res.close();
+        con.close();
+
+        return result;
     }
     
     /*PARTE WEB SERVICES*/ 

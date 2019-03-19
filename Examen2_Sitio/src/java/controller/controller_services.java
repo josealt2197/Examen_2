@@ -42,6 +42,20 @@ public class controller_services {
         return SUCCESS;
     }
     
+    //---------------Buscar el login
+    public String Login() throws SQLException{
+        String result = "";
+        model_services da = new model_services();
+        
+        if("correcto".equals(da.consulta_inicio(getU()))){
+            result = "correcto";
+        }else if("incorrecto".equals(da.consulta_inicio(getU()))){
+            result = "incorrecto";
+        }
+        
+        return result;
+    }
+    
     
     //----------------Insert de Reservaciones
     private int id_hotel;

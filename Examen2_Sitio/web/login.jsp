@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%> 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -53,20 +54,24 @@
         </nav>
 
         <div class="sign-in-body" >
-            <form class="form-signin">
+            <s:form  theme="simple" cssClass="needs-validation" action = "login" id="registration_form" method = "post">
+            <!--<form class="form-signin">-->
                 <h1 class="text-green">TicoBooking</h1>
                 <h1 class="h3 mb-3 font-weight-normal text-green">Iniciar Sesion</h1>
                 <label for="inputEmail" class="sr-only">Correo Electronico</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.Correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+                <!--<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>-->
                 <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <s:textfield type = "password" cssClass="form-control" id="inputPassword" name = "u.Password" placeholder="Contraseña" required="required"></s:textfield>
+                <!--<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>-->
                 <div class="checkbox mb-3">
                     <label>
-                        <a href="pre_register.jsp">Resgistrate</a>
+                        <a href="pre_register.jsp">Regístrate</a>
                     </label>
                 </div>
-                <button class="btn btn-lg btn-success btn-block" type="submit">Ingresar</button>
-            </form>
+                <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Ingresar"></s:submit>
+                <!--<button class="btn btn-lg btn-success btn-block" type="submit">Ingresar</button>-->
+            </s:form>
         </div>
 
         <!-- Footer -->

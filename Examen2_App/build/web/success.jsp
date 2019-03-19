@@ -11,7 +11,10 @@
         <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="shortcut icon" href="./img/medicine.png">
+        
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
         <script src="jqmobile/demos/js/jquery.js"></script>
         <script src="jqmobile/demos/_assets/js/index.js"></script>
         <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -41,7 +44,7 @@
                             <div class="checkbox mb-3">
                                 <center>
                                     <h5>
-                                        <a class="btn btn-success btn-lg btn-block" style="margin: 20px auto; color:#fff;" data-role="button" onclick="location.href = 'index.jsp'">Volver al inicio</a>
+                                        <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'index.jsp'">Volver al inicio</a>
                                     </h5>
                                 </center>
                             </div>
@@ -66,6 +69,6 @@
                     <p class="copyright">© Copyright 2019</p>
                 </center>
             </div>
-        </div><!-- /page1 -->
+        </div>
     </body>
 </html>
