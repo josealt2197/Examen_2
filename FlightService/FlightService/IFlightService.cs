@@ -19,10 +19,10 @@ namespace FlightService
 
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/select_flights", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        List<Flight> SelectCar();
+        List<Flight> SelectFlight();
 
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/select_flights", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        List<Flight> SearchCar(int id);
+        List<Flight> SearchFlight(int id);
     }
 }

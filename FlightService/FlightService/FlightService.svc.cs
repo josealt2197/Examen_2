@@ -38,10 +38,6 @@ namespace FlightService
             return null;
         }
 
-        public List<Flight> SearchCar(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<Flight> SearchFlight(int id)
         {
@@ -66,10 +62,6 @@ namespace FlightService
             return list;
         }
 
-        public List<Flight> SelectCar()
-        {
-            throw new NotImplementedException();
-        }
 
         public List<Flight> SelectFlight()
         {
