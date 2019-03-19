@@ -62,7 +62,15 @@
                     <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
                     <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
                     </svg></center>
-                    <br><br>                    
+                    <br><br>   
+                    <h5 class="font-weight-normal">En caso de no recibir el correo, verifica que esté escrito correctamente e intenta de nuevo.</h5>
+                    <div class="checkbox mb-3">
+                        <center>
+                            <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_register.jsp'">Regresar</a>    
+                            <a href="index.jsp" class="btn btn-success">Volver al inicio</a>
+                        </center>
+                    </div>
+                    
                 </form>
             </div>    
             

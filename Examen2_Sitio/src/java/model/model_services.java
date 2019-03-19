@@ -103,6 +103,7 @@ public class model_services {
         String result = "";
         String mail = "";
         String pass = "";
+        int cont = 0;
         Connection con = conexion.getConnection();
         PreparedStatement ps = con.prepareStatement(sql1);
         ps.setString(1, u.getCorreo());
@@ -112,13 +113,20 @@ public class model_services {
         while (res.next()) {            
             mail = res.getString(1);
             pass = res.getString(2);
+            cont++;
         }
         
-        if(u.getPassword().equals(pass) && u.getCorreo().equals(mail)){
-            result = "correcto";
-        }else{
-            result = "incorrecto";
+        if(cont!=0){
+            if (u.getPassword().equals(pass) && u.getCorreo().equals(mail)) {
+                result = "correcto";
+            } else {
+                result = "incorrecto";
+            }
+        }else if(cont==0){
+            result = "sinregistro";
         }
+        
+
 
         ps.close();
         res.close();

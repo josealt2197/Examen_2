@@ -54,6 +54,7 @@
         </nav>
 
         <div class="sign-in-body" >
+            <s:fielderror cssClass="error_form"/>
             <s:form  theme="simple" cssClass="needs-validation" action = "login" id="registration_form" method = "post">
             <!--<form class="form-signin">-->
                 <h1 class="text-green">TicoBooking</h1>

@@ -734,3 +734,11 @@ ol {
     background-color: #AC2A2A;
     color: white;
 }
+
+
+/*---------------------------------------------------------------------*/
+
+.error_form{
+	color: red;
+	list-style: none;
+}
