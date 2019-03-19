@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -53,14 +54,18 @@
         </nav>
         
         <div class="sign-in-body" >
-            <form class="form-signin">
+            <s:form  theme="simple" cssClass="form-signin" action = "pre_register" id="pre_register" method = "post">
+            <!--<form class="form-signin">-->
                 <h1 class="text-green">TicoBooking</h1>
                 <h1 class="h3 mb-3 font-weight-normal text-green">Registrarse</h1>
                 <h5> Antes de poder completar tu registro necesitamos confimar tu dirección de Correo Electrónico </h5><br/>
                 <label for="inputEmail" class="sr-only">Correo Electronico</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <br/><button class="btn btn-lg btn-success btn-block" type="submit">Continuar</button>
-            </form>
+                <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.correo" placeholder="Correo Electrónico" required="required"></s:textfield>
+                <!--<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>-->
+                <br/>
+                 <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Enviar"></s:submit>
+                <!--<button class="btn btn-lg btn-success btn-block" type="submit">Continuar</button>-->
+            </s:form>
         </div>
 
         <!-- Footer -->

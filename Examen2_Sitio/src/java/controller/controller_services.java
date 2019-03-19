@@ -33,6 +33,15 @@ public class controller_services {
         return SUCCESS;
     }
     
+    //----------------Enviar email    
+    public String proccessRegister(){
+        model_services da = new model_services();
+        da.sendEmail(getU());
+
+        return SUCCESS;
+    }
+    
+    
     //----------------Insert de Reservaciones
     private int id_hotel;
     
