@@ -11,8 +11,7 @@
             <result name="success">look_mail.jsp</result>
         </action>
         <action name="login" class="controller.controller_services" method="Login"> 
-            <result name="correcto">index.jsp</result> 
-            <result name="incorrecto">error.jsp</result>         
+            <result name="correcto">index.jsp</result>       
         </action>
          
         <action name="registrar_reservacion" class="controller.controller_services" method="insertReservacion">
@@ -35,6 +34,17 @@
         </action>   
         <action name="viewcar_detail" class="controller.controller_services" method="selectCar">  
             <result name="success">car_detail.jsp</result>  
+        </action>
+        <action name="reservacion_vuelo" class="controller.controller_services" method="insertFlightReservacion">
+            <result name="reservation">flight_reservation.jsp</result>
+            <result name="success">success.jsp</result> 
+            <result name="error">error.jsp</result>  
+        </action> 
+        <action name="viewflight_list" class="controller.controller_services" method="selectFlights">  
+            <result name="success">flight_list.jsp</result>  
         </action>   
+        <action name="viewflight_detail" class="controller.controller_services" method="selectFlight">  
+            <result name="success">flight_detail.jsp</result>  
+        </action>    
     </package>
 </struts>
