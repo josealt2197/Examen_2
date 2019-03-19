@@ -33,7 +33,7 @@
             </div><!-- /header -->
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Realizar otra busqueda.</h2>
+                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Realizar otra búsqueda.</h2>
 
 
                 <center>
@@ -44,7 +44,7 @@
                             <option>Vehículos</option>
                             <option>Tiquetes Aereos</option>
                         </select>
-                        <input type="text"  style="font-size: 1.2em; text-align: center" placeholder="¿Donde lo necesitas?">
+                        <input type="text"  style="font-size: 1.2em; text-align: center" placeholder="¿Dónde lo necesitas?">
                         <center>
                             <button type="submit" style="width:300px">Buscar</button>
                         </center>
@@ -98,78 +98,7 @@
                         <br><hr><br>
                 </s:iterator>
 
-                <!--                <div class="ui-corner-all custom-corners">
-                                    <div class="ui-bar ui-bar-a">
-                                        <h2>Transporte</h2>
-                                    </div>
-                                    <div class="ui-body ui-body-a">
-                                        <div class="ui-grid-a ui-responsive">
-                                            <div class="ui-block-a">
-                                                <div class="ui-body ui-body-d">                    
-                                                    <center>
-                                                        <img width="300px" src="img/ford.jpg"><br>
-                                                    </center>
-                                                </div>
-                                            </div>
-                                            <div class="ui-block-b">
-                                                <div class="ui-body ui-body-d">
-                                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Toyota Yaris 1.3</h1>
-                                                    <div class="mb-1">
-                                                        <span class="badge badge-primary">Keddy By Europcar</span>
-                                                        <span class="badge badge-success">Compacto</span><br>
-                                                        <i class="pr-4 fas fa-chair"><span class="pl-2">4 asientos</span></i>
-                                                        <i class="pr-4 fas fa-cogs"><span class="pl-2">Manual</span></i>
-                                                        <i class="fas fa-door-closed"><span class="pl-2">4 puertas</span></i>
-                                                    </div>
-                                                    <center>
-                                                        <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
-                                                    </center>
-                                                </div> 
-                                            </div>
-                                        </div> /grid-a 
-                                    </div>
-                                </div>
-                
-                                <br><hr><br>
-                
-                                <div class="ui-corner-all custom-corners">
-                                    <div class="ui-bar ui-bar-a">
-                                        <h2>Transporte</h2>
-                                    </div>
-                                    <div class="ui-body ui-body-a">
-                                        <div class="ui-grid-a ui-responsive">
-                                            <div class="ui-block-a">
-                                                <div class="ui-body ui-body-d">                    
-                                                    <center>
-                                                        <img width="300px" src="img/ford.jpg"><br>
-                                                    </center>
-                                                </div>
-                                            </div>
-                                            <div class="ui-block-b">
-                                                <div class="ui-body ui-body-d">
-                                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Toyota Corolla Sedan</h1>
-                                                    <div class="mb-1">
-                                                        <span class="badge badge-primary">Sixt</span>
-                                                        <span class="badge badge-success">Económico</span><br>
-                                                        <i class="pr-4 fas fa-chair"><span class="pl-2">4 asientos</span></i>
-                                                        <i class="pr-4 fas fa-cogs"><span class="pl-2">Manual</span></i>
-                                                        <i class="fas fa-door-closed"><span class="pl-2">4 puertas</span></i>
-                                                    </div>
-                                                    <div class="mb-1">
-                                                        <i class="fas fa-wind"><span class="pl-2">Aire acondicionado</span></i>
-                                                    </div>
-                                                    <center>
-                                                        <button class="ui-btn" type="submit" style="width:200px">Leer más</button>
-                                                    </center>
-                                                </div> 
-                                            </div>
-                                        </div> /grid-a 
-                                    </div>
-                                </div>
-                
-                                <br><hr><br>-->
-
-            </div><!-- /content -->
+            </div>
 
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">

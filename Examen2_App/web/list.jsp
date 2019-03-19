@@ -72,7 +72,7 @@
                                 <i class="fas fa-users pr-2" style="color: #28a745;"></i><span><s:property value="CantidadHuespedes"></s:property></span>
                                 <i class="fas fa-money-bill pr-1 pl-2" style="color: #4caf50; margin-top: 15px;"></i> ₡ <s:property value="Precio"></s:property><br>
                                 <center>
-                                    <a class="btn" data-role="button" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
+                                    <a class="btn btn-success" style="margin: 20px auto; color:#fff; text-decoration: none;" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
                                 </center>
                             </div> 
                         </div>
