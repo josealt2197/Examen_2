@@ -23,6 +23,7 @@ public class model_services {
         return resultado;
     }
     
+    //--------------------------------------------------ALOJAMIENTO------------------------------------------------------------------
     public boolean insertReservations(reservaciones r){
         boolean resultado = false;        
         
@@ -58,7 +59,24 @@ public class model_services {
         return WebService.getBasicHttpBindingIHotelGeneratorService().searchHotel(id);
     }
     
-    /////////////////////////////////////////////////////////////////////////////////////
+    //--------------------------------------------------TIPO DE CAMBIO------------------------------------------------------------------
+        //BANCO CENTRAL
+    
+    public String getCambioCompra(String fecha){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().getTipoCambioCompra(fecha);
+    }
+    
+    public String getCambioVenta(String fecha){
+        
+        HotelGeneratorService WebService = new HotelGeneratorService();       
+        
+        return WebService.getBasicHttpBindingIHotelGeneratorService().getTipoCambioVenta(fecha);
+    }
+    
+    //--------------------------------------------------VEHICULOS------------------------------------------------------------------
     public boolean insertCarReservations(car_reservation cr) {
         boolean resultado = false;
 

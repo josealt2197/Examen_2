@@ -38,12 +38,33 @@
                 <div class="ui-grid-a ui-responsive">
                     <div class="ui-block-a">
                         <div class="ui-body ui-body-d">                    
-<!--                            Tipo de cambio-->
+                            <center>
+                                <div class="mx-auto">
+                                    <div class="convertor-card">
+                                        <div class="base">
+                                            <span class="name">Compra</span>
+                                            <div class="value-section">
+                                                <span class="symbol">₡</span>
+                                                <span class="value"><%= controller_cambio.getCambioCompra()%></span>                            
+                                            </div>
+                                            <span class="abbr">Banco</span>
+                                        </div>
+                                        <div class="converted">
+                                            <span class="name">Venta</span>
+                                            <div class="value-section">
+                                                <span class="symbol">₡</span>
+                                                <span class="value"><%= controller_cambio.getCambioVenta()%></span>                            
+                                            </div>
+                                            <span class="abbr">Central</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </center>
                         </div>
                         <hr><hr>
                     </div>
                 </div>
-                    
+
 
             </div>
 
