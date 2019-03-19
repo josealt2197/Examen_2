@@ -64,19 +64,21 @@ public class controller_services extends ActionSupport {
     String submitType;
 
     public String insertReservacion() throws Exception {
-
+        String result = "";
         try {
             if(submitType.equals("load")){
                 hotel_info = de.selectOneHotel(id_hotel).getHotel();
+                result = "reservation";
             }else{
                 de.insertReservations(getR());
+                result = "success";
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return SUCCESS;
+        return result;
     }
 
     public String getSubmitType() {
@@ -176,21 +178,23 @@ public class controller_services extends ActionSupport {
     }
            
     public String insertCarReservacion() {  
-
+        String result = "";
         try {
             if (submitType.equals("updatedata")) {
                 model_services de = new model_services();
                 car_info = de.selectOneCar(id_vehiculo).getCar();
+                result = "reservation";
             } else {
                 model_services da = new model_services();
                 da.insertCarReservations(getCr());
+                result = "success";
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return SUCCESS;
+        return result;
     }
 
     //----------------Select de Vehiculos
