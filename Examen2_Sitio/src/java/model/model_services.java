@@ -2,10 +2,13 @@
 package model;
 
 import bean.car_reservation;
+import bean.flight_reservation;
 import bean.usuarios;
 import bean.reservaciones;
 import carservices.ArrayOfCar;
 import carservices.CarService;
+import flightservices.ArrayOfFlight;
+import flightservices.FlightService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -179,6 +182,42 @@ public class model_services {
         CarService WebService = new CarService();
 
         return WebService.getBasicHttpBindingICarService().searchCar(id);
+    }
+    
+    
+      /////////////////////////////////////////////////////////////////////////////////////
+    public boolean insertFlightReservations(flight_reservation fr) {
+        boolean resultado = false;
+
+        int idVuelo = fr.getId_vuelo();
+        int idCliente = fr.getId_cliente();
+        String nombre = fr.getNombre();
+        String apellidos = fr.getApellido();
+        String telefono = fr.getTelefono();
+        String correo = fr.getCorreo();
+        int cantpasajeros = fr.getCantpasajeros();
+        String asientos = fr.getAsientos();
+        float costototal = fr.getCosto();
+
+        FlightService WebService = new FlightService();
+
+        WebService.getBasicHttpBindingIFlightService().insertFlightReservation(idVuelo, idCliente, nombre, apellidos, telefono, correo, cantpasajeros, asientos, costototal);
+
+        return resultado;
+    }
+
+    public ArrayOfFlight selectFlights() {
+
+        FlightService WebService = new FlightService();
+       
+        return WebService.getBasicHttpBindingIFlightService().selectFlight();
+    }
+
+    public ArrayOfFlight selectOneFlight(int id) {
+
+        FlightService WebService = new FlightService();
+
+        return WebService.getBasicHttpBindingIFlightService().searchFlight(id);
     }
 }
 

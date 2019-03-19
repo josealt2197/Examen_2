@@ -10,4 +10,8 @@
     <system systemId="http://localhost:58401/CarService.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/CarService/wsdl/localhost_58401/CarService.svc.xsd_xsd0.xsd"/>
     <system systemId="http://localhost:58401/CarService.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/CarService/wsdl/localhost_58401/CarService.svc.xsd_xsd1.xsd"/>
     <system systemId="http://localhost:58401/CarService.svc?xsd=xsd2" uri="src/conf/xml-resources/web-service-references/CarService/wsdl/localhost_58401/CarService.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://localhost:52396/FlightService.svc?wsdl" uri="src/conf/xml-resources/web-service-references/FlightService/wsdl/localhost_52396/FlightService.svc.wsdl"/>
+    <system systemId="http://localhost:52396/FlightService.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/FlightService/wsdl/localhost_52396/FlightService.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:52396/FlightService.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/FlightService/wsdl/localhost_52396/FlightService.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://localhost:52396/FlightService.svc?xsd=xsd2" uri="src/conf/xml-resources/web-service-references/FlightService/wsdl/localhost_52396/FlightService.svc.xsd_xsd2.xsd"/>
 </catalog>

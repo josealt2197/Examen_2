@@ -1,17 +1,18 @@
 package controller;
 
 import bean.car_reservation;
+import bean.flight_reservation;
 import bean.hotels;
 import bean.reservaciones;
 import bean.usuarios;
 import carservices.*;
+import flightservices.*;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Hotel;
 import model.model_services;
-
 
 public class controller_services {
     
@@ -239,6 +240,100 @@ public class controller_services {
     public String selectCar() {
         model_services de = new model_services();
         car_info = de.selectOneCar(idVehiculo).getCar();
+        return SUCCESS;
+    }
+    
+    //----------------Insert de Reservaciones Vehiculos
+    private int id_vuelo;
+    
+    private flight_reservation fr = new flight_reservation();  
+  
+    private List<Flight> flight_info = new ArrayList<>();
+
+    public int getId_vuelo() {
+        return id_vuelo;
+    }
+
+    public void setId_vuelo(int id_vuelo) {
+        this.id_vuelo = id_vuelo;
+    }
+
+    public flight_reservation getFr() {
+        return fr;
+    }
+
+    public void setFr(flight_reservation fr) {
+        this.fr = fr;
+    }
+
+    public List<Flight> getFlight_info() {
+        return flight_info;
+    }
+
+    public void setFlight_info(List<Flight> flight_info) {
+        this.flight_info = flight_info;
+    }
+        
+    public String insertFlightReservacion() {  
+
+        try {
+            if (submitType.equals("updatedata")) {
+                model_services di = new model_services();
+                flight_info = di.selectOneFlight(id_vuelo).getFlight();
+            } else {
+                model_services dp = new model_services();
+                dp.insertFlightReservations(getFr());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return SUCCESS;
+    }
+
+    //----------------Select de Vehiculos
+    private Flight f = new Flight(); 
+    
+    private List<Flight> flight_list = new ArrayList<>();
+
+    public Flight getF() {
+        return f;
+    }
+
+    public void setF(Flight f) {
+        this.f = f;
+    }
+
+    public List<Flight> getFlight_list() {
+        return flight_list;
+    }
+
+    public void setFlight_list(List<Flight> flight_list) {
+        this.flight_list = flight_list;
+    }
+       
+    public String selectFlights() {
+        model_services dm = new model_services();
+        flight_list = dm.selectFlights().getFlight();
+
+        return SUCCESS;
+    }
+
+    //----------------Select de un Vehiculo
+    private int idVuelo;
+
+    public int getIdVuelo() {
+        return idVuelo;
+    }
+
+    public void setIdVuelo(int idVuelo) {
+        this.idVuelo = idVuelo;
+    }
+
+    public String selectFlight() {
+        model_services de = new model_services();
+        flight_info = de.selectOneFlight(idVuelo).getFlight();
         return SUCCESS;
     }
 }

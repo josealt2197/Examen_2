@@ -58,5 +58,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/carservices"/>
         <delete dir="${build.generated.dir}/jax-wsCache/CarService"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-HotelGeneratorService, wsimport-client-CarService"/>
+    <target name="wsimport-client-FlightService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/FlightService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/FlightService" destdir="${build.generated.dir}/jax-wsCache/FlightService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/FlightService/wsdl/localhost_52396/FlightService.svc.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:52396/FlightService.svc?wsdl" xnocompile="true" xendorsed="true" package="flightservices">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/FlightService/wsdl/localhost_52396/FlightService.svc.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/FlightService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/FlightService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-FlightService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/flightservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/FlightService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-HotelGeneratorService, wsimport-client-CarService, wsimport-client-FlightService"/>
 </project>
