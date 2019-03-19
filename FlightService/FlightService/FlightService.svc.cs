@@ -13,7 +13,7 @@ namespace FlightService
     public class FlightService : IFlightService
     {
 
-        public FlightReservation InsertFlightReservation(int id_vuelo, int id_cliente, string nombre, string apellido, string telefono, string correo, int cantpasajeros, string asientos, float costototal)
+        public FlightReservation InsertFlightReservation(int id_vuelo, int id_cliente, string nombre, string apellido, string telefono, string correo, int cantpasajeros, string asientos, float costototal, string clase)
         {
             FlightReservation reservation = new FlightReservation();
 
@@ -27,7 +27,7 @@ namespace FlightService
                 reservation.correo = correo;
                 reservation.cantpasajeros = cantpasajeros;
                 reservation.asientos = asientos;
-                reservation.asientos = asientos;
+                reservation.clase = clase;
                 reservation.costototal = costototal;
 
                 dc.Configuration.ValidateOnSaveEnabled = false;

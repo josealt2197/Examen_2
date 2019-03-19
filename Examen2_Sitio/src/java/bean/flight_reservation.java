@@ -9,6 +9,7 @@ public class flight_reservation {
     private String apellido;
     private String telefono;
     private String correo;
+    private String clase;
     private int cantpasajeros;
     private String asientos;
     private float costo;
@@ -16,16 +17,25 @@ public class flight_reservation {
     public flight_reservation() {
     }
 
-    public flight_reservation(int id_vehiculo, int id_cliente, String nombre, String apellido, String telefono, String correo, int cantpasajeros, String asientos, float costo) {
-        this.id_vuelo = id_vehiculo;
+    public flight_reservation(int id_vuelo, int id_cliente, String nombre, String apellido, String telefono, String correo, String clase, int cantpasajeros, String asientos, float costo) {
+        this.id_vuelo = id_vuelo;
         this.id_cliente = id_cliente;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.correo = correo;
+        this.clase = clase;
         this.cantpasajeros = cantpasajeros;
         this.asientos = asientos;
         this.costo = costo;
+    }
+    
+    public String getClase() {
+        return clase;
+    }
+
+    public void setClase(String clase) {
+        this.clase = clase;
     }
 
     public int getId_vuelo() {

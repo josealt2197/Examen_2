@@ -33,7 +33,7 @@
     <Property Name="clase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="costototal" Type="Double" />
   </EntityType>
-  <EntityContainer Name="FlightDBEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="FlightDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Flights" EntityType="Self.Flight" />
     <EntitySet Name="FlightReservations" EntityType="Self.FlightReservation" />
   </EntityContainer>

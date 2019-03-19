@@ -15,7 +15,7 @@ namespace FlightService
     {
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "/insert_reservation", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
-        FlightReservation InsertFlightReservation(int id_vuelo, int id_cliente, string nombre, string apellido, string telefono, string correo, int cantpasajeros, string asientos, float costototal);
+        FlightReservation InsertFlightReservation(int id_vuelo, int id_cliente, string nombre, string apellido, string telefono, string correo, int cantpasajeros, string asientos, float costototal, string clase);
 
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/select_flights", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]

@@ -16,7 +16,7 @@ namespace FlightService.Models
     public partial class FlightDBEntities : DbContext
     {
         public FlightDBEntities()
-            : base("name=FlightDBEntities1")
+            : base("name=FlightDBEntities")
         {
         }
     

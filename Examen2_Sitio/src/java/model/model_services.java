@@ -197,11 +197,12 @@ public class model_services {
         String correo = fr.getCorreo();
         int cantpasajeros = fr.getCantpasajeros();
         String asientos = fr.getAsientos();
+        String clase = fr.getClase();
         float costototal = fr.getCosto();
 
         FlightService WebService = new FlightService();
 
-        WebService.getBasicHttpBindingIFlightService().insertFlightReservation(idVuelo, idCliente, nombre, apellidos, telefono, correo, cantpasajeros, asientos, costototal);
+        WebService.getBasicHttpBindingIFlightService().insertFlightReservation(idVuelo, idCliente, nombre, apellidos, telefono, correo, cantpasajeros, asientos, costototal, clase);
 
         return resultado;
     }

@@ -130,7 +130,7 @@
                     </div> 
                   </div>             
                   <div class="col-md-4 mx-auto">
-                    <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar Vuelos</button>
+                    <br><a href="viewflight_list" rel="external" type="submit" class="btn btn-block btn-lg btn-success">Buscar Vuelos</a>
                   </div>
                 </div>
               </form>

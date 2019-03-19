@@ -181,21 +181,24 @@ public class controller_services {
     }
         
     public String insertCarReservacion() {  
-
+        String result="";
         try {
             if (submitType.equals("updatedata")) {
                 model_services de = new model_services();
                 car_info = de.selectOneCar(id_vehiculo).getCar();
+                result = "reservation";
             } else {
                 model_services da = new model_services();
                 da.insertCarReservations(getCr());
+                result = "success";
             }
 
         } catch (Exception e) {
             e.printStackTrace();
+            result = "error";
         }
 
-        return SUCCESS;
+        return result;
     }
 
     //----------------Select de Vehiculos
@@ -275,21 +278,24 @@ public class controller_services {
     }
         
     public String insertFlightReservacion() {  
-
+        String result ="";
         try {
             if (submitType.equals("updatedata")) {
                 model_services di = new model_services();
                 flight_info = di.selectOneFlight(id_vuelo).getFlight();
+                result = "reservation";
             } else {
                 model_services dp = new model_services();
                 dp.insertFlightReservations(getFr());
+                result = "success";
             }
 
         } catch (Exception e) {
             e.printStackTrace();
+            result = "error";
         }
 
-        return SUCCESS;
+        return result;
     }
 
     //----------------Select de Vehiculos

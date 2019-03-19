@@ -80,7 +80,7 @@
           <Property Name="clase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="costototal" Type="Double" />
         </EntityType>
-        <EntityContainer Name="FlightDBEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FlightDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Flights" EntityType="Self.Flight" />
           <EntitySet Name="FlightReservations" EntityType="Self.FlightReservation" />
         </EntityContainer>
@@ -89,7 +89,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FlightDBModelStoreContainer" CdmEntityContainer="FlightDBEntities1">
+        <EntityContainerMapping StorageEntityContainer="FlightDBModelStoreContainer" CdmEntityContainer="FlightDBEntities">
           <EntitySetMapping Name="Flights">
             <EntityTypeMapping TypeName="FlightDBModel.Flight">
               <MappingFragment StoreEntitySet="Flight">
