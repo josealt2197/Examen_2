@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
     <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
     <link rel="shortcut icon" href="./img/costa-rica64.png">
+    
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
     <script src="jqmobile/demos/js/jquery.js"></script>
     <script src="jqmobile/demos/_assets/js/index.js"></script>
     <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -33,8 +36,11 @@
                 <label for="password">Contraseña:</label>
                 <s:textfield type="password" name="u.password" value=""></s:textfield>
                 <center>
-                    <a href="pre_register.jsp">Regístrate</a><br>
-                    <s:submit type="submit" data-role="button" data-theme="b" data-inline="true" value="Ingresar"></s:submit>
+                    <s:submit type="submit" data-role="button" data-theme="b" data-inline="true" value="Ingresar"></s:submit><br>
+                    <hr class="mb-3">
+                    
+                    <h6 class="mt-5">¿Aún no tienes una cuenta?</h6>
+                    <a class="btn btn-success mt-1" style="max-width:200px; color:#fff; text-decoration: none;" href="pre_register.jsp">Regístrate</a><br>
                 </center>
             </s:form>    
         </div>	
