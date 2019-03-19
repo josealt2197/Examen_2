@@ -62,7 +62,8 @@
                                 <span class="badge badge-primary badge-pill">Internacional</span><span class="ml-3 badge badge-info">Oferta del Mes</span>
                             </div>
                             <div class="col-md-3">
-                                <a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vuelo.action?submitType=updatedata&id_vuelo=<s:property value="id"></s:property>">Reservar</a>
+                                <center><h2 style="color:#28A745"><strong></strong>$<s:property value="costo.getValue()"></s:property></h2></center>
+                                <br><a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vuelo.action?submitType=updatedata&id_vuelo=<s:property value="id"></s:property>">Reservar</a>
                             </div>
                         </div>	
                     </div>
@@ -74,7 +75,7 @@
                             </h3>
                             <div class="blog-post">
 
-                                <p><strong>Fecha del Vuelo: </strong><s:property value="fecha.getValue()"></s:property></p>
+                            <p><strong>Fecha del Vuelo: </strong><s:property value="fecha.getValue()"></s:property></p>
                             <p><strong>Hora de Salida: </strong><s:property value="horasalida.getValue()"></s:property></p>
                             <p><strong>Hora de Llegada: </strong><s:property value="horallegada.getValue()"></s:property></p>
                             <p><strong>Aeronave:</strong> <s:property value="avion.getValue()"></s:property></p>
@@ -86,7 +87,7 @@
                         <aside class="col-md-6 blog-sidebar">
                             <img class="card-img-right flex-auto d-none d-md-block" width="220px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"><br> 
                             <div class="p-4 mb-3 bg-light rounded">
-                                <p><strong>Origen:</strong> <s:property value="origen.getValue()"></s:property></p>
+                            <p><strong>Origen:</strong> <s:property value="origen.getValue()"></s:property></p>
                             <p><strong>Destino:</strong> <s:property value="destino.getValue()"></s:property></p>
                             <p><strong>Duración:</strong> <s:property value="destino.getValue()"></s:property></p>		               
                             </div>

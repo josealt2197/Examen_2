@@ -102,11 +102,12 @@
                                         <br>
                                         <p><strong><s:property value="fecha.getValue()"></s:property></strong></p>
                                         <p><strong><s:property value="horasalida.getValue()"></s:property> - <s:property value="horallegada.getValue()"></s:property></strong></p>
+                                        <h5 style="color:#28A745"><strong></strong>$<s:property value="costo.getValue()"></s:property></h5>
                                     </div>
 
                                     <div class="col-md-4 mx-auto">
                                         <center><img class="card-img-right flex-auto d-none d-md-block" width="150px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"></center><br> 
-                                        <br><a class="btn btn-success" href="viewflight_detail.action?idVuelo=<s:property value="id"></s:property>">Leer más</a>
+                                        <br><a class="btn btn-success" href="viewflight_detail.action?idVuelo=<s:property value="id"></s:property>">Ver oferta</a>
                                     </div>
 
                                 </div>
