@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Flights">
       <EntityTypeMapping TypeName="FlightDBModel.Flight">
         <MappingFragment StoreEntitySet="Flight">
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="vuelo" ColumnName="vuelo" />
           <ScalarProperty Name="aerolinea" ColumnName="aerolinea" />

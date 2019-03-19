@@ -1,7 +1,10 @@
 
 package bean;
 
-public class car_reservation {
+import java.io.Serializable;
+
+public class car_reservation implements Serializable{
+    
     
     private int id_vehiculo;
     private int id_cliente;

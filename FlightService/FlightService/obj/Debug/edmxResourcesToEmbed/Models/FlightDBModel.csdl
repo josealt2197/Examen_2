@@ -16,6 +16,8 @@
     <Property Name="serviciosincluidos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="disponibles" Type="Int32" />
     <Property Name="avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imagen" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="costo" Type="Double" />
   </EntityType>
   <EntityType Name="FlightReservation">
     <Key>

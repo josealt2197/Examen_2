@@ -62,7 +62,7 @@
                                 <span class="badge badge-primary badge-pill">Internacional</span><span class="ml-3 badge badge-info">Oferta del Mes</span>
                             </div>
                             <div class="col-md-3">
-                                <a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vuelo.action?submitType=updatedata&id_vuelo=<s:property value="idVuelo"></s:property>">Reservar</a>
+                                <a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vuelo.action?submitType=updatedata&id_vuelo=<s:property value="id"></s:property>">Reservar</a>
                             </div>
                         </div>	
                     </div>
@@ -84,7 +84,7 @@
                         </div>
 
                         <aside class="col-md-6 blog-sidebar">
-                            <br><br><br>
+                            <img class="card-img-right flex-auto d-none d-md-block" width="220px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"><br> 
                             <div class="p-4 mb-3 bg-light rounded">
                                 <p><strong>Origen:</strong> <s:property value="origen.getValue()"></s:property></p>
                             <p><strong>Destino:</strong> <s:property value="destino.getValue()"></s:property></p>

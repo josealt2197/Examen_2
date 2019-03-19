@@ -16,6 +16,8 @@
     <Property Name="serviciosincluidos" Type="varchar" MaxLength="500" />
     <Property Name="disponibles" Type="int" />
     <Property Name="avion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="imagen" Type="varchar" MaxLength="100" />
+    <Property Name="costo" Type="float" />
   </EntityType>
   <EntityType Name="FlightReservation">
     <Key>

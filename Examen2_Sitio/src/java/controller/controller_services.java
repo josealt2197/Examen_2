@@ -93,6 +93,7 @@ public class controller_services {
 
         } catch (Exception e) {
             e.printStackTrace();
+            result = "error";
         }
 
         return result;
@@ -204,6 +205,7 @@ public class controller_services {
             } else {
                 model_services da = new model_services();
                 da.insertCarReservations(getCr());
+                System.out.println(" ");
                 result = "success";
             }
 

@@ -1,9 +1,12 @@
 
 package bean;
 
-public class flight_reservation {
+import java.io.Serializable;
+
+public class flight_reservation implements Serializable{
+    
         
-    private int id_vuelo;
+    public int id_vuelo;
     private int id_cliente;
     private String nombre;
     private String apellido;
@@ -12,7 +15,7 @@ public class flight_reservation {
     private String clase;
     private int cantpasajeros;
     private String asientos;
-    private float costo;
+    public float costo;
 
     public flight_reservation() {
     }

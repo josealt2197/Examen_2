@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FlightDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FlightDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Flight">
           <Key>
             <PropertyRef Name="Id" />
@@ -21,6 +21,8 @@
           <Property Name="serviciosincluidos" Type="varchar" MaxLength="500" />
           <Property Name="disponibles" Type="int" />
           <Property Name="avion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="imagen" Type="varchar" MaxLength="100" />
+          <Property Name="costo" Type="float" />
         </EntityType>
         <EntityType Name="FlightReservation">
           <Key>
@@ -42,8 +44,7 @@
           <EntitySet Name="Flight" EntityType="Self.Flight" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FlightReservation" EntityType="Self.FlightReservation" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FlightDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -63,6 +64,8 @@
           <Property Name="serviciosincluidos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="disponibles" Type="Int32" />
           <Property Name="avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="imagen" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="costo" Type="Double" />
         </EntityType>
         <EntityType Name="FlightReservation">
           <Key>
@@ -93,6 +96,8 @@
           <EntitySetMapping Name="Flights">
             <EntityTypeMapping TypeName="FlightDBModel.Flight">
               <MappingFragment StoreEntitySet="Flight">
+                <ScalarProperty Name="costo" ColumnName="costo" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="vuelo" ColumnName="vuelo" />
                 <ScalarProperty Name="aerolinea" ColumnName="aerolinea" />

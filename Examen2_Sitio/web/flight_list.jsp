@@ -92,18 +92,20 @@
 
                                 <div class="row">
                                     <div class="col-md-4 mx-auto">
+                                        <br>
                                         <p><strong><s:property value="origen.getValue()"></s:property></strong></p>
                                         <p><strong><s:property value="destino.getValue()"></s:property></strong></p>
                                         <p><strong><s:property value="duracion.getValue()"></s:property></strong></p>
                                     </div>
 
                                     <div class="col-md-4 mx-auto">
+                                        <br>
                                         <p><strong><s:property value="fecha.getValue()"></s:property></strong></p>
                                         <p><strong><s:property value="horasalida.getValue()"></s:property> - <s:property value="horallegada.getValue()"></s:property></strong></p>
                                     </div>
 
                                     <div class="col-md-4 mx-auto">
-                                        <p><strong><s:property value="aerolinea.getValue()"></s:property></strong></p>
+                                        <center><img class="card-img-right flex-auto d-none d-md-block" width="150px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"></center><br> 
                                         <br><a class="btn btn-success" href="viewflight_detail.action?idVuelo=<s:property value="id"></s:property>">Leer más</a>
                                     </div>
 

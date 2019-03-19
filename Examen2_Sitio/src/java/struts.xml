@@ -16,8 +16,9 @@
         </action>
         
         <action name="registrar_reservacion" class="controller.controller_services" method="insertReservacion"> 
+            <result name="reservation">place_reservation.jsp</result>
             <result name="success">success.jsp</result> 
-            <result name="reservation">place_reservation.jsp</result>         
+            <result name="error">error.jsp</result>           
         </action>
         <action name="viewrecords" class="controller.controller_services" method="selectHoteles">  
             <result name="success">list.jsp</result>  
@@ -27,7 +28,9 @@
         </action> 
         
         <action name="reservacion_vehiculo" class="controller.controller_services" method="insertCarReservacion">
-            <result name="success">car_reservation.jsp</result>
+            <result name="reservation">car_reservation.jsp</result>
+            <result name="success">success.jsp</result> 
+            <result name="error">error.jsp</result>  
         </action> 
         <action name="viewcar_list" class="controller.controller_services" method="selectCars">  
             <result name="success">car_list.jsp</result>  
@@ -37,7 +40,9 @@
         </action> 
         
         <action name="reservacion_vuelo" class="controller.controller_services" method="insertFlightReservacion">
-            <result name="success">flight_reservation.jsp</result>
+            <result name="reservation">flight_reservation.jsp</result>
+            <result name="success">success.jsp</result> 
+            <result name="error">error.jsp</result>  
         </action> 
         <action name="viewflight_list" class="controller.controller_services" method="selectFlights">  
             <result name="success">flight_list.jsp</result>  

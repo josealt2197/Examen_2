@@ -26,5 +26,7 @@ namespace FlightService.Models
         public string serviciosincluidos { get; set; }
         public Nullable<int> disponibles { get; set; }
         public string avion { get; set; }
+        public string imagen { get; set; }
+        public Nullable<double> costo { get; set; }
     }
 }
