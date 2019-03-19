@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +11,11 @@
         <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="shortcut icon" href="./img/costa-rica64.png">
+        
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        
         <script src="jqmobile/demos/js/jquery.js"></script>
         <script src="jqmobile/demos/_assets/js/index.js"></script>
         <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
@@ -32,12 +35,12 @@
                 <h2 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Registrarse</h2>
 
                 <div class="sign-in-body" >
-                    <form class="form-signin">
+                     <s:form  theme="simple" cssClass="form-signin" action = "pre_register" method = "post">
                         <p> Antes de poder completar tu registro necesitamos confimar tu dirección de <b>correo electrónico</b>. </p><br/>
-                        <label for="inputEmail" class="sr-only">Correo Electronico</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
-                        <br/><button class="btn btn-lg btn-success btn-block" type="submit">Continuar</button>
-                    </form>
+                        <label for="inputEmail" class="sr-only">Correo Electrónico</label>
+                        <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.correo" placeholder="Correo Electrónico" required="required"></s:textfield>
+                        <br/><s:submit cssClass="btn btn-success" style="color:#fff; text-decoration: none;" type="submit" value="Enviar"></s:submit>
+                    </s:form>
                 </div>
             </div>
 

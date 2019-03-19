@@ -4,24 +4,21 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>TicoBooking</title>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-        <!-- Custom fonts for this template -->
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-        <!-- Custom styles for this template -->
-        <link href="css/style.css" rel="stylesheet">
-
-        <link rel="icon" href="img/costa-rica64.png">
+        <link rel="stylesheet" href="css/theme/customAB.css" />
+        <link rel="stylesheet" href="css/theme/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
+        <link rel="shortcut icon" href="./img/costa-rica64.png">
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+        <script src="jqmobile/demos/js/jquery.js"></script>
+        <script src="jqmobile/demos/_assets/js/index.js"></script>
+        <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="TicoBooking">
@@ -32,7 +29,7 @@
             </div>
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#0071bc;">Reservación Completada</h2>
+                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#0071bc;">¡Vaya!</h2>
 
                 <div class="pt-menu">
                     <div class="sign-in-body" style="background-color: transparent;">
@@ -50,8 +47,8 @@
                             </center>
                             <div class="checkbox mb-3">
                                 <center>
-                                    <h5>
-                                        <a class="btn btn-error" style="margin: 20px auto; color:#fff;" onclick="location.href = 'index.jsp'">Volver al inicio</a>
+                                    <h5 style="margin-top: 20px;">
+                                        <a class="btn-error" style="margin: 30px auto; color:#fff;" onclick="location.href = 'index.jsp'">Volver al inicio</a>
                                     </h5>
                                 </center>
                             </div>
