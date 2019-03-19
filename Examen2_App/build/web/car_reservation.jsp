@@ -36,35 +36,36 @@
                 <div class="ui-grid-a ui-responsive">
                     <div class="ui-block-a">
                         <div class="ui-body ui-body-d">                    
-
-                            <div>
+                            <s:iterator  value="car_info">
                                 <div>
-                                    <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Ford Fiesta</h1><br>
                                     <div>
-                                        <div>
-                                            <center>
-                                                <img width="300px" src="img/ford.jpg"><br>
-                                            </center>
-                                            <ul style="list-style-type: none;">
-                                                <h2>Empresa</h2>
-                                                <li>Enterprise Rent-A-Car</li>
-                                            </ul>
-                                            <ul style="list-style-type: none;" >
-                                                <h2>Tipo</h2>
-                                                <li>Compacto</li>
-                                            </ul>
-                                            <ul style="list-style-type: none;" >
-                                                <h2>Kilometraje</h2>
-                                                <li>Ilimitado</li>
-                                            </ul>
-                                            <ul style="list-style-type: none;" >
-                                                <h2>Transmisión</h2>
-                                                <li>Manual</li>
-                                            </ul>
+                                        <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="modelo.getValue()"></s:property></h1><br>
+                                            <div>
+                                                <div>
+                                                    <center>
+                                                        <img width="290px" src="<s:property value="imagen.getValue()"></s:property>"><br>
+                                                    </center>
+                                                    <ul style="list-style-type: none;">
+                                                        <h2>Empresa:</h2>
+                                                        <li><s:property value="empresa.getValue()"></s:property></li>
+                                                    </ul>
+                                                    <ul style="list-style-type: none;" >
+                                                        <h2>Tipo:</h2>
+                                                        <li><s:property value="tipo.getValue()"></s:property></li>
+                                                    </ul>
+                                                    <ul style="list-style-type: none;" >
+                                                        <h2>Kilometraje:</h2>
+                                                        <li><s:property value="tipo.getValue()"></s:property></li>
+                                                    </ul>
+                                                    <ul style="list-style-type: none;" >
+                                                        <h2>Transmisión:</h2>
+                                                        <li><s:property value="transmision.getValue()"></s:property></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                            </s:iterator>
                         </div>
                         <hr><hr>
                     </div>
@@ -73,33 +74,50 @@
                         <div class="ui-body ui-body-d">
 
                             <div class='alert alert-success'>
-                                <strong>¿Aún no has iniciado sesión?</strong><p>Puedes iniciar sesión para completar tus datos personales con tu perfil o crea una cuenta para estar en contacto contigo.</p>
+                                <strong>¿Aún no has iniciado sesión?</strong><br><p>Puedes <a href="login.jsp" rel="external" style="text-decoration: none;">iniciar sesión</a> para completar tus datos personales con tu perfil o <a href="pre_register.jsp" rel="external" style="text-decoration: none;">crea una cuenta</a> para estar en contacto contigo.</p>
                             </div>
                             <h4 class="mb-3">Datos personales</h4>
-                            <s:form theme="simple" cssClass="needs-validation" action = "registrar_reservacion" id="registration_form" method = "post">
+                            <s:form theme="simple" cssClass="needs-validation" action = "reservacion_vehiculo" method = "post">
                                 <div class="row">
+                                    <div style="display:none">
+                                        <input type="text" class="form-control" name="cr.id_vehiculo" value="<s:property value='id_vehiculo'/>" >
+                                    </div>
                                     <div class="col-md-4 mb-3">
-                                        <label for="firstName">Nombre</label>
-                                        <s:textfield type="text" cssClass="form-control" id="firstName" placeholder="" value="" required="required"></s:textfield>
+                                        <label for="id">Cédula</label>
+                                        <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
+                                            <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+                                            <div class="invalid-feedback">
+                                                Este campo es requerido.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="firstName">Nombre</label>
+                                        <s:textfield type="text" cssClass="form-control" name = "cr.nombre" placeholder="Nombre" value="" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="lastName">Apellidos</label>
-                                        <s:textfield type="text" cssClass="form-control" id="lastName" placeholder="" value="" required="required"></s:textfield>
+                                        <s:textfield type="text" cssClass="form-control" name = "cr.apellido" placeholder="Apellidos" value="" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="phone">Teléfono</label>
-                                        <s:textfield type="text" cssClass="form-control" id="phone" placeholder="" value="" required="required"></s:textfield>
+                                        <s:textfield type="text" cssClass="form-control" name = "cr.telefono" placeholder="85603215" value="" required="required"></s:textfield>
                                         </div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="email">Correo electrónico</label>
-                                    <s:textfield type="email" cssClass="form-control" id="email" placeholder="ticobooking@correo.com" value="" required="required"></s:textfield>
+                                    <s:textfield type="email" cssClass="form-control" name = "cr.correo" placeholder="ticobooking@correo.com" value="" required="required"></s:textfield>
+                                        <div class="invalid-feedback">
+                                            Este campo es requerido.
+                                        </div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="repeatemail">Repita su correo electrónico</label>
-                                    <s:textfield type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required="required"></s:textfield>
+                                        <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required>
+                                        <div class="invalid-feedback">
+                                            Este campo es requerido.
+                                        </div>
                                     </div>
                                     <hr class="mb-4">
 
@@ -107,51 +125,37 @@
 
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
-                                            <label for="check-in-date">Fecha de entrada</label>
-                                        <s:textfield type="date" cssClass="form-control" id="check-in-date" placeholder="" required="required"></s:textfield>
+                                            <label for="check-in-date">Fecha de Pick-up</label>
+                                        <s:textfield type="date" cssClass="form-control" name = "cr.fentrada" placeholder="Fecha de entrada" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="check-in-time">Hora de entrada</label>
-                                        <s:textfield type="time" cssClass="form-control" id="check-in-time" placeholder="" required="required"></s:textfield>
+                                            <label for="check-in-time">Hora de Pick-up</label>
+                                        <s:textfield type="time" cssClass="form-control" name = "cr.hentrada" placeholder="Hora de entrada" required="required"></s:textfield>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
-                                            <label for="check-out-date">Fecha de salida</label>
-                                        <s:textfield type="date" cssClass="form-control" id="check-in-date" placeholder="" required="required"></s:textfield>
+                                            <label for="check-out-date">Fecha de Drop-off</label>
+                                        <s:textfield type="date" cssClass="form-control" name = "cr.fsalida" placeholder="Fecha de salida" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="check-out-time">Hora de salida</label>
-                                        <s:textfield type="time" cssClass="form-control" id="check-out-time" placeholder="" required="required"></s:textfield>
+                                            <label for="check-out-time">Hora de Drop-off</label>
+                                        <s:textfield type="time" cssClass="form-control" name = "cr.hsalida" placeholder="Hora de salida" required="required"></s:textfield>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="lugar-r">Recoger</label>
-                                        <s:textfield type="text" cssClass="form-control" id="lugar-r" placeholder="" required="required"></s:textfield>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="lugar-f">Dejar</label>
-                                        <s:textfield type="text" cssClass="form-control" id="lugar-f" placeholder="" required="required"></s:textfield>
+                                    <div class="mb-3">
+                                        <label for="pick-place">Lugar de Pick-up / Drop-off</label>
+                                    <s:textfield type = "text" cssClass="form-control" id="check-in" name = "cr.lugar" placeholder="Fecha de entrada" required="required"></s:textfield>
+                                        <div class="invalid-feedback">
+                                            Este campo es requerido.
                                         </div>
                                     </div>
-                                    <hr class="mb-4">
-
-                                    <h4 class="mb-3">Envía alguna petición/comentario</h4>
-                                    <div class="row">
-                                        <div class="col-md-12 mb-3">
-                                            <label for="comments">Comentarios</label>
-                                        <s:textarea id="comments" cssClass="form-control" cols="30" rows="8"></s:textarea>
-                                            <small class="text-muted">Las peticiones especiales no se pueden garantizar, pero haremos todo lo posible para atender tu solicitud de la mejor manera. 
-                                                ¡También puedes enviarnos tu petición especial cuando hayas realizado la reserva!</small>
-                                        </div>
-                                    </div> 
 
                                     <hr class="mb-4">
                                     <center>
-                                        <button class="btn btn-success btn-lg btn-block" style="max-width:200px;" type="submit">Reservar</button>
+                                        <button class="btn btn-success btn-lg btn-block" style="max-width:200px;" name="submitType" type="submit">Reservar</button>
                                     </center>
                             </s:form>
 

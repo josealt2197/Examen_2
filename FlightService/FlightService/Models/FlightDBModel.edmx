@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FlightDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Flight">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vuelo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="aerolinea" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="origen" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="destino" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="horasalida" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="horallegada" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="duracion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="serviciosincluidos" Type="varchar" MaxLength="500" />
+          <Property Name="disponibles" Type="int" />
+          <Property Name="avion" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FlightReservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idVuelo" Type="int" Nullable="false" />
+          <Property Name="idCliente" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="cantpasajeros" Type="int" />
+          <Property Name="asientos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="clase" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="costototal" Type="float" />
+        </EntityType>
+        <EntityContainer Name="FlightDBModelStoreContainer">
+          <EntitySet Name="Flight" EntityType="Self.Flight" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FlightReservation" EntityType="Self.FlightReservation" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FlightDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Flight">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vuelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="aerolinea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="origen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="destino" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="horasalida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="horallegada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="duracion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="serviciosincluidos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="disponibles" Type="Int32" />
+          <Property Name="avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FlightReservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idVuelo" Type="Int32" Nullable="false" />
+          <Property Name="idCliente" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cantpasajeros" Type="Int32" />
+          <Property Name="asientos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="clase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="costototal" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="FlightDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Flights" EntityType="Self.Flight" />
+          <EntitySet Name="FlightReservations" EntityType="Self.FlightReservation" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FlightDBModelStoreContainer" CdmEntityContainer="FlightDBEntities1">
+          <EntitySetMapping Name="Flights">
+            <EntityTypeMapping TypeName="FlightDBModel.Flight">
+              <MappingFragment StoreEntitySet="Flight">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="vuelo" ColumnName="vuelo" />
+                <ScalarProperty Name="aerolinea" ColumnName="aerolinea" />
+                <ScalarProperty Name="origen" ColumnName="origen" />
+                <ScalarProperty Name="destino" ColumnName="destino" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="horasalida" ColumnName="horasalida" />
+                <ScalarProperty Name="horallegada" ColumnName="horallegada" />
+                <ScalarProperty Name="duracion" ColumnName="duracion" />
+                <ScalarProperty Name="serviciosincluidos" ColumnName="serviciosincluidos" />
+                <ScalarProperty Name="disponibles" ColumnName="disponibles" />
+                <ScalarProperty Name="avion" ColumnName="avion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FlightReservations">
+            <EntityTypeMapping TypeName="FlightDBModel.FlightReservation">
+              <MappingFragment StoreEntitySet="FlightReservation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="idVuelo" ColumnName="idVuelo" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="cantpasajeros" ColumnName="cantpasajeros" />
+                <ScalarProperty Name="asientos" ColumnName="asientos" />
+                <ScalarProperty Name="clase" ColumnName="clase" />
+                <ScalarProperty Name="costototal" ColumnName="costototal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
