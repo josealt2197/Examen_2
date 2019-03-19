@@ -534,6 +534,33 @@ body {
     background-size: cover;    
 }
 
+.place-body-other{
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;    
+}
+
+.bg1{
+    background-image: url(../img/volcano.jpg); 
+}
+
+.bg2{
+    background-image: url(../img/playa.jpg);    
+}
+
+.bg3{
+    background-image: url(../img/teatro.jpg);     
+}
+
+.bg4{
+    background-image: url(../img/fortuna.jpg);     
+}
+
+.bg5{
+    background-image: url(../img/jimenez.jpg);     
+}
+
 /*--------------Selector de asientos--------------------*/
 
 .theatre {
