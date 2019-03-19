@@ -4,13 +4,14 @@ import bean.*;
 import carservices.*;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Hotel;
 import model.model_services;
 
 public class controller_services extends ActionSupport {
-    //----------------Insert de Usuarios
+    //-------------------------INSERT DE USUARIOS--------------------------------------------
 
     private usuarios u = new usuarios();
 
@@ -22,14 +23,36 @@ public class controller_services extends ActionSupport {
         this.u = u;
     }
 
-    public String insertUsuario() {
+    public String insertUsuario() throws SQLException {
         model_services da = new model_services();
         da.insertU(getU());
 
         return SUCCESS;
     }
 
-    //----------------Insert de Reservaciones
+    //-------------------------CORREO ELECTRONICO--------------------------------------------
+    public String proccessRegister() {
+        model_services da = new model_services();
+        da.sendEmail(getU());
+
+        return SUCCESS;
+    }
+    
+    //-------------------------COMPROBACIÓN EN LOGIN--------------------------------------------
+        public String Login() throws SQLException{
+        String result = "";
+        model_services da = new model_services();
+        
+        if("correcto".equals(da.consulta_inicio(getU()))){
+            result = "correcto";
+        }else if("incorrecto".equals(da.consulta_inicio(getU()))){
+            result = "incorrecto";
+        }
+        
+        return result;
+    }
+        
+    //-------------------------METODOS DE HOTELES--------------------------------------------
     private int id_hotel;
 
     private reservaciones r = new reservaciones();
@@ -66,10 +89,10 @@ public class controller_services extends ActionSupport {
     public String insertReservacion() throws Exception {
         String result = "";
         try {
-            if(submitType.equals("load")){
+            if (submitType.equals("load")) {
                 hotel_info = de.selectOneHotel(id_hotel).getHotel();
                 result = "reservation";
-            }else{
+            } else {
                 de.insertReservations(getR());
                 result = "success";
             }
@@ -144,9 +167,11 @@ public class controller_services extends ActionSupport {
         hotel_info = da.selectOneHotel(id).getHotel();
         return SUCCESS;
     }
-    ////////////////////////////////////////////////////////////////////////////
     
-        //----------------Insert de Reservaciones Vehiculos
+    
+    //-------------------------METODOS DE VEHICULOS--------------------------------------------
+
+    //----------------Insert de Reservaciones Vehiculos
     private int id_vehiculo;
 
     public int getId_vehiculo() {
@@ -166,7 +191,7 @@ public class controller_services extends ActionSupport {
     public void setCr(car_reservation cr) {
         this.cr = cr;
     }
-    
+
     private List<Car> car_info = new ArrayList<>();
 
     public List<Car> getCar_info() {
@@ -176,8 +201,8 @@ public class controller_services extends ActionSupport {
     public void setCar_info(List<Car> car_info) {
         this.car_info = car_info;
     }
-           
-    public String insertCarReservacion() {  
+
+    public String insertCarReservacion() {
         String result = "";
         try {
             if (submitType.equals("updatedata")) {

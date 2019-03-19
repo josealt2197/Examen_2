@@ -69,6 +69,6 @@
                     <p class="copyright">© Copyright 2019</p>
                 </center>
             </div>
-        </div><!-- /page1 -->
+        </div>
     </body>
 </html>

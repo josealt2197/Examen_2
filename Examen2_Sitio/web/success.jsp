@@ -66,7 +66,7 @@
                     <div class="checkbox mb-3">
                         <center><h5>
                                 <a href="index.jsp" class="btn btn-lg btn-success btn-block">Volver al inicio</a>
-                        </label></h5>
+                        </h5></center>
                     </div>
                 </form>
             </div>    
