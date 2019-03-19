@@ -65,13 +65,12 @@
                                 <h1 class="mb-3" style="color:#4caf50;">Vuelos<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
                                 <h4>Realizar otra busqueda</h4><br>
                                 <input type="text" class="form-control form-control-lg" placeholder="¿A dónde te gustaría ir?"><br>
-                                <select class="form-control form-control-lg" >
-                                    <option>¿Qué clase necesitas?</option>
-                                    <option>Economica</option>
-                                    <option>Economica Superior</option>
-                                    <option>Business</option>
-                                    <option>Primera</option>
-                                </select><br>
+                                <center><h5>¿Cuándo lo necesitas?</h5></center>
+                                <input type="date" class="form-control form-control-lg" placeholder="¿Cuándo lo necesitas?"><br>
+                                <div class="radio">
+                                    <h6><input type="radio" name="optradio" checked>Solo ida</h6>
+                                    <h6><input type="radio" name="optradio" disabled>Ida - Vuelta</h>
+                                </div> 
                             </div>             
                         </div>
                         <div class="col-md-4 mx-auto">

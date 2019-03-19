@@ -73,40 +73,43 @@
                         <div style="display:none;">
                             <input type="text" class="form-control" name="fr.id_vuelo" value="<s:property value='id_vuelo'/>" >
                         </div>
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <label for="id">Cédula</label>
-                                <s:textfield type = "text" cssClass="form-control" id="id" name = "fr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
-                                <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
-                                <div class="invalid-feedback">
-                                    Este campo es requerido.
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
+                         <div class="row">
+                            <div class="col-md-6 mb-3">
                                 <label for="firstname">Nombre</label>
                                 <s:textfield type = "text" cssClass="form-control" id="firstname" name = "fr.nombre" placeholder="Nombre" required="required"></s:textfield>
-                                <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
-                                <div class="invalid-feedback">
-                                    Este campo es requerido.
+                                    <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="lastName">Apellidos</label>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Apellidos</label>
                                 <s:textfield type = "text" cssClass="form-control" id="lastName" name = "fr.apellido" placeholder="Apellidos" required="required"></s:textfield>
                                 <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
                                 <div class="invalid-feedback">
                                     Este campo es requerido.
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="phone">Teléfono</label>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="id">Cédula</label>
+                                <s:textfield type = "text" cssClass="form-control" id="id" name = "fr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
+                                    <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone">Teléfono</label>
                                 <s:textfield type = "text" cssClass="form-control" id="phone" name = "fr.telefono" placeholder="12345678" required="required"></s:textfield>
-                                <!--<input type="text" class="form-control" id="phone" placeholder="" value="" required="">-->
-                                <div class="invalid-feedback">
-                                    Este campo es requerido.
+                                    <!--<input type="text" class="form-control" id="phone" placeholder="" value="" required="">-->
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         <div class="mb-3">
                             <label for="email">Correo electrónico</label>

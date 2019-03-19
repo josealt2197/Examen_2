@@ -29,28 +29,28 @@
     <body class="bg-light">
 
         <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
-          <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item"></li>
-            </ul>
-            <form class="form-inline mt-2 mt-md-0">
-              <ul class="navbar-nav mr-auto">
-                 <li class="nav-item active">
-                  <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="login.jsp">Ingresar</a>
-                </li>
-              </ul>
-            </form>
-          </div>
+            <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"></li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.jsp">Ingresar</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </nav>
 
         <div class="container">
@@ -71,13 +71,13 @@
                                 <div class="mx-auto">
                                     <center><img class="card-img-right flex-auto d-none d-md-block" width="220px" height="175px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_vehiculo"></center>                          
                                     <div class="list-group-item">
-                                        <h6 class="text-success">Precio por día: <s:property value="precioxdia"></s:property></h6>
+                                        <h6 class="text-success">Precio por día: $<s:property value="precioxdia"></s:property></h6>
                                     </div>
                                     <div class="list-group-item">
                                         <h6 class="text-success">Detalles</h6>
                                         <h6>Transmisión: <s:property value="transmision.getValue()"></s:property></h6>
-                                        <h6>Pasajeros: <s:property value="cantpasajeros"></s:property></h6>
-                                        <h6>Extras: <s:property value="extras.getValue()"></s:property></h6>  
+                                    <h6>Pasajeros: <s:property value="cantpasajeros"></s:property></h6>
+                                    <h6>Extras: <s:property value="extras.getValue()"></s:property></h6>  
                                     </div>
                                 </div>
                             </div>
@@ -95,31 +95,34 @@
                             <input type="text" class="form-control" name="cr.id_vehiculo" value="<s:property value='id_vehiculo'/>" >
                         </div>
                         <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <label for="id">Cédula</label>
-                                <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
-                                    <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
-                                    <div class="invalid-feedback">
-                                        Este campo es requerido.
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="firstname">Nombre</label>
+                            <div class="col-md-6 mb-3">
+                                <label for="firstname">Nombre</label>
                                 <s:textfield type = "text" cssClass="form-control" id="firstname" name = "cr.nombre" placeholder="Nombre" required="required"></s:textfield>
                                     <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label for="lastName">Apellidos</label>
                                 <s:textfield type = "text" cssClass="form-control" id="lastName" name = "cr.apellido" placeholder="Apellidos" required="required"></s:textfield>
-                                    <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
+                                <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
+                                <div class="invalid-feedback">
+                                    Este campo es requerido.
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="id">Cédula</label>
+                                <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
+                                    <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label for="phone">Teléfono</label>
                                 <s:textfield type = "text" cssClass="form-control" id="phone" name = "cr.telefono" placeholder="12345678" required="required"></s:textfield>
                                     <!--<input type="text" class="form-control" id="phone" placeholder="" value="" required="">-->

@@ -27,7 +27,7 @@
     </head>
 
 
-    <body class="text-center">
+    <body class="text-center place-body-other bg3">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
           <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +53,8 @@
           </div>
         </nav>
         
-        <div class="sign-in-body" >
-            <s:form  theme="simple" cssClass="form-signin" action = "pre_register" id="pre_register" method = "post">
+        <div class="sign-in-body" style="background-color: transparent;">
+            <s:form  theme="simple" cssClass="form-signin form-redirect" action = "pre_register" id="pre_register" method = "post">
             <!--<form class="form-signin">-->
                 <h1 class="text-green">TicoBooking</h1>
                 <h1 class="h3 mb-3 font-weight-normal text-green">Registrarse</h1>

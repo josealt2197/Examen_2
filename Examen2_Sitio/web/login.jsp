@@ -27,7 +27,7 @@
     </head>
 
 
-    <body class="text-center">
+    <body class="text-center place-body-other bg5">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
           <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,10 +52,11 @@
             </form>
           </div>
         </nav>
-
-        <div class="sign-in-body" >
+        
+        <div class="container">
+            <div class="sign-in-body" style="background-color: transparent;">
             <s:fielderror cssClass="error_form"/>
-            <s:form  theme="simple" cssClass="needs-validation" action = "login" id="registration_form" method = "post">
+            <s:form  theme="simple" cssClass="needs-validation form-redirect" action = "login" id="registration_form" method = "post">
             <!--<form class="form-signin">-->
                 <h1 class="text-green">TicoBooking</h1>
                 <h1 class="h3 mb-3 font-weight-normal text-green">Iniciar Sesion</h1>
@@ -72,10 +73,11 @@
                 </div>
                 <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Ingresar"></s:submit>
                 <!--<button class="btn btn-lg btn-success btn-block" type="submit">Ingresar</button>-->
-            </s:form>
+            </s:form>         
+            </div>
         </div>
-
-        <!-- Footer -->
+       
+         <!-- Footer -->
         <footer class="footer bg-light">
             <div class="container">
                 <div class="row">

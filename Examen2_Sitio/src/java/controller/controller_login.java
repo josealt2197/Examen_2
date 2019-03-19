@@ -37,6 +37,8 @@ public class controller_login extends ActionSupport implements SessionAware {
             result = "correcto";
             session.put("userName", u.getCorreo());
             session.put("password", u.getPassword());
+            session.put("name", u.getPassword());
+            session.put("phone", u.getPassword());
         }
 
         return result;
