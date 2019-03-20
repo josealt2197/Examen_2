@@ -234,8 +234,10 @@
           <h2 class="mb-4">¿Necesitas ayuda?</h2>
           <h3>Visita nuestra seccion de preguntas frecuentes.</h3>          
         </div>
-        <div class="col-xl-2 mx-auto"><br><br><button type="submit" class="btn btn-block btn-lg btn-success">Ayuda</button>
+        <div class="col-xl-12 mx-auto">
+            <center><a style="max-width: 200px;" href="ayuda.jsp" class="btn btn-lg btn-success btn-block">Ayuda</a></center>    
         </div>
+          
       </div>
     </div>
   </section>
