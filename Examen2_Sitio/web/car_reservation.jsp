@@ -23,8 +23,12 @@
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="img/costa-rica64.png">
-
-
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />        
+        
     </head>
     <body class="bg-light">
 
@@ -153,6 +157,34 @@
                             <h4 class="mb-3">Datos de reservación</h4>
 
                             <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="daterangel">Tiempo de alquiler</label>
+                                    <input class="form-control" type="text" id="daterange1" name="daterange1" value="" onchange="getDate();" required/>
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
+                                </div>
+                                
+                                 <div style="display:none;">
+                                    <label for="fentrada">FEntrada</label>
+                                    <input type="text" id="fentrada" name = "cr.fentrada" value="" />
+                                </div>
+                                <div style="display:none;">
+                                    <label for="hentrada">HEntrada</label>
+                                    <input type="text" id="hentrada" name = "cr.hentrada" value="" />
+                                </div>
+                                <div style="display:none;">
+                                    <label for="fsalida">FSalida</label>
+                                    <input type="text" id="fsalida" name = "cr.fsalida" value="" />
+                                </div> 
+                                <div style="display:none;">
+                                    <label for="hsalida">HSalida</label>
+                                    <input type="text" id="hsalida" name = "cr.hsalida" value="" />
+                                </div>  
+                          
+                            </div>
+                            
+<!--                            <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="check-in">Fecha de Pick-up</label>
                                 <s:textfield type = "date" cssClass="form-control" id="check-in" name = "cr.fentrada" placeholder="Fecha de entrada" required="required"></s:textfield>
@@ -167,9 +199,9 @@
                                         Este campo es requerido.
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
-                            <div class="row">
+<!--                            <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="check-out">Fecha de Drop-off</label>
                                 <s:textfield type = "date" cssClass="form-control" id="check-in" name = "cr.fsalida" placeholder="Fecha de entrada" required="required"></s:textfield>
@@ -184,7 +216,7 @@
                                         Este campo es requerido.
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
                             <div class="mb-3">
                                 <label for="pick-place">Lugar de Pick-up / Drop-off</label>
@@ -226,10 +258,24 @@
                 </div>
             </footer>
 
-            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+<!--            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>-->
 
+            
+            <script>
+                $(function() {
+                    $('input[name="daterange1"]').daterangepicker({
+                      timePicker: true,
+                      startDate: moment().startOf('hour'),
+                      endDate: moment().startOf('hour').add(32, 'hour'),
+                      locale: {
+                        format: 'M/DD/YYYY | hh:mm A'
+                      }
+                    });
+                  });         
+            </script>
+ 
             <script>
                 (function () {
                     'use strict'
@@ -250,6 +296,19 @@
                         })
                     }, false)
                 }());
+            </script>
+            
+            <script>
+                function getDate() {
+                    var drp = document.getElementById("daterange1").value;
+                    var result = drp.split("-");
+                    var entrada = result[0].split("|");
+                    var salida = result[1].split("|");
+                    document.getElementById("fentrada").value = entrada[0];
+                    document.getElementById("hentrada").value = entrada[1];
+                    document.getElementById("fsalida").value = salida[0];
+                    document.getElementById("hsalida").value = salida[1];
+                }
             </script>
     </body>
 </html>

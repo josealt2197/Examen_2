@@ -29,7 +29,9 @@
             <div data-role="header" data-theme="b">
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
-                <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                <s:if test="%{#session.session_correo != null}">
+                    <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                </s:if>
             </div><!-- /header -->
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -37,18 +39,17 @@
 
 
                 <center>
-                    <form>
-                        <select>
-                            <option>¿Qué andas buscando?</option>
-                            <option>Hospedaje</option>
-                            <option>Vehículos</option>
-                            <option>Tiquetes Aereos</option>
-                        </select>
-                        <input type="text"  style="font-size: 1.2em; text-align: center" placeholder="¿Dónde lo necesitas?">
-                        <center>
-                            <button type="submit" style="width:300px">Buscar</button>
-                        </center>
-                    </form> 
+                    <div class="form-row ">
+                        <div class="col-md-6 mx-auto">
+                            <h4>¿Dónde necesitas el vehículo?</h4><br>
+                            <input type="text" class="form-control form-control-lg" id="search-criteria" placeholder="¿Dónde necesitas el vehículo?" title="Digite un lugar"><br/>
+                        </div><br>
+                    </div>
+                    <div class="form-row mx-auto">
+                        <div class="col-md-4 mx-auto">
+                            <br><button id="search" class="btn btn-block btn-lg btn-success">Buscar Vehículos</button>
+                        </div>
+                    </div>
                 </center>
                 <br><br>
 
@@ -56,46 +57,51 @@
                 <br> 
 
                 <s:iterator value="car_list">
-                    <div class="ui-corner-all custom-corners">
-                        <div class="ui-bar ui-bar-a">
-                            <h2>Transporte</h2>
-                        </div>
-                        <div class="ui-body ui-body-a">
-                            <div class="ui-grid-a ui-responsive">
-                                <div class="ui-block-a">
-                                    <div class="ui-body ui-body-d">                    
-                                        <center>
-                                            <img width="290px" height="200px" src="<s:property value="imagen.getValue()"></s:property>" alt="Imagen vehículo"><br>
-                                            </center>
-                                        </div>
-                                    </div>
-                                    <div class="ui-block-b">
-                                        <div class="ui-body ui-body-d">
-                                            <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="modelo.getValue()"></s:property></h1>
-                                            <div class="mb-1">
-                                                <span class="badge badge-primary"><s:property value="empresa.getValue()"></s:property></span>
-                                            <span class="badge badge-success"><s:property value="tipo.getValue()"></s:property></span><br><br>
-                                            <i class="pr-2 fas fa-car-side" style="color: #28a745;"></i><span>Para <s:property value="cantpasajeros"></s:property> pasajeros</span><br>
-                                            <i class="pr-2 fas fa-cogs" style="color: #28a745;"></i><span><s:property value="transmision.getValue()"></s:property></span><br>
-                                            </div>
-                                            <div class="mb-1">
-                                                <i class="pr-2 fas fa-wind" style="color: #28a745;"></i><span><s:property value="servicios.getValue()"></s:property></span>
-                                            </div>
-
-                                            <div class="mb-1">
-                                                <span style="width: 100%; height: 5px; display: flex; align-items: center; background-color:#7CC543; margin: 0 auto; margin-top: 15px;"></span><br>
-                                                <i class="pr-2 fas fa-money-bill" style="color: #28a745;"></i><span>₡ <s:property value="precioxdia"></s:property> por día</span> 
-                                            </div>
-                                            <center>
-                                                <a class="btn btn-success" style="margin: 20px auto; color:#fff; text-decoration: none;" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
-                                            </center>
-                                        </div> 
-                                    </div>
-                                </div><!-- /grid-a -->
+                    <div class="car-data">
+                        <div class="ui-corner-all custom-corners">
+                            <div class="ui-bar ui-bar-a">
+                                <h2>Transporte</h2>
                             </div>
-                        </div>
+                            <div class="ui-body ui-body-a">
+                                <div class="ui-grid-a ui-responsive">
+                                    <div class="ui-block-a">
+                                        <div class="ui-body ui-body-d">                    
+                                            <center>
+                                                <img width="290px" height="200px" src="<s:property value="imagen.getValue()"></s:property>" alt="Imagen vehículo"><br>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="ui-block-b">
+                                            <div class="ui-body ui-body-d">
+                                                <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="modelo.getValue()"></s:property></h1>
+                                                <div class="mb-1">
+                                                    <span class="badge badge-primary"><s:property value="empresa.getValue()"></s:property></span>
+                                                <span class="badge badge-success"><s:property value="tipo.getValue()"></s:property></span>
+                                                <span class="badge badge-danger"><s:property value="ubicacion.getValue()"></s:property></span><br><br>
+                                                <i class="pr-2 fas fa-car-side" style="color: #28a745;"></i><span>Para <s:property value="cantpasajeros"></s:property> pasajeros</span><br>
+                                                <i class="pr-2 fas fa-cogs" style="color: #28a745;"></i><span><s:property value="transmision.getValue()"></s:property></span><br>
+                                                </div>
+                                                <div class="mb-1">
+                                                    <i class="pr-2 fas fa-wind" style="color: #28a745;"></i><span><s:property value="servicios.getValue()"></s:property></span>
+                                                </div>
 
-                        <br><hr><br>
+                                                <div class="mb-1">
+                                                    <span style="width: 100%; height: 5px; display: flex; align-items: center; background-color:#7CC543; margin: 0 auto; margin-top: 15px;"></span><br>
+                                                    <i class="pr-2 fas fa-money-bill" style="color: #28a745;"></i><span>$ <s:property value="precioxdia"></s:property> por día</span> 
+                                                </div>
+                                                <center>
+                                                    <a class="btn btn-success" style="margin: 20px auto; color:#fff; text-decoration: none;" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
+                                                </center>
+                                            </div> 
+                                        </div>
+                                    </div><!-- /grid-a -->
+                                </div>
+
+                                <br><hr><br>              
+                            </div>
+
+
+                        </div>                       
                 </s:iterator>
 
             </div>
@@ -103,9 +109,12 @@
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
+                        <s:if test="%{#session.session_correo == null}">
+                        <li><a href="login.jsp" rel="external">Iniciar sesión</a></li>
+                        </s:if>
+                    <li><a href="index.jsp" rel="external">Inicio</a></li>
                     <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
                     <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
-                    <li><a href="login.jsp" rel="external">Ingresar</a></li>
                 </ul>
             </div>
 
@@ -117,12 +126,19 @@
             </div>
 
             <script>
-                $('.car-data').hide();
                 $('#search').click(function () {
-                    $('.car-data').hide();
-                    var txt = $('#search-criteria').val();
-                    $('.car-data:contains("' + txt + '")').show();
+                    var filter = $("#search-criteria").val();
+                    $('.car-data').each(function () {
+                        $(this).find(".custom-corners:not(:contains('" + filter + "'))").hide();
+                        $(this).find(".custom-corners:contains('" + filter + "')").show();
+                    });
+                    $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+                        return function (elem) {
+                            return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                        };
+                    });
                 });
+
             </script>
         </div><!-- /page1 -->
     </body>

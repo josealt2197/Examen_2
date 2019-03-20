@@ -26,6 +26,7 @@
 
             <div data-role="header" data-theme="b">
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
+                <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
             </div><!-- /header -->
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -53,7 +54,7 @@
 
                         <div>
                             <label for="firstName">Apellidos</label>
-                       <s:textfield type = "text" cssClass="form-control" id="apellidos" name = "u.apellido" placeholder="Apellidos" required="required"></s:textfield>
+                        <s:textfield type = "text" cssClass="form-control" id="apellidos" name = "u.apellido" placeholder="Apellidos" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Un nombre valido es requerido.
                             </div>
@@ -105,7 +106,16 @@
 
                 <br>
                 <br>
-            </div><!-- /content -->
+            </div>
+
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
+                    <li><a href="index.jsp" rel="external">Inicio</a></li>
+                    <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
+                    <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
+                </ul>
+            </div>
 
             <div data-role="footer" data-theme="b" class="ui-footer ui-bar-a footer-btm" role="contentinfo">
                 <center>
