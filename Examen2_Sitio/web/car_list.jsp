@@ -141,17 +141,19 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
         <script>
-            $('.car-data').hide();
-            $('#search').click(function () {
-                $('.car-data').hide();
-                var txt = $('#search-criteria').val();
-                $('.car-data:contains("' + txt + '")').show();
-                 $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+            $('#search-criteria').keyup(function () { 
+                var filter = $("#search-criteria").val();
+                $('.place-data').each(function() {
+                    $(this).find(".row:not(:contains('" + filter + "'))").hide();
+                    $(this).find(".row:contains('" + filter + "')").show();
+                });
+                $.expr[":"].contains = $.expr.createPseudo(function (arg) {
                     return function (elem) {
                         return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
                     };
                 });
             });
+
         </script>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
