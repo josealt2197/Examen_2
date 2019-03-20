@@ -105,7 +105,7 @@
                 <div class="ui-body ui-body-a ui-corner-all">
                     <br>
                     <center><img width="300px" src="img/bg-showcase-1.jpg"></center>
-                    <h3 class="text-center">¿Necesitas donde hospedarte?</h3>
+                    <h3 class="text-center">¿Necesitas dónde hospedarte?</h3>
                     <p class="mb-0 text-center">Con nosotros estás en buenas manos: Tenemos opciones de hoteles para todos los gustos, con los mejores precios y en todo el país.</p>
                 </div><br>
 
