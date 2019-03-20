@@ -29,7 +29,7 @@
             </div>
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#0071bc;">Reservación Completada</h2>
+                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#0071bc;">¡Proceso Completado!</h2>
 
                 <div class="pt-menu">
                     <div class="sign-in-body" style="background-color: transparent;">
