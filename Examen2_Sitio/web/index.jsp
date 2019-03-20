@@ -58,8 +58,10 @@
   <!-- Masthead -->
   <header class="masthead text-white text-center">
     <div class="col-xl-10 mx-auto">
-      <h1 class="mb-3" style="color:#4caf50;">¿Quieres explorar Costa Rica?<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
-      <h2 class="mb-3">Tenemos lo que necesitas.</h2>
+      <h1 class="mb-3" style="color: #0A2A70;background-color: rgba(255, 255, 255, 0.3);width: 80%; margin: auto;">¿Quieres explorar Costa Rica?<span class="pl-2"><img src="img/costa-rica64.png"></span>
+          <br><small class="h2 mb-3">Tenemos lo que necesitas.</small>
+      </h1>
+      
     </div>
     <center><div class="col-md-8">
 
