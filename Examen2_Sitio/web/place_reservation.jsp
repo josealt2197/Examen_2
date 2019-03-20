@@ -69,7 +69,8 @@
                     </h4>
                     <div class="mb-3">
                         <div class="mx-auto">
-                            <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
+                            <img width="290" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
+
                             <div class="list-group-item">
                                 <h6 class="text-success">Ubicación</h6>
                                 <h6><s:property value="UbicacionExacta.getValue()"></s:property></h6>
@@ -78,7 +79,7 @@
                                 <h6 class="text-success">Detalles</h6>
                                 <h6>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></h6>
                                 <h6>Incluye</h6>
-                                <l6><s:property value="ServiciosIncluidos.getValue()"></s:property></h6>
+                                <h6><s:property value="ServiciosIncluidos.getValue()"></s:property></h6>
                             </div>
                         </div>
                     </div>
@@ -193,6 +194,7 @@
                     </s:form>
                     
                 </div>
+            </div>
             </div>
             <!-- Footer -->
             <footer class="footer bg-light">
