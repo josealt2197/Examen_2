@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -74,7 +74,7 @@ public class InsertReservation {
     protected Integer costo;
 
     /**
-     * Gets the value of the idHospedaje property.
+     * Obtiene el valor de la propiedad idHospedaje.
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the idHospedaje property.
+     * Define el valor de la propiedad idHospedaje.
      * 
      * @param value
      *     allowed object is
@@ -98,7 +98,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the idCliente property.
+     * Obtiene el valor de la propiedad idCliente.
      * 
      * @return
      *     possible object is
@@ -110,7 +110,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the idCliente property.
+     * Define el valor de la propiedad idCliente.
      * 
      * @param value
      *     allowed object is
@@ -122,7 +122,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the nombre property.
+     * Obtiene el valor de la propiedad nombre.
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the nombre property.
+     * Define el valor de la propiedad nombre.
      * 
      * @param value
      *     allowed object is
@@ -146,7 +146,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the apellido property.
+     * Obtiene el valor de la propiedad apellido.
      * 
      * @return
      *     possible object is
@@ -158,7 +158,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the apellido property.
+     * Define el valor de la propiedad apellido.
      * 
      * @param value
      *     allowed object is
@@ -170,7 +170,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the telefono property.
+     * Obtiene el valor de la propiedad telefono.
      * 
      * @return
      *     possible object is
@@ -182,7 +182,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the telefono property.
+     * Define el valor de la propiedad telefono.
      * 
      * @param value
      *     allowed object is
@@ -194,7 +194,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the correo property.
+     * Obtiene el valor de la propiedad correo.
      * 
      * @return
      *     possible object is
@@ -206,7 +206,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the correo property.
+     * Define el valor de la propiedad correo.
      * 
      * @param value
      *     allowed object is
@@ -218,7 +218,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the entrada property.
+     * Obtiene el valor de la propiedad entrada.
      * 
      * @return
      *     possible object is
@@ -230,7 +230,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the entrada property.
+     * Define el valor de la propiedad entrada.
      * 
      * @param value
      *     allowed object is
@@ -242,7 +242,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the salida property.
+     * Obtiene el valor de la propiedad salida.
      * 
      * @return
      *     possible object is
@@ -254,7 +254,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the salida property.
+     * Define el valor de la propiedad salida.
      * 
      * @param value
      *     allowed object is
@@ -266,7 +266,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the cantidad property.
+     * Obtiene el valor de la propiedad cantidad.
      * 
      * @return
      *     possible object is
@@ -278,7 +278,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the cantidad property.
+     * Define el valor de la propiedad cantidad.
      * 
      * @param value
      *     allowed object is
@@ -290,7 +290,7 @@ public class InsertReservation {
     }
 
     /**
-     * Gets the value of the costo property.
+     * Obtiene el valor de la propiedad costo.
      * 
      * @return
      *     possible object is
@@ -302,7 +302,7 @@ public class InsertReservation {
     }
 
     /**
-     * Sets the value of the costo property.
+     * Define el valor de la propiedad costo.
      * 
      * @param value
      *     allowed object is

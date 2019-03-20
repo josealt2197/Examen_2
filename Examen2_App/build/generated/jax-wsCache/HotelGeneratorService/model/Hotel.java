@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Hotel complex type.
+ * <p>Clase Java para Hotel complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="Hotel"&gt;
@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="HoraEntradaHos" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="HoraSalidaHos" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="Id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *         &lt;element name="ImagenDetail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="ImagenHos" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="NombreHos" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="Precio" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
@@ -46,6 +47,7 @@ import javax.xml.bind.annotation.XmlType;
     "horaEntradaHos",
     "horaSalidaHos",
     "id",
+    "imagenDetail",
     "imagenHos",
     "nombreHos",
     "precio",
@@ -66,6 +68,8 @@ public class Hotel {
     protected JAXBElement<String> horaSalidaHos;
     @XmlElement(name = "Id")
     protected Integer id;
+    @XmlElementRef(name = "ImagenDetail", namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> imagenDetail;
     @XmlElementRef(name = "ImagenHos", namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", type = JAXBElement.class, required = false)
     protected JAXBElement<String> imagenHos;
     @XmlElementRef(name = "NombreHos", namespace = "http://schemas.datacontract.org/2004/07/HotelService.Models", type = JAXBElement.class, required = false)
@@ -82,7 +86,7 @@ public class Hotel {
     protected JAXBElement<String> ubicacionExacta;
 
     /**
-     * Gets the value of the cantidadHuespedes property.
+     * Obtiene el valor de la propiedad cantidadHuespedes.
      * 
      * @return
      *     possible object is
@@ -94,7 +98,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the cantidadHuespedes property.
+     * Define el valor de la propiedad cantidadHuespedes.
      * 
      * @param value
      *     allowed object is
@@ -106,7 +110,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the descripcionHos property.
+     * Obtiene el valor de la propiedad descripcionHos.
      * 
      * @return
      *     possible object is
@@ -118,7 +122,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the descripcionHos property.
+     * Define el valor de la propiedad descripcionHos.
      * 
      * @param value
      *     allowed object is
@@ -130,7 +134,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the horaEntradaHos property.
+     * Obtiene el valor de la propiedad horaEntradaHos.
      * 
      * @return
      *     possible object is
@@ -142,7 +146,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the horaEntradaHos property.
+     * Define el valor de la propiedad horaEntradaHos.
      * 
      * @param value
      *     allowed object is
@@ -154,7 +158,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the horaSalidaHos property.
+     * Obtiene el valor de la propiedad horaSalidaHos.
      * 
      * @return
      *     possible object is
@@ -166,7 +170,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the horaSalidaHos property.
+     * Define el valor de la propiedad horaSalidaHos.
      * 
      * @param value
      *     allowed object is
@@ -178,7 +182,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtiene el valor de la propiedad id.
      * 
      * @return
      *     possible object is
@@ -190,7 +194,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define el valor de la propiedad id.
      * 
      * @param value
      *     allowed object is
@@ -202,7 +206,31 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the imagenHos property.
+     * Obtiene el valor de la propiedad imagenDetail.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getImagenDetail() {
+        return imagenDetail;
+    }
+
+    /**
+     * Define el valor de la propiedad imagenDetail.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setImagenDetail(JAXBElement<String> value) {
+        this.imagenDetail = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad imagenHos.
      * 
      * @return
      *     possible object is
@@ -214,7 +242,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the imagenHos property.
+     * Define el valor de la propiedad imagenHos.
      * 
      * @param value
      *     allowed object is
@@ -226,7 +254,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the nombreHos property.
+     * Obtiene el valor de la propiedad nombreHos.
      * 
      * @return
      *     possible object is
@@ -238,7 +266,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the nombreHos property.
+     * Define el valor de la propiedad nombreHos.
      * 
      * @param value
      *     allowed object is
@@ -250,7 +278,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the precio property.
+     * Obtiene el valor de la propiedad precio.
      * 
      * @return
      *     possible object is
@@ -262,7 +290,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the precio property.
+     * Define el valor de la propiedad precio.
      * 
      * @param value
      *     allowed object is
@@ -274,7 +302,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the provinciaHos property.
+     * Obtiene el valor de la propiedad provinciaHos.
      * 
      * @return
      *     possible object is
@@ -286,7 +314,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the provinciaHos property.
+     * Define el valor de la propiedad provinciaHos.
      * 
      * @param value
      *     allowed object is
@@ -298,7 +326,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the serviciosIncluidos property.
+     * Obtiene el valor de la propiedad serviciosIncluidos.
      * 
      * @return
      *     possible object is
@@ -310,7 +338,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the serviciosIncluidos property.
+     * Define el valor de la propiedad serviciosIncluidos.
      * 
      * @param value
      *     allowed object is
@@ -322,7 +350,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the tipo property.
+     * Obtiene el valor de la propiedad tipo.
      * 
      * @return
      *     possible object is
@@ -334,7 +362,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the tipo property.
+     * Define el valor de la propiedad tipo.
      * 
      * @param value
      *     allowed object is
@@ -346,7 +374,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the ubicacionExacta property.
+     * Obtiene el valor de la propiedad ubicacionExacta.
      * 
      * @return
      *     possible object is
@@ -358,7 +386,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the ubicacionExacta property.
+     * Define el valor de la propiedad ubicacionExacta.
      * 
      * @param value
      *     allowed object is
