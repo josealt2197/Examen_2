@@ -68,7 +68,7 @@
                     </h4>
                     <div class="mb-3">
                         <div class="mx-auto">
-                            <img src="" alt="ImagenLugar" width="64px" height="64px">
+                            <img src="" alt="ImagenLugar" width="64" height="64">
                             <div class="list-group-item">
                                 <h6 class="text-success">Ubicación</h6>
                                 <h6>Calle Central y Tercera Av 15, Barrio Tournon, 00001 San José, Costa Rica</h6>
@@ -191,6 +191,7 @@
                     </s:form>
                     
                 </div>
+            </div>
             </div>
             <!-- Footer -->
             <footer class="footer bg-light">
