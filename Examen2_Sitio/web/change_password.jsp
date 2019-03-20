@@ -24,6 +24,48 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="img/costa-rica64.png">
         
+        <style>            
+            /* The message box is shown when the user clicks on the password field */
+            #message {
+                display:none;
+                background: #f1f1f1;
+                border: solid 2px #26a69a;
+                border-radius: 10px;
+                color: #000;
+                position: relative;
+                padding: 10px;
+                padding-left: 15px;
+                margin-top: 2px;
+            }
+            
+            #message p {
+                padding: 2px 10px;
+                font-size: 13px;
+            }
+            
+            /* Add a green text color and a checkmark when the requirements are right */
+            .valid {
+                color: #28a745;
+            }
+            
+            .valid:before {
+                position: relative;
+                left: -15px;
+                content: "✔";
+            }
+            
+            /* Add a red text color and an "x" when the requirements are wrong */
+            .invalid {
+                color: #AC2A2A;
+            }
+            
+            .invalid:before {
+                position: relative;
+                left: -15px;
+                content: "✖";
+            }
+        </style>
+        
     </head>
     
     
@@ -65,11 +107,78 @@
                     <h1 class="h3 mb-3 font-weight-normal text-green">Restablecer Contraseña</h1>
                     <div class="mb-3">
                         <label for="form_password">Nueva Contraseña</label><br>
-                        <s:textfield type = "password" cssClass="form-control" id="form_password" name = "u.password" placeholder="Contraseña" required="required"></s:textfield>
+                        <s:textfield type = "password" cssClass="form-control" id="password" name = "u.password" placeholder="Contraseña" required="required"></s:textfield>
                             <!--<input type="password" class="form-control" id="pass" placeholder="Contraseña" required>-->
                             <div class="invalid-feedback">
                                 Este campo es requerido.
                             </div>
+                            <div id="message">
+                                    <h6>La contraseña debe tener:</h6>
+                                    <p id="letter" class="invalid">Letras <b>minusculas</b></p>
+                                    <p id="capital" class="invalid">Una letra <b>mayuscula</b></p>
+                                    <p id="number" class="invalid">Un <b>número</b></p>
+                                    <p id="length" class="invalid">Un mínimo de <b>8 caracteres</b></p>
+                                </div>
+                                <script>
+                
+                                var myInput = document.getElementById("password");
+                                var letter = document.getElementById("letter");
+                                var capital = document.getElementById("capital");
+                                var number = document.getElementById("number");
+                                var length = document.getElementById("length");
+
+                                // When the user clicks on the password field, show the message box
+                                myInput.onfocus = function() {
+                                    document.getElementById("message").style.display = "block";
+                                }
+
+                                // When the user clicks outside of the password field, hide the message box
+                                myInput.onblur = function() {
+                                    document.getElementById("message").style.display = "none";
+                                }
+
+                                // When the user starts to type something inside the password field
+                                myInput.onkeyup = function() {
+                                    // Validate lowercase letters
+                                    var lowerCaseLetters = /[a-z]/g;
+                                    if(myInput.value.match(lowerCaseLetters)) { 
+                                        letter.classList.remove("invalid");
+                                        letter.classList.add("valid");
+                                    } else {
+                                        letter.classList.remove("valid");
+                                        letter.classList.add("invalid");
+                                    }
+
+                                    // Validate capital letters
+                                    var upperCaseLetters = /[A-Z]/g;
+                                    if(myInput.value.match(upperCaseLetters)) { 
+                                        capital.classList.remove("invalid");
+                                        capital.classList.add("valid");
+                                    } else {
+                                        capital.classList.remove("valid");
+                                        capital.classList.add("invalid");
+                                    }
+
+                                    // Validate numbers
+                                    var numbers = /[0-9]/g;
+                                    if(myInput.value.match(numbers)) { 
+                                        number.classList.remove("invalid");
+                                        number.classList.add("valid");
+                                    } else {
+                                        number.classList.remove("valid");
+                                        number.classList.add("invalid");
+                                    }
+
+                                    // Validate length
+                                    if(myInput.value.length >= 8) {
+                                        length.classList.remove("invalid");
+                                        length.classList.add("valid");
+                                    } else {
+                                        length.classList.remove("valid");
+                                        length.classList.add("invalid");
+                                    }
+                                }
+                            </script>                             
                         </div>
                         
                         <div class="mb-3">
