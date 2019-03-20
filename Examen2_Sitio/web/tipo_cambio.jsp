@@ -67,7 +67,7 @@
                 <div class="container">
                     <div class="form-row ">
                         <div class="col-md-6 mx-auto">
-                            <h2>Tipo de Cambio <span class="pl-2"><img src="img/costa-rica64.png"></span></h2>                                                  
+                            <h2 style="color: #0A2A70;background-color: rgba(255, 255, 255, 0.3);width: 80%; margin: auto;">Tipo de Cambio <span class="pl-2"><img src="img/costa-rica64.png"></span></h2>                                                  
                         </div><br>
                     </div>
                 </div>

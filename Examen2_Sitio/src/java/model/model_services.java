@@ -80,7 +80,7 @@ public class model_services {
             Session session = Session.getDefaultInstance(props);
             
             MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("progravcuc@gmail.com"));
+            message.setFrom(new InternetAddress("progravcuc@gmail.com", "TicoBooking"));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject(subject);
             message.setContent(body, "text/html");
@@ -131,7 +131,7 @@ public class model_services {
             Session session = Session.getDefaultInstance(props);
             
             MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("progravcuc@gmail.com"));
+            message.setFrom(new InternetAddress("progravcuc@gmail.com", "TicoBooking"));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject(subject);
             message.setContent(body, "text/html");

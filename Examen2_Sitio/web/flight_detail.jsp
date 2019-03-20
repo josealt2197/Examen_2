@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-md-3">
                                 <center><h2 style="color:#28A745"><strong></strong>$<s:property value="costo.getValue()"></s:property></h2></center>
-                                <br><a class="btn btn-success btn-lg btn-block" type="submit" href="reservacion_vuelo.action?submitType=updatedata&id_vuelo=<s:property value="id"></s:property>">Reservar</a>
+                                <br><a class="btn btn-success btn-lg btn-block" href="reservacion_vuelo.action?submitType=updatedata&id_vuelo=<s:property value="id"></s:property>">Reservar</a>
                             </div>
                         </div>	
                     </div>
@@ -90,7 +90,7 @@
                         </div>
 
                         <aside class="col-md-6 blog-sidebar">
-                            <img class="card-img-right flex-auto d-none d-md-block" width="220px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"><br> 
+                            <img class="card-img-right flex-auto d-none d-md-block" width="220" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"><br> 
                             <div class="p-4 mb-3 bg-light rounded">
                             <p><strong>Origen:</strong> <s:property value="origen.getValue()"></s:property></p>
                             <p><strong>Destino:</strong> <s:property value="destino.getValue()"></s:property></p>

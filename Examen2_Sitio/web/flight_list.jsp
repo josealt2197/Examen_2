@@ -66,7 +66,7 @@
                 <div class="container">
                         <div class="form-row">
                             <div class="col-md-6 mx-auto">
-                                <h1 class="mb-3" style="color:#4caf50;">Vuelos<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
+                                <h1 class="mb-3" style="color: #0A2A70;background-color: rgba(255, 255, 255, 0.3);width: 80%; margin: auto;">Vuelos<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
                                 <h4>Realizar otra busqueda</h4><br>
                                 <input type="text" class="form-control form-control-lg" id="searchCriteria" placeholder="¿A dónde te gustaría ir?"><br>
                                 <center><h5>¿Cuándo lo necesitas?</h5></center>

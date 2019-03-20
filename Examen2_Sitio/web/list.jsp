@@ -68,7 +68,7 @@
 
                     <div class="form-row ">
                         <div class="col-md-6 mx-auto">
-                            <h1 class="mb-3" style="color:#4caf50;">Hospedaje<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
+                            <h1 class="mb-3" style="color: #0A2A70;background-color: rgba(255, 255, 255, 0.3);width: 80%; margin: auto;">Hospedaje<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
                             <h4>¿Donde lo necesitas?</h4>
                             <input type="text" class="form-control form-control-lg" id="search-criteria" placeholder="¿Donde lo necesitas?">
                         </div><br>
