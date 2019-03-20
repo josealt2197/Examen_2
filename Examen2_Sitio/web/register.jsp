@@ -28,28 +28,28 @@
     </head>
     <body class="bg-light">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-green">
-          <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item"></li>
-            </ul>
-            <form class="form-inline mt-2 mt-md-0">
-              <ul class="navbar-nav mr-auto">
-                 <li class="nav-item active">
-                  <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="login.jsp">Ingresar</a>
-                </li>
-              </ul>
-            </form>
-          </div>
+            <a class="navbar-brand" href="index.jsp"><span class="pr-2"><img src="img/costa-rica32.png"></span><strong>TicoBooking</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"></li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="tipo_cambio.jsp">Tipo de Cambio</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.jsp">Ingresar</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </nav>
 
         <div class="container register-body">
@@ -65,20 +65,28 @@
                     <!--<form class="needs-validation" novalidate> -->
                     <s:form  theme="simple" cssClass="needs-validation" action = "registrar" id="registration_form" method = "post">
                         <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="firstName">Nombre Completo</label><br>
-                                <s:textfield type = "text" cssClass="form-control" id="firstName" name = "u.fullnombre" placeholder="Nombre Completo" required="required"></s:textfield>
+                            <div class="col-md-4 mb-3">
+                                <label for="form_cedula">Cédula</label><br>
+                                <s:textfield type = "number" cssClass="form-control" id="form_cedula" name = "u.cedula" placeholder="Cédula" required="required"></s:textfield>
+                                    <!--<input type="text" class="form-control" id="lastName" placeholder="Número de Cédula" value="" required>-->
+                                    <div class="invalid-feedback">
+                                        Una Cédula valida es requerida.
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="firstName">Nombre</label><br>
+                                <s:textfield type = "text" cssClass="form-control" id="firstName" name = "u.nombre" placeholder="Nombre" required="required"></s:textfield>
                                     <!--<input type="text" class="form-control" id="firstName" placeholder="Nombre y Apellidos" value="" required>-->
                                     <div class="invalid-feedback">
                                         Un nombre valido es requerido.
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="form_cedula">Cédula</label><br>
-                                <s:textfield type = "number" cssClass="form-control" id="form_cedula" name = "u.cedula" placeholder="Cédula" required="required"></s:textfield>
+                                <div class="col-md-4 mb-3">
+                                    <label for="apellidos">Apellidos</label><br>
+                                <s:textfield type = "text" cssClass="form-control" id="apellidos" name = "u.apellido" placeholder="Apellidos" required="required"></s:textfield>
                                     <!--<input type="text" class="form-control" id="lastName" placeholder="Número de Cédula" value="" required>-->
                                     <div class="invalid-feedback">
-                                        Una Cédula valida es requerida.
+                                        Los apellidos son requeridos.
                                     </div>
                                 </div>
                             </div>

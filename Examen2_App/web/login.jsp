@@ -31,10 +31,10 @@
                 <h2 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;">Iniciar Sesión</h2>
             <s:fielderror cssClass="error_form"/>
             <s:form theme="simple" cssClass="form-signin" action="login" method="post">
-                <label for="ident">Correo Electrónico:</label>
-                <s:textfield type="text" name = "u.correo" value=""></s:textfield>
-                <label for="password">Contraseña:</label>
-                <s:textfield type="password" name="u.password" value=""></s:textfield>
+                <label for="inputEmail">Correo Electrónico:</label>
+                <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.Correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+                <label for="inputPassword">Contraseña:</label>
+                <s:textfield type = "password" cssClass="form-control" id="inputPassword" name = "u.Password" placeholder="Contraseña" required="required"></s:textfield>
                 <center>
                     <s:submit type="submit" data-role="button" data-theme="b" data-inline="true" value="Ingresar"></s:submit><br>
                     <hr class="mb-3">

@@ -63,7 +63,7 @@
                     <div class="form-row ">
                         <div class="col-md-6 mx-auto">
                             <h1 class="mb-3" style="color:#4caf50;">Vehículos<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
-                            <h4>Realizar otra busqueda</h4><br>
+                            <h4>¿Dónde necesitas el vehículo?</h4><br>
                             <input type="text" class="form-control form-control-lg" id="search-criteria" placeholder="¿Dónde necesitas el vehículo?" title="Digite un lugar"><br/>
                         </div><br>
                     </div>
@@ -146,6 +146,11 @@
                 $('.car-data').hide();
                 var txt = $('#search-criteria').val();
                 $('.car-data:contains("' + txt + '")').show();
+                 $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+                    return function (elem) {
+                        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                    };
+                });
             });
         </script>
         
