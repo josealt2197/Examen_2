@@ -51,16 +51,16 @@
                                             <div>
                                                 <div>
                                                     <center>
-                                                        <img width="290" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
+                                                        <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
                                                     </center>
                                                     <ul style="list-style-type: none;">
-                                                        <li><h2>Ubicación</h2></li>
+                                                        <h2>Ubicación</h2>
                                                         <li><s:property value="UbicacionExacta.getValue()"></s:property></li>
                                                     </ul>
                                                     <ul style="list-style-type: none;" >
-                                                        <li><h2>Detalles</h2></li>
+                                                        <h2>Detalles</h2>
                                                         <li>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></li>
-                                                        <li><h2>Incluye</h2></li>
+                                                        <h2>Incluye</h2>
                                                         <li><s:property value="ServiciosIncluidos.getValue()"></s:property></li>
                                                     </ul>
                                                 </div>
@@ -123,20 +123,19 @@
 
                                     <h4 class="mb-3">Datos de reservación</h4>
 
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="check-in">Fecha de entrada</label>
-                                        <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="check-out">Fecha de salida</label>
-                                            <input type = "date" class="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required>
-                                        </div>
+                                    <div>
+                                        <label for="">Tiempo de estadía</label>
+                                        <input type="text" id="daterange1" name="daterange1" value="" onchange="getDate();" required/>
                                     </div>
 
-                                    <div>
-                                        <label>DateRangerPicker</label>
-                                        <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                                    <div style="display:none;">
+                                        <label for="entrada">Entrada</label>
+                                        <input type="text" id="entrada" name = "r.entrada" value="" />
+                                    </div>
+
+                                    <div style="display:none;">
+                                        <label for="salida">Salida</label>
+                                        <input type="text" id="salida" name = "r.salida" value="" />
                                     </div>
 
                                     <div class="row">
@@ -158,7 +157,7 @@
                                     </div> 
                                 <s:iterator value="hotel_info">
                                     <h3>Precio del hospedaje:</h3>
-                                    <input type="text" class="form-control" name="r.costo" readonly value="<s:property value="precio"></s:property>"> 
+                                    <input type="text" class="form-control" name="r.costo" readonly="true" value="<s:property value="precio"></s:property>"> 
                                 </s:iterator>         
                                 <hr class="mb-4">
                                 <center>
@@ -191,7 +190,32 @@
         </div>
 
         <script>
-            $('input[name="daterange"]').daterangepicker();
+            $(function () {
+                $('input[name="daterange1"]').daterangepicker({
+                    startDate: moment().startOf('hour'),
+                    endDate: moment().startOf('hour').add(32, 'hour'),
+                    minYear: 2019,
+                    drops: "down",
+                    opens: "center",
+                });
+            });
+            /*           $(function () {
+             $('input[name="daterange2"]').daterangepicker({
+             singleDatePicker: true,
+             startDate: moment().startOf('hour'),
+             endDate: moment().startOf('hour').add(32, 'hour'),
+             
+             });
+             });*/
+        </script>
+
+        <script>
+            function getDate() {
+                var drp = document.getElementById("daterange1").value;
+                var result = drp.split("-");
+                document.getElementById("entrada").value = result[0];
+                document.getElementById("salida").value = result[1];
+            }
         </script>
     </body>
 </html>
