@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s" %>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,6 +19,12 @@
         <script src="jqmobile/demos/_assets/js/index.js"></script>
         <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     </head>
     <body>
         <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="TicoBooking">
@@ -42,25 +48,25 @@
                                 <div>
                                     <div>
                                         <h1 class="ui-title" role="heading" style="font-weight: 700; color:#28A745;"><s:property value="NombreHos.getValue()"></s:property></h1><br>
-                                        <div>
                                             <div>
-                                                <center>
-                                                    <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
-                                                </center>
-                                                <ul style="list-style-type: none;">
-                                                    <h2>Ubicación</h2>
-                                                    <li><s:property value="UbicacionExacta.getValue()"></s:property></li>
-                                                </ul>
-                                                <ul style="list-style-type: none;" >
-                                                    <h2>Detalles</h2>
-                                                    <li>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></li>
-                                                    <h2>Incluye</h2>
-                                                    <li><s:property value="ServiciosIncluidos.getValue()"></s:property></li>
-                                                </ul>
+                                                <div>
+                                                    <center>
+                                                        <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
+                                                    </center>
+                                                    <ul style="list-style-type: none;">
+                                                        <h2>Ubicación</h2>
+                                                        <li><s:property value="UbicacionExacta.getValue()"></s:property></li>
+                                                    </ul>
+                                                    <ul style="list-style-type: none;" >
+                                                        <h2>Detalles</h2>
+                                                        <li>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></li>
+                                                        <h2>Incluye</h2>
+                                                        <li><s:property value="ServiciosIncluidos.getValue()"></s:property></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </s:iterator>
                         </div>
                         <hr><hr>
@@ -120,12 +126,17 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="check-in">Fecha de entrada</label>
-                                        <s:textfield type = "date" cssClass="form-control" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
+                                        <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="check-out">Fecha de salida</label>
-                                            <input type = "date" class="form-control"name = "r.salida" placeholder="Fecha de salida" required>
+                                            <input type = "date" class="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required>
                                         </div>
+                                    </div>
+
+                                    <div>
+                                        <label for="">DateRangerPicker</label>
+                                        <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
                                     </div>
 
                                     <div class="row">
@@ -145,14 +156,14 @@
                                                 ¡También puedes enviarnos tu petición especial cuando hayas realizado la reserva!</small>
                                         </div>
                                     </div> 
-                                     <s:iterator value="hotel_info">
-                                         <h3>Precio del hospedaje:</h3>
-                                         <input type="text" class="form-control" name="r.costo" readonly="true" value="<s:property value="precio"></s:property>"> 
-                                     </s:iterator>         
-                                    <hr class="mb-4">
-                                    <center>
-                                        <button class="btn btn-success btn-lg btn-block" name="submitType" style="max-width:200px;" type="submit">Reservar</button>
-                                    </center>
+                                <s:iterator value="hotel_info">
+                                    <h3>Precio del hospedaje:</h3>
+                                    <input type="text" class="form-control" name="r.costo" readonly="true" value="<s:property value="precio"></s:property>"> 
+                                </s:iterator>         
+                                <hr class="mb-4">
+                                <center>
+                                    <button class="btn btn-success btn-lg btn-block" name="submitType" style="max-width:200px;" type="submit">Reservar</button>
+                                </center>
                             </s:form>
 
 
@@ -179,5 +190,8 @@
             </div>
         </div>
 
+        <script>
+            $('input[name="daterange"]').daterangepicker();
+        </script>
     </body>
 </html>
