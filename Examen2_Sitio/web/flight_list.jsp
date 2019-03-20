@@ -64,7 +64,7 @@
                             <div class="col-md-6 mx-auto">
                                 <h1 class="mb-3" style="color:#4caf50;">Vuelos<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
                                 <h4>Realizar otra busqueda</h4><br>
-                                <input type="text" class="form-control form-control-lg" placeholder="¿A dónde te gustaría ir?"><br>
+                                <input type="text" class="form-control form-control-lg" id="searchCriteria" placeholder="¿A dónde te gustaría ir?"><br>
                                 <center><h5>¿Cuándo lo necesitas?</h5></center>
                                 <input type="date" class="form-control form-control-lg" placeholder="¿Cuándo lo necesitas?"><br>
                                 <div class="radio">
@@ -74,7 +74,7 @@
                             </div>             
                         </div>
                         <div class="col-md-4 mx-auto">
-                            <br><button type="submit" class="btn btn-block btn-lg btn-success">Buscar Vuelos</button>
+                            <br><button id="search" class="btn btn-block btn-lg btn-success">Buscar Vuelos</button>
                         </div>
                     </form>
                 </div>
@@ -84,6 +84,7 @@
 
             <!--A PARTIR DE AQUI-->
             <s:iterator  value="flight_list"> 
+                <div class="flight-data">
                 <div class="row mb-2 ">
                     <div class="col-md-8 mx-auto">
                         <div class="card mb-4 box-shadow h-md-250">
@@ -113,6 +114,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </s:iterator>  
 
@@ -148,7 +150,22 @@
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
-
+        
+        
+        <script>
+            $('.flight-data').hide();
+            $('#search').click(function () {
+                $('.flight-data').hide();
+                var txt = $('#search-criteria').val();
+                $('.flight-data:contains("' + txt + '")').show();
+                $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+                    return function (elem) {
+                        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                    };
+                });
+            });
+        </script>
+        
     </body>
 </html>
 

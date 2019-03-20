@@ -146,6 +146,11 @@
                 $('.car-data').hide();
                 var txt = $('#search-criteria').val();
                 $('.car-data:contains("' + txt + '")').show();
+                 $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+                    return function (elem) {
+                        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                    };
+                });
             });
         </script>
         
