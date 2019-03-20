@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="lastName">Apellidos</label>                                    
-                                <input type="text" class="form-control" name = "r.apellido" id="lastName" placeholder="Zúñiga" value='<s:property value="#session.session_apellido"/>' required="">
+                                <input type="text" class="form-control" name = "r.apellido" id="lastName" placeholder="Apellidos" value='<s:property value="#session.session_apellido"/>' required="">
                                 <div class="invalid-feedback">
                                     Este campo es requerido.
                                 </div>
