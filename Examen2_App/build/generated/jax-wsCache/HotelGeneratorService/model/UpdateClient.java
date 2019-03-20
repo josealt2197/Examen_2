@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -50,7 +50,7 @@ public class UpdateClient {
     protected JAXBElement<String> phone;
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
      * @return
      *     possible object is
@@ -62,7 +62,7 @@ public class UpdateClient {
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
      *     allowed object is
@@ -74,7 +74,7 @@ public class UpdateClient {
     }
 
     /**
-     * Obtiene el valor de la propiedad fullname.
+     * Gets the value of the fullname property.
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class UpdateClient {
     }
 
     /**
-     * Define el valor de la propiedad fullname.
+     * Sets the value of the fullname property.
      * 
      * @param value
      *     allowed object is
@@ -98,7 +98,7 @@ public class UpdateClient {
     }
 
     /**
-     * Obtiene el valor de la propiedad mail.
+     * Gets the value of the mail property.
      * 
      * @return
      *     possible object is
@@ -110,7 +110,7 @@ public class UpdateClient {
     }
 
     /**
-     * Define el valor de la propiedad mail.
+     * Sets the value of the mail property.
      * 
      * @param value
      *     allowed object is
@@ -122,7 +122,7 @@ public class UpdateClient {
     }
 
     /**
-     * Obtiene el valor de la propiedad phone.
+     * Gets the value of the phone property.
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class UpdateClient {
     }
 
     /**
-     * Define el valor de la propiedad phone.
+     * Sets the value of the phone property.
      * 
      * @param value
      *     allowed object is

@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para Reservaciones complex type.
+ * <p>Java class for Reservaciones complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Reservaciones"&gt;
@@ -78,7 +78,7 @@ public class Reservaciones {
     protected JAXBElement<String> telefono;
 
     /**
-     * Obtiene el valor de la propiedad apellido.
+     * Gets the value of the apellido property.
      * 
      * @return
      *     possible object is
@@ -90,7 +90,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad apellido.
+     * Sets the value of the apellido property.
      * 
      * @param value
      *     allowed object is
@@ -102,7 +102,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad cantHuespedes.
+     * Gets the value of the cantHuespedes property.
      * 
      * @return
      *     possible object is
@@ -114,7 +114,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad cantHuespedes.
+     * Sets the value of the cantHuespedes property.
      * 
      * @param value
      *     allowed object is
@@ -126,7 +126,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad correo.
+     * Gets the value of the correo property.
      * 
      * @return
      *     possible object is
@@ -138,7 +138,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad correo.
+     * Sets the value of the correo property.
      * 
      * @param value
      *     allowed object is
@@ -150,7 +150,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad costoTotal.
+     * Gets the value of the costoTotal property.
      * 
      * @return
      *     possible object is
@@ -162,7 +162,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad costoTotal.
+     * Sets the value of the costoTotal property.
      * 
      * @param value
      *     allowed object is
@@ -174,7 +174,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad fechaEntrada.
+     * Gets the value of the fechaEntrada property.
      * 
      * @return
      *     possible object is
@@ -186,7 +186,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad fechaEntrada.
+     * Sets the value of the fechaEntrada property.
      * 
      * @param value
      *     allowed object is
@@ -198,7 +198,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad fechaSalida.
+     * Gets the value of the fechaSalida property.
      * 
      * @return
      *     possible object is
@@ -210,7 +210,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad fechaSalida.
+     * Sets the value of the fechaSalida property.
      * 
      * @param value
      *     allowed object is
@@ -222,7 +222,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad idCliente.
+     * Gets the value of the idCliente property.
      * 
      * @return
      *     possible object is
@@ -234,7 +234,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad idCliente.
+     * Sets the value of the idCliente property.
      * 
      * @param value
      *     allowed object is
@@ -246,7 +246,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad idHospedaje.
+     * Gets the value of the idHospedaje property.
      * 
      * @return
      *     possible object is
@@ -258,7 +258,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad idHospedaje.
+     * Sets the value of the idHospedaje property.
      * 
      * @param value
      *     allowed object is
@@ -270,7 +270,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad idReservacion.
+     * Gets the value of the idReservacion property.
      * 
      * @return
      *     possible object is
@@ -282,7 +282,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad idReservacion.
+     * Sets the value of the idReservacion property.
      * 
      * @param value
      *     allowed object is
@@ -294,7 +294,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad nombre.
+     * Gets the value of the nombre property.
      * 
      * @return
      *     possible object is
@@ -306,7 +306,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad nombre.
+     * Sets the value of the nombre property.
      * 
      * @param value
      *     allowed object is
@@ -318,7 +318,7 @@ public class Reservaciones {
     }
 
     /**
-     * Obtiene el valor de la propiedad telefono.
+     * Gets the value of the telefono property.
      * 
      * @return
      *     possible object is
@@ -330,7 +330,7 @@ public class Reservaciones {
     }
 
     /**
-     * Define el valor de la propiedad telefono.
+     * Sets the value of the telefono property.
      * 
      * @param value
      *     allowed object is
