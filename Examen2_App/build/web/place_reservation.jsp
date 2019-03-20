@@ -51,16 +51,16 @@
                                             <div>
                                                 <div>
                                                     <center>
-                                                        <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
+                                                        <img width="290" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
                                                     </center>
                                                     <ul style="list-style-type: none;">
-                                                        <h2>Ubicación</h2>
+                                                        <li><h2>Ubicación</h2></li>
                                                         <li><s:property value="UbicacionExacta.getValue()"></s:property></li>
                                                     </ul>
                                                     <ul style="list-style-type: none;" >
-                                                        <h2>Detalles</h2>
+                                                        <li><h2>Detalles</h2></li>
                                                         <li>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></li>
-                                                        <h2>Incluye</h2>
+                                                        <li><h2>Incluye</h2></li>
                                                         <li><s:property value="ServiciosIncluidos.getValue()"></s:property></li>
                                                     </ul>
                                                 </div>
@@ -124,7 +124,7 @@
                                     <h4 class="mb-3">Datos de reservación</h4>
 
                                     <div>
-                                        <label for="">Tiempo de estadía</label>
+                                        <label for="daterangel">Tiempo de estadía</label>
                                         <input type="text" id="daterange1" name="daterange1" value="" onchange="getDate();" required/>
                                     </div>
 
@@ -157,7 +157,7 @@
                                     </div> 
                                 <s:iterator value="hotel_info">
                                     <h3>Precio del hospedaje:</h3>
-                                    <input type="text" class="form-control" name="r.costo" readonly="true" value="<s:property value="precio"></s:property>"> 
+                                    <input type="text" class="form-control" name="r.costo" readonly value="<s:property value="precio"></s:property>"> 
                                 </s:iterator>         
                                 <hr class="mb-4">
                                 <center>

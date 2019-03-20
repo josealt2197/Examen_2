@@ -25,6 +25,10 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="img/costa-rica64.png">
         
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />        
         
     </head>
     <body class="bg-light">
@@ -155,25 +159,24 @@
                             
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="check-in">Fecha de entrada</label>
-                                <s:textfield type = "date" cssClass="form-control" id="check-in" name = "r.entrada" placeholder="Fecha de entrada" required="required"></s:textfield>
-                                    <!--<input type="date" class="form-control" id="check-in" placeholder="" required="">-->
+                                    <label for="daterangel">Tiempo de estadía</label>
+                                    <input class="form-control" type="text" id="daterange1" name="daterange1" value="" onchange="getDate();" required/>
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
                                 </div>
+                                
+                                 <div style="display:none;">
+                                    <label for="entrada">Entrada</label>
+                                    <input type="text" id="entrada" name = "r.entrada" value="" />
+                                </div>
+
+                                <div style="display:none;">
+                                    <label for="salida">Salida</label>
+                                    <input type="text" id="salida" name = "r.salida" value="" />
+                                </div>                                  
+                          
                                 <div class="col-md-6 mb-3">
-                                    <label for="check-out">Fecha de salida</label>
-                                <s:textfield type = "date" cssClass="form-control" id="check-out" name = "r.salida" placeholder="Fecha de salida" required="required"></s:textfield>
-                                    <!--<input type="date" class="form-control" id="check-out" placeholder="" required="">-->
-                                    <div class="invalid-feedback">
-                                        Este campo es requerido.
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
                                     <label for="persons">Cantidad de huéspedes</label>              
                                 <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="r.cantidad"></s:select>
                                     <!--<select class="custom-select d-block w-100" id="persons" required="">-->
@@ -225,9 +228,9 @@
                 </div>
             </footer>
             
-            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+<!--            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>-->
             
             <script>
                 (function () {
@@ -250,5 +253,34 @@
                     }, false)
                 }());
             </script>
+            
+        <script>
+            $(function () {
+                $('input[name="daterange1"]').daterangepicker({
+                    startDate: moment().startOf('hour'),
+                    endDate: moment().startOf('hour').add(32, 'hour'),
+                    minYear: 2019,
+                    drops: "down",
+                    opens: "right",
+                });
+            });
+            /*           $(function () {
+             $('input[name="daterange2"]').daterangepicker({
+             singleDatePicker: true,
+             startDate: moment().startOf('hour'),
+             endDate: moment().startOf('hour').add(32, 'hour'),
+             
+             });
+             });*/
+        </script>
+
+        <script>
+            function getDate() {
+                var drp = document.getElementById("daterange1").value;
+                var result = drp.split("-");
+                document.getElementById("entrada").value = result[0];
+                document.getElementById("salida").value = result[1];
+            }
+        </script>
     </body>
 </html>
