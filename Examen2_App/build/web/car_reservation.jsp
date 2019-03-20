@@ -157,7 +157,7 @@
                                 <s:iterator  value="car_info">
                                     <div class="mb-3">
                                         <label for="pick-place">Costo</label>
-                                        <input type="text" class="form-control" name="cr.id_vehiculo" value="<s:property value="precioxdia"></s:property>" >
+                                        <input type="text" class="form-control" name="cr.id_vehiculo" readonly="true" value="<s:property value="precioxdia"></s:property>" >
                                         <div class="invalid-feedback">
                                             Este campo es requerido.
                                         </div>

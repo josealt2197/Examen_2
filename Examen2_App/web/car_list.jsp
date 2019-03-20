@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 
 <!DOCTYPE html>
 <html>
@@ -115,6 +115,15 @@
                     <p class="copyright">© Copyright 2019</p>
                 </center>
             </div>
+
+            <script>
+                $('.car-data').hide();
+                $('#search').click(function () {
+                    $('.car-data').hide();
+                    var txt = $('#search-criteria').val();
+                    $('.car-data:contains("' + txt + '")').show();
+                });
+            </script>
         </div><!-- /page1 -->
     </body>
 </html>
