@@ -30,14 +30,46 @@ public class controller_services extends ActionSupport {
 
         return SUCCESS;
     }
+    
 
-    //-------------------------CORREO ELECTRONICO--------------------------------------------
+    //-------------------------CORREO ELECTRONICO - VERIFICACION DE REGISTRO--------------------------------------------
     public String proccessRegister() {
         model_services da = new model_services();
         da.sendEmail(getU());
 
         return SUCCESS;
     }
+        
+    //-------------------------CORREO ELECTRONICO - CONTRASEÑA--------------------------------------------
+    public String proccessChangeP(){
+        model_services da = new model_services();
+        da.sendEmailPassword(getU());
+
+        return SUCCESS;
+    }
+    
+    //-------------------------ACTUALIZAR CONTRASEÑA--------------------------------------------
+    private int idU;
+
+    public int getIdU() {
+        return idU;
+    }
+
+    public void setIdU(int idU) {
+        this.idU = idU;
+    }
+    
+    public String updateUsuario() throws SQLException{
+        model_services da = new model_services(); 
+        da.updateU(getU(), idU);
+
+        return SUCCESS;
+    }
+    
+    public String returnToPage(){
+        return SUCCESS;
+    }
+    
     
     //-------------------------COMPROBACIÓN EN LOGIN--------------------------------------------
         public String Login() throws SQLException{

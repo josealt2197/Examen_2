@@ -33,7 +33,7 @@ public class controller_login extends ActionSupport implements SessionAware {
             addFieldError("u.Correo", "No existe esa cuenta con esas crendenciales. Registrate para continuar.");
         }else if("incorrecto".equals(da.consulta_inicio(getU()))){
             result = "incorrecto";
-            addFieldError("u.Correo", "Su cédula o contraseña no son correctas. Intente de nuevo.");
+            addFieldError("u.Correo", "Alguna de sus credenciales no son correctas. Intente de nuevo.");
         }else if("correcto".equals(da.consulta_inicio(getU()))){
             result = "correcto";
             session.put("session_correo", u.getCorreo()); 
