@@ -10,13 +10,16 @@
         <action name="pre_register" class="controller.controller_services" method="proccessRegister">
             <result name="success">look_mail.jsp</result>
         </action>
-        <action name="login" class="controller.controller_services" method="Login"> 
-            <result name="correcto">index.jsp</result>       
+        <action name="login" class="controller.controller_login"> 
+            <result name="correcto">index.jsp</result> 
+            <result name="incorrecto">login.jsp</result>
+            <result name="sinregistro">login.jsp</result>          
         </action>
          
         <action name="registrar_reservacion" class="controller.controller_services" method="insertReservacion">
-            <result name="success">success.jsp</result>
             <result name="reservation">place_reservation.jsp</result>
+            <result name="success">success.jsp</result> 
+            <result name="error">error.jsp</result>  
         </action> 
         <action name="viewrecords" class="controller.controller_services" method="selectHoteles">  
             <result name="success">list.jsp</result>  
@@ -26,8 +29,9 @@
         </action>
         
         <action name="reservacion_vehiculo" class="controller.controller_services" method="insertCarReservacion">
-            <result name="success">success.jsp</result>
             <result name="reservation">car_reservation.jsp</result>
+            <result name="success">success.jsp</result> 
+            <result name="error">error.jsp</result> 
         </action> 
         <action name="viewcar_list" class="controller.controller_services" method="selectCars">  
             <result name="success">car_list.jsp</result>  
