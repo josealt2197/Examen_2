@@ -133,9 +133,9 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="persons">Cantidad de pasajeros</label>
-                                        <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="fr.cantpasajeros"></s:select>
+                                        <s:textfield type = "number" id="cantidad" cssClass="form-control" name = "fr.cantpasajeros" placeholder="" required="required"></s:textfield> 
                                             <div class="invalid-feedback">
-                                                Seleccione una opción.
+                                                Ingrese un número entre 1 y 10.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">

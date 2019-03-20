@@ -118,7 +118,7 @@
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                        <s:if test="%{#session.session_correo == null}">
+                        <s:if test="%{#session.session_correo != null}">
                         <li><a href="login.jsp" rel="external">Iniciar sesión</a></li>
                         </s:if>
                     <li><a href="index.jsp" rel="external">Inicio</a></li>

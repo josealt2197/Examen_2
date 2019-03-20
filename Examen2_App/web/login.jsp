@@ -45,8 +45,8 @@
                             </div>
                             <hr class="mb-3">
 
-                            <h6 class="mt-5">¿Aún no tienes una cuenta?</h6>
-                            <a class="btn btn-success mt-1" style="max-width:200px; color:#fff; text-decoration: none;" href="pre_register.jsp">Regístrate</a><br>
+                            <h6 class="mt-4">¿Aún no tienes una cuenta?</h6>
+                            <a class="btn btn-success mt-1 mb-5" style="max-width:200px; color:#fff; text-decoration: none;" href="pre_register.jsp">Regístrate</a><br>
                         </center>
                 </s:form>    
             </div>	

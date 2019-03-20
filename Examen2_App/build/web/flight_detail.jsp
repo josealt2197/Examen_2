@@ -26,7 +26,7 @@
             <div data-role="header" data-theme="b">
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
-                <s:if test="%{#session.session_correo != null}">
+                <s:if test="%{#session.session_correo == null}">
                     <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
                 </s:if>
             </div><!-- /header -->
@@ -120,7 +120,7 @@
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                        <s:if test="%{#session.session_correo == null}">
+                        <s:if test="%{#session.session_correo != null}">
                         <li><a href="login.jsp" rel="external">Iniciar sesión</a></li>
                         </s:if>
                     <li><a href="index.jsp" rel="external">Inicio</a></li>
