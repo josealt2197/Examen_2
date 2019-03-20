@@ -66,9 +66,6 @@ public class controller_services {
     
     public String updateUsuario() throws SQLException{
         model_services da = new model_services(); 
-        //HttpServletRequest request = (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST);
-        //idmail = request.getParameter("idmail");
-        System.out.println(">>>"+idU);
         da.updateU(getU(), idU);
 
         return SUCCESS;
@@ -83,7 +80,9 @@ public class controller_services {
         String result = "";
         model_services da = new model_services();
         
-        if("correcto".equals(da.consulta_inicio(getU()))){
+        if("sinregistro".equals(da.consulta_inicio(getU()))){
+            result = "sinregistro";
+        }else if("correcto".equals(da.consulta_inicio(getU()))){
             result = "correcto";
         }else if("incorrecto".equals(da.consulta_inicio(getU()))){
             result = "incorrecto";

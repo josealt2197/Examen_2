@@ -156,7 +156,6 @@ public class model_services {
         PreparedStatement ps = con.prepareStatement(updatesql);
         ps.setString(1, u.getPassword());
         ps.setInt(2, id);
-        System.out.println(">>>" +id);
         
         if (ps.executeUpdate() == 1) {
             resultado = true;

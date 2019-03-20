@@ -23,6 +23,13 @@
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="img/costa-rica64.png">
+        
+        <style>
+            .error_form{
+                color: red;
+                list-style: none;
+            }
+        </style>
 
     </head>
 
@@ -54,12 +61,12 @@
         </nav>
         
         <div class="container">
-            <div class="sign-in-body" style="background-color: transparent;">
-            <s:fielderror cssClass="error_form"/>
+            <div class="sign-in-body" style="background-color: transparent;">            
             <s:form  theme="simple" cssClass="needs-validation form-redirect" action = "login" id="registration_form" method = "post">
             <!--<form class="form-signin">-->
                 <h1 class="text-green">TicoBooking</h1>
                 <h1 class="h3 mb-3 font-weight-normal text-green">Iniciar Sesion</h1>
+                <s:fielderror cssClass="error_form"/>
                 <label for="inputEmail" class="sr-only">Correo Electronico</label>
                 <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.Correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
                 <!--<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>-->
