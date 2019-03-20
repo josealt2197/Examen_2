@@ -145,14 +145,42 @@ public interface IHotelGeneratorService {
      * 
      * @param id
      * @return
-     *     returns model.ArrayOfTable
+     *     returns model.ArrayOfHotel
      */
-    @WebMethod(operationName = "SearchClient", action = "http://tempuri.org/IHotelGeneratorService/SearchClient")
-    @WebResult(name = "SearchClientResult", targetNamespace = "http://tempuri.org/")
-    @RequestWrapper(localName = "SearchClient", targetNamespace = "http://tempuri.org/", className = "model.SearchClient")
-    @ResponseWrapper(localName = "SearchClientResponse", targetNamespace = "http://tempuri.org/", className = "model.SearchClientResponse")
-    public ArrayOfTable searchClient(
+    @WebMethod(operationName = "SearchHotel", action = "http://tempuri.org/IHotelGeneratorService/SearchHotel")
+    @WebResult(name = "SearchHotelResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "SearchHotel", targetNamespace = "http://tempuri.org/", className = "model.SearchHotel")
+    @ResponseWrapper(localName = "SearchHotelResponse", targetNamespace = "http://tempuri.org/", className = "model.SearchHotelResponse")
+    public ArrayOfHotel searchHotel(
         @WebParam(name = "id", targetNamespace = "http://tempuri.org/")
         Integer id);
+
+    /**
+     * 
+     * @param fecha
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "http://tempuri.org/IHotelGeneratorService/getTipoCambioCompra")
+    @WebResult(name = "getTipoCambioCompraResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "getTipoCambioCompra", targetNamespace = "http://tempuri.org/", className = "model.GetTipoCambioCompra")
+    @ResponseWrapper(localName = "getTipoCambioCompraResponse", targetNamespace = "http://tempuri.org/", className = "model.GetTipoCambioCompraResponse")
+    public String getTipoCambioCompra(
+        @WebParam(name = "fecha", targetNamespace = "http://tempuri.org/")
+        String fecha);
+
+    /**
+     * 
+     * @param fecha
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "http://tempuri.org/IHotelGeneratorService/getTipoCambioVenta")
+    @WebResult(name = "getTipoCambioVentaResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "getTipoCambioVenta", targetNamespace = "http://tempuri.org/", className = "model.GetTipoCambioVenta")
+    @ResponseWrapper(localName = "getTipoCambioVentaResponse", targetNamespace = "http://tempuri.org/", className = "model.GetTipoCambioVentaResponse")
+    public String getTipoCambioVenta(
+        @WebParam(name = "fecha", targetNamespace = "http://tempuri.org/")
+        String fecha);
 
 }
