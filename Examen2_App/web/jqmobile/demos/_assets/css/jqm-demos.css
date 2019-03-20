@@ -1216,4 +1216,8 @@ ol {
     animation-name: rubberBand;
 }
 
+#topcontrol {
+    z-index:10000;
+}
+
 

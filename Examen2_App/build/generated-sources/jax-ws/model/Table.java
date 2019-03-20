@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para Table complex type.
+ * <p>Java class for Table complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="Table"&gt;
@@ -58,7 +58,7 @@ public class Table {
     protected JAXBElement<String> telefono;
 
     /**
-     * Obtiene el valor de la propiedad contraseña.
+     * Gets the value of the contraseña property.
      * 
      * @return
      *     possible object is
@@ -70,7 +70,7 @@ public class Table {
     }
 
     /**
-     * Define el valor de la propiedad contraseña.
+     * Sets the value of the contraseña property.
      * 
      * @param value
      *     allowed object is
@@ -82,7 +82,7 @@ public class Table {
     }
 
     /**
-     * Obtiene el valor de la propiedad correo.
+     * Gets the value of the correo property.
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class Table {
     }
 
     /**
-     * Define el valor de la propiedad correo.
+     * Sets the value of the correo property.
      * 
      * @param value
      *     allowed object is
@@ -106,7 +106,7 @@ public class Table {
     }
 
     /**
-     * Obtiene el valor de la propiedad fechaNac.
+     * Gets the value of the fechaNac property.
      * 
      * @return
      *     possible object is
@@ -118,7 +118,7 @@ public class Table {
     }
 
     /**
-     * Define el valor de la propiedad fechaNac.
+     * Sets the value of the fechaNac property.
      * 
      * @param value
      *     allowed object is
@@ -130,7 +130,7 @@ public class Table {
     }
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Gets the value of the id property.
      * 
      * @return
      *     possible object is
@@ -142,7 +142,7 @@ public class Table {
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Sets the value of the id property.
      * 
      * @param value
      *     allowed object is
@@ -154,7 +154,7 @@ public class Table {
     }
 
     /**
-     * Obtiene el valor de la propiedad nombre.
+     * Gets the value of the nombre property.
      * 
      * @return
      *     possible object is
@@ -166,7 +166,7 @@ public class Table {
     }
 
     /**
-     * Define el valor de la propiedad nombre.
+     * Sets the value of the nombre property.
      * 
      * @param value
      *     allowed object is
@@ -178,7 +178,7 @@ public class Table {
     }
 
     /**
-     * Obtiene el valor de la propiedad telefono.
+     * Gets the value of the telefono property.
      * 
      * @return
      *     possible object is
@@ -190,7 +190,7 @@ public class Table {
     }
 
     /**
-     * Define el valor de la propiedad telefono.
+     * Sets the value of the telefono property.
      * 
      * @param value
      *     allowed object is

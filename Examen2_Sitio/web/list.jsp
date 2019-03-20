@@ -68,11 +68,11 @@
                             <input type="text" class="form-control form-control-lg" id="search-criteria" placeholder="¿Donde lo necesitas?">
                         </div><br>
                     </div>
-                    <div class="form-row mx-auto">
+<!--                    <div class="form-row mx-auto">
                         <div class="col-md-2 mx-auto">
                             <br><button id="search" class="btn btn-block btn-lg btn-success">Buscar</button>
                         </div>
-                    </div>
+                    </div>-->
 
                 </div>
             </section><br>
@@ -91,14 +91,14 @@
                                             <a class="text-dark" href="#"><s:property value="NombreHos.getValue()"></s:property></a>
                                         </h3>
                                         <div class="mb-1">
-                                            <i class="pr-4 fas fa-map-marker-alt" style="color: #4caf50; margin-top: 15px;"> <s:property value="ProvinciaHos.getValue()"></s:property></i>                                        
+                                        <i class="provincia pr-4 fas fa-map-marker-alt" style="color: #4caf50; margin-top: 15px;"> <s:property value="ProvinciaHos.getValue()"></s:property></i>                                        
                                         <i class="pr-4 fas fa-users" style="color: #4caf50; margin-top: 15px;"> <s:property value="CantidadHuespedes"></s:property></i>
                                         <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> $ <s:property value="Precio"></s:property></i>
                                         </div>                      
                                         <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="DescripcionHos.getValue()"></s:property></p>
                                     <br><a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
                                     </div>
-                                    <img class="card-img-right flex-auto d-none d-md-block" width="290px" height="275px" style="padding-top: 25px;" src="<s:property value="ImagenHos.getValue()"></s:property>" alt="Card image cap">
+                                    <img class="card-img-right flex-auto d-none d-md-block" width="290" height="275" style="padding-top: 25px;" src="<s:property value="ImagenHos.getValue()"></s:property>" alt="Card image cap">
                                 </div>
                             </div>
                         </div>
@@ -106,8 +106,6 @@
                 </div>            
         </s:iterator>  
         <!--HASTA AQUI-->
-
-    </div>
 
     <hr class="mb-4">
 
@@ -138,21 +136,27 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
-
-
+    
     <script>
-        $('.place-data').hide();
-        $('#search').click(function () {
-            $('.place-data').hide();
-            var txt = $('#search-criteria').val();
-            $('.place-data:contains("' + txt + '")').show();
+        $('#search-criteria').keyup(function () { 
+            var filter = $("#search-criteria").val();
+            $('.place-data').each(function() {
+                $(this).find(".row:not(:contains('" + filter + "'))").hide();
+                $(this).find(".row:contains('" + filter + "')").show();
+            });
             $.expr[":"].contains = $.expr.createPseudo(function (arg) {
                 return function (elem) {
                     return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
                 };
             });
         });
+        
     </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow88.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
+    <noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+
 
 </body>
 </html>
