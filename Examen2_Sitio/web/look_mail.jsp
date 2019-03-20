@@ -45,7 +45,12 @@
                             <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="login.jsp">Ingresar</a>
+                            <s:if test="%{#session.session_correo == null}">
+                                <a class="nav-link" href="login.jsp">Ingresar</a>
+                            </s:if>
+                            <s:elseif test="%{#session.session_correo != null}">
+                                <a class="nav-link" href="logout">Salir</a>
+                            </s:elseif>
                         </li>
                     </ul>
                 </form>

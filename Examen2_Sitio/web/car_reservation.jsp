@@ -46,7 +46,12 @@
                             <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="login.jsp">Ingresar</a>
+                            <s:if test="%{#session.session_correo == null}">
+                                <a class="nav-link" href="login.jsp">Ingresar</a>
+                            </s:if>
+                            <s:elseif test="%{#session.session_correo != null}">
+                                <a class="nav-link" href="logout">Salir</a>
+                            </s:elseif>
                         </li>
                     </ul>
                 </form>
@@ -69,7 +74,7 @@
                             </h4>
                             <div class="mb-3">
                                 <div class="mx-auto">
-                                    <center><img class="card-img-right flex-auto d-none d-md-block" width="220px" height="175px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_vehiculo"></center>                          
+                                    <center><img class="card-img-right flex-auto d-none d-md-block" width="220" height="175" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_vehiculo"></center>                          
                                     <div class="list-group-item">
                                         <h6 class="text-success">Precio por día: $<s:property value="precioxdia"></s:property></h6>
                                     </div>
@@ -201,6 +206,7 @@
 
                 </div>
             </div>
+        </div>
             <!-- Footer -->
             <footer class="footer bg-light">
                 <div class="container">

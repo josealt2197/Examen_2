@@ -52,9 +52,6 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="ayuda.jsp">¿Necesitas ayuda?</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="login.jsp">Ingresar</a>
-                </li>
               </ul>
             </form>
           </div>
