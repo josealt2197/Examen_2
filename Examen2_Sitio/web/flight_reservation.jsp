@@ -73,7 +73,7 @@
                         <div style="display:none;">
                             <input type="text" class="form-control" name="fr.id_vuelo" value="<s:property value='id_vuelo'/>" >
                         </div>
-                         <div class="row">
+                        <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstname">Nombre</label>
                                 <s:textfield type = "text" cssClass="form-control" id="firstname" name = "fr.nombre" placeholder="Nombre" required="required"></s:textfield>
@@ -85,11 +85,11 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="lastName">Apellidos</label>
                                 <s:textfield type = "text" cssClass="form-control" id="lastName" name = "fr.apellido" placeholder="Apellidos" required="required"></s:textfield>
-                                <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
-                                <div class="invalid-feedback">
-                                    Este campo es requerido.
+                                    <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
                                 </div>
-                            </div>
 
                             </div>
                             <div class="row">
@@ -111,52 +111,51 @@
                                 </div>
                             </div>
 
-                        <div class="mb-3">
-                            <label for="email">Correo electrónico</label>
+                            <div class="mb-3">
+                                <label for="email">Correo electrónico</label>
                             <s:textfield type = "text" cssClass="form-control" id="email" name = "fr.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
-                            <!--<input type="email" class="form-control" id="email" placeholder="" value="" required="">-->
-                            <div class="invalid-feedback">
-                                Este campo es requerido.
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="repeatemail">Repita su correo electrónico</label>
-                            <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required="">
-                            <div class="invalid-feedback">
-                                Este campo es requerido.
-                            </div>
-                        </div>
-                        <hr class="mb-4">
-
-                        <h4 class="mb-3">Datos de reservación</h4>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="persons">Cantidad de Pasajeros</label>
-                                <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Cantidad" list="{1,2,3,4,5,6,7,8,9}" id="persons" name="fr.cantpasajeros"></s:select>
-                                <div class="invalid-feedback">
-                                    Seleccione una opción.
-                                </div>
-                            </div> 
-                            <div class="col-md-6 mb-3">
-                                <label for="persons">Clase</label>
-                                <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Clase" list="{'Economica','Economica Superior','Business', 'Primera'}" id="persons" name="fr.clase"></s:select>
-                                <div class="invalid-feedback">
-                                    Seleccione una opción.
-                                </div>
-                            </div> 
-
-
-
-                            <div style="display:none" class="col-md-6 mb-3">
-                                <label for="asientos">Asientos</label>
-                                <s:textfield type = "text" cssClass="form-control" id="selectedtext" name = "fr.asientos" placeholder="" required="required" readonly="true" ></s:textfield>
+                                <!--<input type="email" class="form-control" id="email" placeholder="" value="" required="">-->
                                 <div class="invalid-feedback">
                                     Este campo es requerido.
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="mb-3">
+                                <label for="repeatemail">Repita su correo electrónico</label>
+                                <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required="">
+                                <div class="invalid-feedback">
+                                    Este campo es requerido.
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+
+                            <h4 class="mb-3">Datos de reservación</h4>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="persons">Cantidad de Pasajeros</label>
+                                <s:textfield type = "number" id="cantidad" cssClass="form-control" name = "fr.cantpasajeros" placeholder="" required="required"></s:textfield>    
+                                    <div class="invalid-feedback">
+                                        Ingrese un número entre 1 y 10.
+                                    </div>
+                                </div> 
+                                <div class="col-md-6 mb-3">
+                                    <label for="persons">Clase</label>
+                                <s:select cssClass="custom-select d-block w-100" headerKey="-1" headerValue="Clase" list="{'Economica','Economica Superior','Business', 'Primera'}" id="persons" name="fr.clase"></s:select>
+                                    <div class="invalid-feedback">
+                                        Seleccione una opción.
+                                    </div>
+                                </div> 
+
+
+
+                                <div style="display:none;" class="col-md-6 mb-3">
+                                <s:textfield type = "text" cssClass="form-control" id="selectedtext" name = "fr.asientos" placeholder="" required="required" readonly="true" ></s:textfield>
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
+                                </div>
+                            </div>
 
 
 
@@ -169,12 +168,12 @@
                                         <p><strong>Hora de Llegada:</strong> <s:property value="horallegada.getValue()"></s:property></p>
                                         <p><strong>Aeronave:</strong> <s:property value="avion.getValue()"></s:property></p>
                                         <p><strong>Costo por Tiquete: </strong> <s:property value="costo.getValue()"></s:property></p>
-                                        <div>
-                                            <input type="text" class="form-control" name="fr.costo" value="<s:property value="costo.getValue()"></s:property>" >
+                                            <div style="display:none;">
+                                                <input type="text" class="form-control" name="fr.costo" value="<s:property value="costo.getValue()"></s:property>" >
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </s:iterator>
                     </div>
 
@@ -182,16 +181,16 @@
 
                         <s:iterator  value="flight_info">
                             <center><img class="card-img-right flex-auto d-none d-md-block" width="220px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"></center><br>
-                            <div class="mb-3">
-                                <div class="mx-auto">
-                                    <div class="list-group-item">
-                                        <p><strong>Vuelo: <s:property value="aerolinea.getValue()"></s:property> - <s:property value="vuelo.getValue()"></s:property></p>
+                                <div class="mb-3">
+                                    <div class="mx-auto">
+                                        <div class="list-group-item">
+                                            <p><strong>Vuelo: <s:property value="aerolinea.getValue()"></s:property> - <s:property value="vuelo.getValue()"></s:property></p>
                                         <p><strong>Origen:</strong> <s:property value="origen.getValue()"></s:property></p>
                                         <p><strong>Destino:</strong> <s:property value="destino.getValue()"></s:property> </p>
                                         <p><strong>Duración:</strong> <s:property value="duracion.getValue()"></s:property></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </s:iterator>
 
                         <!-- Seleccionar Asientos -->
@@ -207,27 +206,27 @@
                                         <li class="row--1">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="1A" type="checkbox" id="1A"/>
+                                                    <input class="form-check-input" value="1A" type="checkbox" name="chk" id="1A"/>
                                                     <label for="1A">1A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="1B" type="checkbox" id="1B" />
+                                                    <input class="form-check-input" value="1B" type="checkbox" name="chk" id="1B" />
                                                     <label for="1B">1B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="1C" type="checkbox" id="1C" />
+                                                    <input class="form-check-input" value="1C" type="checkbox" name="chk" id="1C" />
                                                     <label for="1C">1C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="1D" type="checkbox" id="1D" />
+                                                    <input class="form-check-input" value="1D" type="checkbox" name="chk" id="1D" />
                                                     <label for="1D">1D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="1E" type="checkbox" id="1E" />
+                                                    <input class="form-check-input" value="1E" type="checkbox" name="chk" id="1E" />
                                                     <label for="1E">1E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="1F" type="checkbox" id="1F" />
+                                                    <input class="form-check-input" value="1F" type="checkbox" name="chk" id="1F" />
                                                     <label for="1F">1F</label>
                                                 </li>
                                             </ol>
@@ -235,27 +234,27 @@
                                         <li class="row--2">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="2A" type="checkbox" id="2A" />
+                                                    <input class="form-check-input" value="2A" type="checkbox" name="chk" id="2A" />
                                                     <label for="2A">2A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="2B" type="checkbox" id="2B" />
+                                                    <input class="form-check-input" value="2B" type="checkbox" name="chk" id="2B" />
                                                     <label for="2B">2B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="2C" type="checkbox" id="2C" />
+                                                    <input class="form-check-input" value="2C" type="checkbox" name="chk" id="2C" />
                                                     <label for="2C">2C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="2D" type="checkbox" id="2D" />
+                                                    <input class="form-check-input" value="2D" type="checkbox" name="chk" id="2D" />
                                                     <label for="2D">2D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="2E" type="checkbox" id="2E" />
+                                                    <input class="form-check-input" value="2E" type="checkbox" name="chk" id="2E" />
                                                     <label for="2E">2E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="2F" type="checkbox" id="2F" />
+                                                    <input class="form-check-input" value="2F" type="checkbox" name="chk" id="2F" />
                                                     <label for="2F">2F</label>
                                                 </li>
                                             </ol>
@@ -263,27 +262,27 @@
                                         <li class="row--3">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="3A" type="checkbox" id="3A" />
+                                                    <input class="form-check-input" value="3A" type="checkbox" name="chk" id="3A" />
                                                     <label for="3A">3A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="3B" type="checkbox" id="3B" />
+                                                    <input class="form-check-input" value="3B" type="checkbox" name="chk" id="3B" />
                                                     <label for="3B">3B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="3C" type="checkbox" id="3C" />
+                                                    <input class="form-check-input" value="3C" type="checkbox" name="chk" id="3C" />
                                                     <label for="3C">3C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="3D" type="checkbox" id="3D" />
+                                                    <input class="form-check-input" value="3D" type="checkbox" name="chk" id="3D" />
                                                     <label for="3D">3D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="3E" type="checkbox" id="3E" />
+                                                    <input class="form-check-input" value="3E" type="checkbox" name="chk" id="3E" />
                                                     <label for="3E">3E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="3F" type="checkbox" id="3F" />
+                                                    <input class="form-check-input" value="3F" type="checkbox" name="chk" id="3F" />
                                                     <label for="3F">3F</label>
                                                 </li>
                                             </ol>
@@ -291,27 +290,27 @@
                                         <li class="row--4">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="4A" type="checkbox" id="4A" />
+                                                    <input class="form-check-input" value="4A" type="checkbox" name="chk" id="4A" />
                                                     <label for="4A">4A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="4B" type="checkbox" id="4B" />
+                                                    <input class="form-check-input" value="4B" type="checkbox" name="chk" id="4B" />
                                                     <label for="4B">4B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="4C" type="checkbox" id="4C" />
+                                                    <input class="form-check-input" value="4C" type="checkbox" name="chk" id="4C" />
                                                     <label for="4C">4C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="4D" type="checkbox" id="4D" />
+                                                    <input class="form-check-input" value="4D" type="checkbox" name="chk" id="4D" />
                                                     <label for="4D">4D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="4E" type="checkbox" id="4E" />
+                                                    <input class="form-check-input" value="4E" type="checkbox" name="chk" id="4E" />
                                                     <label for="4E">4E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="4F" type="checkbox" id="4F" />
+                                                    <input class="form-check-input" value="4F" type="checkbox" name="chk" id="4F" />
                                                     <label for="4F">4F</label>
                                                 </li>
                                             </ol>
@@ -319,27 +318,27 @@
                                         <li class="row--5">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="5A" type="checkbox" id="5A" />
+                                                    <input class="form-check-input" value="5A" type="checkbox" name="chk" id="5A" />
                                                     <label for="5A">5A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="5B" type="checkbox" id="5B" />
+                                                    <input class="form-check-input" value="5B" type="checkbox" name="chk" id="5B" />
                                                     <label for="5B">5B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="5C" type="checkbox" id="5C" />
+                                                    <input class="form-check-input" value="5C" type="checkbox" name="chk" id="5C" />
                                                     <label for="5C">5C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="5D" type="checkbox" id="5D" />
+                                                    <input class="form-check-input" value="5D" type="checkbox" name="chk" id="5D" />
                                                     <label for="5D">5D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="5E" type="checkbox" id="5E" />
+                                                    <input class="form-check-input" value="5E" type="checkbox" name="chk" id="5E" />
                                                     <label for="5E">5E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="5F" type="checkbox" id="5F" />
+                                                    <input class="form-check-input" value="5F" type="checkbox" name="chk" id="5F" />
                                                     <label for="5F">5F</label>
                                                 </li>
                                             </ol>
@@ -347,27 +346,27 @@
                                         <li class="row--6">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="6A" type="checkbox" id="6A" />
+                                                    <input class="form-check-input" value="6A" type="checkbox" name="chk" id="6A" />
                                                     <label for="6A">6A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="6B"type="checkbox" id="6B" />
+                                                    <input class="form-check-input" value="6B"type="checkbox" name="chk" id="6B" />
                                                     <label for="6B">6B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="6C" type="checkbox" id="6C" />
+                                                    <input class="form-check-input" value="6C" type="checkbox" name="chk" id="6C" />
                                                     <label for="6C">6C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="6D" type="checkbox" id="6D" />
+                                                    <input class="form-check-input" value="6D" type="checkbox" name="chk" id="6D" />
                                                     <label for="6D">6D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="6E" type="checkbox" id="6E" />
+                                                    <input class="form-check-input" value="6E" type="checkbox" name="chk" id="6E" />
                                                     <label for="6E">6E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="6F" type="checkbox" id="6F" />
+                                                    <input class="form-check-input" value="6F" type="checkbox" name="chk" id="6F" />
                                                     <label for="6F">6F</label>
                                                 </li>
                                             </ol>
@@ -375,27 +374,27 @@
                                         <li class="row--7">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="7A" type="checkbox" id="7A" />
+                                                    <input class="form-check-input" value="7A" type="checkbox" name="chk" id="7A" />
                                                     <label for="7A">7A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="7B" type="checkbox" id="7B" />
+                                                    <input class="form-check-input" value="7B" type="checkbox" name="chk" id="7B" />
                                                     <label for="7B">7B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="7C" type="checkbox" id="7C" />
+                                                    <input class="form-check-input" value="7C" type="checkbox" name="chk" id="7C" />
                                                     <label for="7C">7C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="7D" type="checkbox" id="7D" />
+                                                    <input class="form-check-input" value="7D" type="checkbox" name="chk" id="7D" />
                                                     <label for="7D">7D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="7E" type="checkbox" id="7E" />
+                                                    <input class="form-check-input" value="7E" type="checkbox" name="chk" id="7E" />
                                                     <label for="7E">7E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="7F" type="checkbox" id="7F" />
+                                                    <input class="form-check-input" value="7F" type="checkbox" name="chk" id="7F" />
                                                     <label for="7F">7F</label>
                                                 </li>
                                             </ol>
@@ -403,27 +402,27 @@
                                         <li class="row--8">
                                             <ol class="seats" type="A">
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="8A" type="checkbox" id="8A" />
+                                                    <input class="form-check-input" value="8A" type="checkbox" name="chk" id="8A" />
                                                     <label for="8A">8A</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="8B" type="checkbox" id="8B" />
+                                                    <input class="form-check-input" value="8B" type="checkbox" name="chk" id="8B" />
                                                     <label for="8B">8B</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="8C" type="checkbox" id="8C" />
+                                                    <input class="form-check-input" value="8C" type="checkbox" name="chk" id="8C" />
                                                     <label for="8C">8C</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="8D" type="checkbox" id="8D" />
+                                                    <input class="form-check-input" value="8D" type="checkbox" name="chk" id="8D" />
                                                     <label for="8D">8D</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="8E" type="checkbox" id="8E" />
+                                                    <input class="form-check-input" value="8E" type="checkbox" name="chk" id="8E" />
                                                     <label for="8E">8E</label>
                                                 </li>
                                                 <li class="seat">
-                                                    <input class="form-check-input" value="8F" type="checkbox" id="8F" />
+                                                    <input class="form-check-input" value="8F" type="checkbox" name="chk" id="8F" />
                                                     <label for="8F">8F</label>
                                                 </li>
                                             </ol>
@@ -491,71 +490,84 @@
                         </div>
                     </div>
                     <center><button style="max-width:200px; margin-right: 90px;" class="btn btn-success btn-block" type="submit" name="submitType">Reservar</button></center>
-            </s:form>
-        </div>
-        <!-- Footer -->
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="foot col-lg-6 h-100 text-center mx-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item">
-                                <a href="#">Ayuda</a>
-                            </li>
-                            <li class="list-inline-item">&sdot;</li>
-                            <li class="list-inline-item">
-                                <a href="#">Hospedaje</a>
-                            </li>
-                            <li class="list-inline-item">&sdot;</li>
-                            <li class="list-inline-item">
-                                <a href="#">Vehículos</a>
-                            </li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; JBSG 2019. All Rights Reserved.</p>
+                    </s:form>
+            </div>
+            <!-- Footer -->
+            <footer class="footer bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="foot col-lg-6 h-100 text-center mx-auto">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item">
+                                    <a href="#">Ayuda</a>
+                                </li>
+                                <li class="list-inline-item">&sdot;</li>
+                                <li class="list-inline-item">
+                                    <a href="#">Hospedaje</a>
+                                </li>
+                                <li class="list-inline-item">&sdot;</li>
+                                <li class="list-inline-item">
+                                    <a href="#">Vehículos</a>
+                                </li>
+                            </ul>
+                            <p class="text-muted small mb-4 mb-lg-0">&copy; JBSG 2019. All Rights Reserved.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('.form-check-input').click(function () {
-                    var text = "";
-                    $('.form-check-input:checked').each(function () {
-                        text += $(this).val() + ' | ';
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.form-check-input').click(function () {
+                        var text = "";
+                        $('.form-check-input:checked').each(function () {
+                            text += $(this).val() + ' | ';
+                        });
+                        text = text.substring(0, text.length - 1);
+                        $('#selectedtext').val(text);
+                        $('#selectedtext2').val(text);
                     });
-                    text = text.substring(0, text.length - 1);
-                    $('#selectedtext').val(text);
-                    $('#selectedtext2').val(text);
                 });
-            });
-        </script>
+            </script>
 
-        <script>
-            (function () {
-                'use strict'
+            <script>
+                (function () {
+                    'use strict'
 
-                window.addEventListener('load', function () {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation')
+                    window.addEventListener('load', function () {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation')
 
-                    // Loop over them and prevent submission
-                    Array.prototype.filter.call(forms, function (form) {
-                        form.addEventListener('submit', function (event) {
-                            if (form.checkValidity() === false) {
-                                event.preventDefault()
-                                event.stopPropagation()
-                            }
-                            form.classList.add('was-validated')
-                        }, false)
-                    })
-                }, false)
-            }());
-        </script>
+                        // Loop over them and prevent submission
+                        Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+                    }, false)
+                }());
+            </script>
+
+            <script>
+                $("input[name=chk]").change(function () {
+                    var max = document.getElementById('cantidad').value;
+                    if ($("input[name=chk]:checked").length == max) {
+                        $("input[name=chk]").attr('disabled', 'disabled');
+                        $("input[name=chk]:checked").removeAttr('disabled');
+                    } else {
+                        $("input[name=chk]").removeAttr('disabled');
+                    }
+                });
+            </script>
+
     </body>
 </html>
 

@@ -59,7 +59,6 @@
             <section class="list-search text-white text-center">
                 <div class="overlay"></div>
                 <div class="container">
-                    <form>
                         <div class="form-row">
                             <div class="col-md-6 mx-auto">
                                 <h1 class="mb-3" style="color:#4caf50;">Vuelos<span class="pl-2"><img src="img/costa-rica64.png"></span></h1>
@@ -76,7 +75,6 @@
                         <div class="col-md-4 mx-auto">
                             <br><button id="search" class="btn btn-block btn-lg btn-success">Buscar Vuelos</button>
                         </div>
-                    </form>
                 </div>
             </section><br>
 
@@ -152,7 +150,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
         
         
-        <script>
+<!--        <script>
             $('.flight-data').hide();
             $('#search').click(function () {
                 $('.flight-data').hide();
@@ -164,7 +162,7 @@
                     };
                 });
             });
-        </script>
+        </script>-->
         
     </body>
 </html>
