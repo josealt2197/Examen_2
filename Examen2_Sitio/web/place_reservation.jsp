@@ -61,28 +61,30 @@
             </div>
             
             <div class="row">
-                <div class="col-md-4 order-md-1">
+                <s:iterator value="hotel_info">
+                    <div class="col-md-4 order-md-1">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-muted">Park Inn San Jose by Radisson</span>
+                        <span class="text-muted"><s:property value="NombreHos.getValue()"></s:property></span>
                         <span class="badge badge-primary badge-pill">Hotel</span>
                     </h4>
                     <div class="mb-3">
                         <div class="mx-auto">
-                            <img src="" alt="ImagenLugar" width="64px" height="64px">
+                            <img width="290px" src="<s:property value="ImagenDetail.getValue()"></s:property>"><br>
                             <div class="list-group-item">
                                 <h6 class="text-success">Ubicación</h6>
-                                <h6>Calle Central y Tercera Av 15, Barrio Tournon, 00001 San José, Costa Rica</h6>
+                                <h6><s:property value="UbicacionExacta.getValue()"></s:property></h6>
                             </div>
                             <div class="list-group-item">
                                 <h6 class="text-success">Detalles</h6>
-                                <h6>Está en nuestra selección para San José</h6>
-                                <h6>Tiene 2 restaurantes</h6>
+                                <h6>Está en nuestra selección para <s:property value="ProvinciaHos.getValue()"></s:property></h6>
+                                <h6>Incluye</h6>
+                                <l6><s:property value="ServiciosIncluidos.getValue()"></s:property></h6>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                
+                </s:iterator>
+   
                 <div class="col-md-7 order-md-2">
                     <div class='alert alert-success'>
                         <strong>¿Aún no has iniciado sesión?</strong><p>Puedes iniciar sesión para completar tus datos personales con tu perfil o crea una cuenta para estar en contacto contigo.</p>

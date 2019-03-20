@@ -93,7 +93,7 @@
                                         <div class="mb-1">
                                             <i class="pr-4 fas fa-map-marker-alt" style="color: #4caf50; margin-top: 15px;"> <s:property value="ProvinciaHos.getValue()"></s:property></i>                                        
                                         <i class="pr-4 fas fa-users" style="color: #4caf50; margin-top: 15px;"> <s:property value="CantidadHuespedes"></s:property></i>
-                                        <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> ₡ <s:property value="Precio"></s:property></i>
+                                        <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> $ <s:property value="Precio"></s:property></i>
                                         </div>                      
                                         <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="DescripcionHos.getValue()"></s:property></p>
                                     <br><a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
