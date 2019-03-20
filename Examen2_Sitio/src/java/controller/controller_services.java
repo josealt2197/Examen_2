@@ -8,11 +8,14 @@ import bean.usuarios;
 import carservices.*;
 import flightservices.*;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionContext;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
 import model.Hotel;
 import model.model_services;
+import org.apache.struts2.ServletActionContext;
 
 public class controller_services {
     
@@ -34,11 +37,44 @@ public class controller_services {
         return SUCCESS;
     }
     
-    //----------------Enviar email    
+    //----------------Enviar email registro    
     public String proccessRegister(){
         model_services da = new model_services();
         da.sendEmail(getU());
 
+        return SUCCESS;
+    }
+    
+    //----------------Enviar email contraseña  
+    public String proccessChangeP(){
+        model_services da = new model_services();
+        da.sendEmailPassword(getU());
+
+        return SUCCESS;
+    }
+    
+    //---------------Actualizar usuario
+    private int idU;
+
+    public int getIdU() {
+        return idU;
+    }
+
+    public void setIdU(int idU) {
+        this.idU = idU;
+    }
+    
+    public String updateUsuario() throws SQLException{
+        model_services da = new model_services(); 
+        //HttpServletRequest request = (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST);
+        //idmail = request.getParameter("idmail");
+        System.out.println(">>>"+idU);
+        da.updateU(getU(), idU);
+
+        return SUCCESS;
+    }
+    
+    public String returnToPage(){
         return SUCCESS;
     }
     

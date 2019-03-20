@@ -68,6 +68,11 @@
                 <!--<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>-->
                 <div class="checkbox mb-3">
                     <label>
+                        <a href="pre_forgot.jsp">¿Olvidaste tu contraseña?</a>
+                    </label>
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
                         <a href="pre_register.jsp">Regístrate</a>
                     </label>
                 </div>
