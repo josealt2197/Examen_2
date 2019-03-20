@@ -185,11 +185,11 @@
                     <div class="col-md-5 order-md-2">
 
                         <s:iterator  value="flight_info">
-                            <center><img class="card-img-right flex-auto d-none d-md-block" width="220px" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"></center><br>
+                            <center><img class="card-img-right flex-auto d-none d-md-block" width="220" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="img_aero"></center><br>
                                 <div class="mb-3">
                                     <div class="mx-auto">
                                         <div class="list-group-item">
-                                            <p><strong>Vuelo: <s:property value="aerolinea.getValue()"></s:property> - <s:property value="vuelo.getValue()"></s:property></p>
+                                            <p><strong>Vuelo: <s:property value="aerolinea.getValue()"></s:property> - <s:property value="vuelo.getValue()"></s:property></strong></p>
                                         <p><strong>Origen:</strong> <s:property value="origen.getValue()"></s:property></p>
                                         <p><strong>Destino:</strong> <s:property value="destino.getValue()"></s:property> </p>
                                         <p><strong>Duración:</strong> <s:property value="duracion.getValue()"></s:property></p>
