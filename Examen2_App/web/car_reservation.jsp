@@ -24,7 +24,9 @@
             <div data-role="header" data-theme="b">
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
-                <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                <s:if test="%{#session.session_correo != null}">
+                    <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                </s:if>
             </div><!-- /header -->
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -153,15 +155,15 @@
                                         </div>
                                     </div>
 
-<!--                                COSTO DE VEHICULOS->AGREGAR A TABLA Y MVC STRUTS-->
+                                    <!--                                COSTO DE VEHICULOS->AGREGAR A TABLA Y MVC STRUTS-->
                                 <s:iterator  value="car_info">
                                     <div class="mb-3">
                                         <label for="pick-place">Costo</label>
                                         <input type="text" class="form-control" name="cr.id_vehiculo" readonly="true" value="<s:property value="precioxdia"></s:property>" >
-                                        <div class="invalid-feedback">
-                                            Este campo es requerido.
+                                            <div class="invalid-feedback">
+                                                Este campo es requerido.
+                                            </div>
                                         </div>
-                                    </div>
                                 </s:iterator>
 
                                 <hr class="mb-4">
@@ -180,9 +182,12 @@
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
+                        <s:if test="%{#session.session_correo == null}">
+                        <li><a href="login.jsp" rel="external">Iniciar sesión</a></li>
+                        </s:if>
+                    <li><a href="index.jsp" rel="external">Inicio</a></li>
                     <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
                     <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
-                    <li><a href="login.jsp" rel="external">Ingresar</a></li>
                 </ul>
             </div>
 
