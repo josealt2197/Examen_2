@@ -100,7 +100,7 @@
                                         <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> $ <s:property value="precioxdia"></s:property></i>
                                         </div>                      
                                         <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="servicios.getValue()"></s:property></p>
-                                    <a class="btn btn-success" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Leer más</a>
+                                    <a class="btn btn-success" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Ver oferta</a>
                                     </div>
                                     <img class="card-img-right flex-auto d-none d-md-block" width="350" height="225" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="Card image cap">                          
                                 </div>
@@ -146,9 +146,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
         <script>
-            $('#search-criteria').keyup(function () { 
+            $('#search').click(function () { 
                 var filter = $("#search-criteria").val();
-                $('.place-data').each(function() {
+                $('.car-data').each(function() {
                     $(this).find(".row:not(:contains('" + filter + "'))").hide();
                     $(this).find(".row:contains('" + filter + "')").show();
                 });

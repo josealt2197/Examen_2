@@ -73,11 +73,11 @@
                             <input type="text" class="form-control form-control-lg" id="search-criteria" placeholder="¿Donde lo necesitas?">
                         </div><br>
                     </div>
-<!--                    <div class="form-row mx-auto">
+                    <div class="form-row mx-auto">
                         <div class="col-md-2 mx-auto">
                             <br><button id="search" class="btn btn-block btn-lg btn-success">Buscar</button>
                         </div>
-                    </div>-->
+                    </div>
 
                 </div>
             </section><br>
@@ -101,7 +101,7 @@
                                         <i class="fas fa-money-bill" style="color: #4caf50; margin-top: 15px;"> $ <s:property value="Precio"></s:property></i>
                                         </div>                      
                                         <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="DescripcionHos.getValue()"></s:property></p>
-                                    <br><a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Leer más</a>
+                                    <br><a class="btn btn-success" href="place_detail.action?id=<s:property value="id"></s:property>">Ver oferta</a>
                                     </div>
                                     <img class="card-img-right flex-auto d-none d-md-block" width="290" height="275" style="padding-top: 25px;" src="<s:property value="ImagenHos.getValue()"></s:property>" alt="Card image cap">
                                 </div>
@@ -143,7 +143,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
     
     <script>
-        $('#search-criteria').keyup(function () { 
+        $('#search').click(function () { 
             var filter = $("#search-criteria").val();
             $('.place-data').each(function() {
                 $(this).find(".row:not(:contains('" + filter + "'))").hide();
