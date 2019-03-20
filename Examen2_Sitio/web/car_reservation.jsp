@@ -102,16 +102,14 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstname">Nombre</label>
-                                <s:textfield type = "text" cssClass="form-control" id="firstname" name = "cr.nombre" placeholder="Nombre" required="required"></s:textfield>
-                                    <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+                                <input type="text" class="form-control" name = "cr.nombre" id="firstname" placeholder="Nombre" value='<s:property value="#session.session_nombre"/>' required="">
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="lastName">Apellidos</label>
-                                <s:textfield type = "text" cssClass="form-control" id="lastName" name = "cr.apellido" placeholder="Apellidos" required="required"></s:textfield>
-                                <!--<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">-->
+                                <input type="text" class="form-control" name = "cr.apellido" id="lastName" placeholder="Apellidos" value='<s:property value="#session.session_apellido"/>' required="">
                                 <div class="invalid-feedback">
                                     Este campo es requerido.
                                 </div>
@@ -121,16 +119,14 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="id">Cédula</label>
-                                <s:textfield type = "text" cssClass="form-control" id="id" name = "cr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
-                                    <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
+                                <input type="text" class="form-control" name = "cr.id_cliente" id="id" placeholder="Cédula" value='<s:property value="#session.session_cedula"/>' required="">
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="phone">Teléfono</label>
-                                <s:textfield type = "text" cssClass="form-control" id="phone" name = "cr.telefono" placeholder="12345678" required="required"></s:textfield>
-                                    <!--<input type="text" class="form-control" id="phone" placeholder="" value="" required="">-->
+                                <input type="text" class="form-control" name = "cr.telefono" id="phone" placeholder="12345678" value='<s:property value="#session.session_telefono"/>' required="">
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
@@ -139,8 +135,7 @@
 
                             <div class="mb-3">
                                 <label for="email">Correo electrónico</label>
-                            <s:textfield type = "text" cssClass="form-control" id="email" name = "cr.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
-                                <!--<input type="email" class="form-control" id="email" placeholder="" value="" required="">-->
+                            <input type="email" class="form-control" name = "cr.correo" id="email" placeholder="ticobooking@correo.com" value='<s:property value="#session.session_correo"/>' required="">
                                 <div class="invalid-feedback">
                                     Este campo es requerido.
                                 </div>

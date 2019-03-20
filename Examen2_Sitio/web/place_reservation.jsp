@@ -120,7 +120,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="id">Cédula</label>                              
-                                    <input type="text" class="form-control" name = "r.id_cliente" id="firstName" placeholder="Cédula" value='<s:property value="#session.session_cedula"/>' required="">
+                                    <input type="text" class="form-control" name = "r.id_cliente" id="id" placeholder="Cédula" value='<s:property value="#session.session_cedula"/>' required="">
                                     <div class="invalid-feedback">
                                         Este campo es requerido.
                                     </div>
