@@ -16,18 +16,19 @@ import javax.mail.internet.MimeMessage;
 
 public class model_services {
     //--------------------------------------------------PARTE LOCAL: REGISTRO DE USUARIOS------------------------------------------------------------------
-        private String insertsql = "insert into Register_Usuario(IDUsuario, NombreCompleto, Telefono, Correo, FechaNac, Password) values(?, ?, ?, ?, ?, ?);";
+        private String insertsql = "insert into Register_Usuario(IDUsuario, Nombre, Apellidos, Telefono, Correo, FechaNac, Password) values(?, ?, ?, ?, ?, ?, ?);";
         public boolean insertU(usuarios u) throws SQLException{
         boolean resultado = false;        
         
         Connection con = conexion.getConnection();
         PreparedStatement ps = con.prepareStatement(insertsql);
         ps.setInt(1, u.getCedula());
-        ps.setString(2, u.getFullnombre());
-        ps.setString(3, u.getTelefono());
-        ps.setString(4, u.getCorreo());
-        ps.setString(5, u.getFechanacimiento());
-        ps.setString(6, u.getPassword());
+        ps.setString(2, u.getNombre());
+        ps.setString(3, u.getApellido());
+        ps.setString(4, u.getTelefono());
+        ps.setString(5, u.getCorreo());
+        ps.setString(6, u.getFechanacimiento());
+        ps.setString(7, u.getPassword());
 
         if (ps.executeUpdate() == 1) {
             resultado = true;
@@ -117,6 +118,25 @@ public class model_services {
         con.close();
 
         return result;
+    }
+    
+    private String sql2 = "SELECT IDUsuario, Nombre, Apellidos, Telefono, Correo FROM Register_Usuario WHERE Correo = ?;";    
+    public String consulta_session(usuarios u) throws SQLException {
+        Connection con = conexion.getConnection();        
+        PreparedStatement ps = con.prepareStatement(sql2);
+        ps.setString(1, u.getCorreo());
+        
+        ResultSet res = ps.executeQuery();
+        
+        while (res.next()) {
+            u.setCedula(res.getInt(1));
+            u.setNombre(res.getString(2));
+            u.setApellido(res.getString(3));
+            u.setTelefono(res.getString(4));
+            u.setCorreo(res.getString(5));
+        }
+        
+        return "exito";
     }
     //--------------------------------------------------ALOJAMIENTO------------------------------------------------------------------
     public boolean insertReservations(reservaciones r){

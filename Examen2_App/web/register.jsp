@@ -36,18 +36,26 @@
                 <s:form  theme="simple" cssClass="needs-validation" action = "registrar" method = "post">
 
                     <div>
-                        <label for="firstName">Nombre Completo</label>
-                        <s:textfield type="text" cssClass="form-control" id="firstName" name = "u.fullnombre" placeholder="Nombre y Apellidos" value="" required="required"></s:textfield>
+                        <label for="lastName">Cédula</label>
+                        <s:textfield type = "number" cssClass="form-control" id="form_cedula" name = "u.cedula" placeholder="Cédula" required="required"></s:textfield>
+                            <div class="invalid-feedback">
+                                Una Cédula valida es requerida.
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="firstName">Nombre</label>
+                        <s:textfield type = "text" cssClass="form-control" id="firstName" name = "u.nombre" placeholder="Nombre" required="required"></s:textfield>
                             <div class="invalid-feedback">
                                 Un nombre valido es requerido.
                             </div>
                         </div>
 
                         <div>
-                            <label for="lastName">Cédula</label>
-                        <s:textfield type="text" cssClass="form-control" id="lastName" name = "u.cedula" placeholder="Número de Cédula" value="" required="required"></s:textfield>
+                            <label for="firstName">Apellidos</label>
+                       <s:textfield type = "text" cssClass="form-control" id="apellidos" name = "u.apellido" placeholder="Apellidos" required="required"></s:textfield>
                             <div class="invalid-feedback">
-                                Una Cédula valida es requerida.
+                                Un nombre valido es requerido.
                             </div>
                         </div>
 

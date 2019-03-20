@@ -6,7 +6,8 @@ import java.io.Serializable;
 public class usuarios implements Serializable {
     
     public int cedula;
-    public String fullnombre;
+    public String nombre;
+    public String apellido;
     public String correo;
     public String telefono;
     public String fechanacimiento;
@@ -21,9 +22,10 @@ public class usuarios implements Serializable {
         this.password = password;
     }
 
-    public usuarios(int cedula, String fullnombre, String correo, String telefono, String fechanacimiento, String password) {
+    public usuarios(int cedula, String nombre, String apellido, String correo, String telefono, String fechanacimiento, String password) {
         this.cedula = cedula;
-        this.fullnombre = fullnombre;
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.correo = correo;
         this.telefono = telefono;
         this.fechanacimiento = fechanacimiento;
@@ -46,13 +48,21 @@ public class usuarios implements Serializable {
         this.password = password;
     }
 
-    public String getFullnombre() {
-        return fullnombre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setFullnombre(String fullnombre) {
-        this.fullnombre = fullnombre;
-    }    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }        
     
     public String getCorreo() {
         return correo;
