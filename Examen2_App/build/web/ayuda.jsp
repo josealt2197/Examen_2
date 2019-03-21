@@ -45,10 +45,7 @@
                             <div class="card-body">
                                 <h3 style="color: #0A2A70;" class="mx-auto card-title"><i class="fas fa-home"></i> Reserva de Hospedaje</h3>
                                 <p class="card-text"><strong>¿Tienes preguntas de las habitaciones que te ofrecemos?</strong> En nuestra seccion <b>FAQ</b> te las respondemos</p>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
-                                    FAQ <i class="fas fa-home"></i>
-                                </button>
-                                <a href="#dialog1">Dialog 1</a>
+                                <a href="#dialog1" class="btn btn-success text-white" style="text-decoration: none;">FAQ <i class="fas fa-home"></i></a>
                             </div>
                         </div>
                     </div>
@@ -61,9 +58,7 @@
                             <div class="card-body">
                                 <h3 style="color: #0A2A70;" class="mx-auto"><i class="fas fa-car"></i> Reserva de Vehiculos</h3> 
                                 <p class="card-text"><strong>¿Tienes preguntas sobre las opciones de alquiler de vehículos?</strong> En nuestra seccion <b>FAQ</b> te las respondemos</p>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
-                                    FAQ <i class="fas fa-car"></i>
-                                </button>
+                                <a href="#dialog2" class="btn btn-success text-white" style="text-decoration: none;">FAQ <i class="fas fa-car"></i></a>
                             </div>
                         </div>
                     </div>
@@ -76,266 +71,12 @@
                             <div class="card-body">
                                 <h3 style="color: #0A2A70;" class="mx-auto"><i class="fas fa-plane"></i> Reserva de Vuelos</h3> 
                                 <p class="card-text"><strong>¿Tienes preguntas sobre tus viajes?</strong> En nuestra seccion <b>FAQ</b> te las respondemos</p>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
-                                    FAQ <i class="fas fa-plane"></i>
-                                </button>
+                                <a href="#dialog3" class="btn btn-success text-white" style="text-decoration: none;">FAQ <i class="fas fa-plane"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- The Modal -->
-                <div class="modal fade" id="myModal1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title" style="color: #0A2A70;">Reserva de Hospedaje</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div id="accordion">
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingTwo">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Los precios ¿son por persona o por habitación?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Todos los precios de TICOBOOKING.COM son por habitación y estancia, a menos que se indique lo contrario.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingThree">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    ¿Está el desayuno incluido en el precio?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Una vez hayas confirmado la disponibilidad para las fechas solicitadas, encontrarás información sobre desayuno, impuestos y equipamiento clicando sobre el nombre de la habitación.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingFour">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                    No tengo tarjeta de crédito ¿puedo efectuar una reserva?    
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                                            <div class="card-body">
-                                                No. Todos los hoteles solicitan una tarjeta de crédito para garantizar la reserva. No podemos procesar ninguna sin ella.
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingFive">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapsefive">
-                                                    ¿Cómo sé si mi reserva ha sido cancelada?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Una vez cancelada la reserva recibirás un email para confirmar la cancelación. Si no recibes el email de cancelación envíanos los datos de tu reserva. 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Modal -->
-                <div class="modal fade" id="myModal2">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title" style="color: #0A2A70;">Reserva de Vehiculos</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div id="accordion">
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingTwo2">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-                                                    ¿Qué edad debo tener para alquilar un coche?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion">
-                                            <div class="card-body">
-                                                La mayoría de nuestros proveedores exigen que el conductor principal tenga una edad de entre 21 y 70 años. Si el conductor es menor de 25 años o mayor de 70, es posible que tenga que abonar una tasa adicional.    
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingThree2">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
-                                                    ¿Puedo reservar un coche para otra persona?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Sí, siempre y cuando dicha persona cumpla con estos requisitos. Sólo tendrá que introducir sus datos al realizar la reserva.    
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingFour2">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
-                                                    ¿Qué aspectos son los más importantes a la hora de elegir un coche?    
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFour2" class="collapse" aria-labelledby="headingFour2" data-parent="#accordion">
-                                            <div class="card-body">
-                                                <ul>
-                                                    <li>Tamaño: viajará con más comodidad si escoge un vehículo que disponga de suficiente espacio para los pasajeros y las maletas.</li>
-                                                    <li>Ubicación: le resultará más cómodo escoger un proveedor cuya oficina de alquiler se encuentre en un lugar mas cercano; sin embargo, los proveedores situados fuera del aeropuerto ofrecen un autobús de cortesía que le llevará a la oficina y suelen tener precios más económicos.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div style="background-color:#4caf50;" class="card-header" id="headingFive2">
-                                                <h5 class="mb-0">
-                                                    <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive2" aria-expanded="false" aria-controls="collapseFive2">
-                                                        ¿Están todos los impuestos incluidos en el precio del alquiler?
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseFive2" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                                <div class="card-body">
-                                                    La gran mayoría de nuestras reservas incluyen Cobertura en caso de robo, Cobertura parcial por colisión (CDW), impuestos locales, 
-                                                    tasas aeroportuarias e impuestos de circulación.  Si desea obtener más información sobre lo que está incluido en su reserva, 
-                                                    consulte los términos y condiciones o contacte a la empresa a la que pertenece el vehículo.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Modal -->
-                <div class="modal fade" id="myModal3">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title" style="color: #0A2A70;">Reserva de Vuelos</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div id="accordion">
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingTwo3">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
-                                                    ¿Qué pasa si efectuó mi reserva más de una vez?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo3" class="collapse" aria-labelledby="headingTwo3" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Si los pasajes para el mismo pasajero se han efectuado con repetición o reservas duplicadas (incluyendo la reserva de vuelos que salen en el mismo día), usted será responsable de las tasas de cancelación.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingThree">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
-                                                    ¿Cuánto tiempo después de efectuar mi reserva se emitirá el pasaje?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree3" class="collapse" aria-labelledby="headingThree3" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Normalmente, los pasajes se emitirán en 30 minutos después de efectuar y pagar su reserva.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingFour3">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour3" aria-expanded="false" aria-controls="collapseFour3">
-                                                    Me he equivocado al hacer la reserva. ¿Qué debo hacer? 
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFour3" class="collapse" aria-labelledby="headingFour3" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Ponte en contacto con nuestro departamento de Atención al Cliente lo antes posible.
-                                                De todas maneras te recordamos que nuestro proceso de emisión de billetes es automático y una vez confirmada una reserva la mayoría de tarifas no 
-                                                permiten los cambios o cancelaciones. En caso que la aerolínea o la tarifa que has comprado permitan el cambio te indicaremos que nos lo pidas por escrito y en cualquier caso se te aplicarán los gastos de gestión correspondientes.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div style="background-color:#4caf50;" class="card-header" id="headingFive3">
-                                            <h5 class="mb-0">
-                                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive3" aria-expanded="false" aria-controls="collapseFive3">
-                                                    ¿Con cuánto anticipación puedo reservar un vuelo? 
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFive3" class="collapse" aria-labelledby="headingFive3" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Usted puede reservar vuelos domésticos con 180 días de anticipo y vuelos internacionales con 365 días de anticipo. Los pasajes deben pagar en el precio cotizado. 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>            
-
+        
                 <hr class="mb-1">
                 <br>
             </div><!-- /content -->
@@ -360,91 +101,106 @@
             </div>
         </div>
 
-
-
-
         <div data-role="page" class="jqm-demos ui-responsive-panel" id="dialog1" data-title="TicoBooking" data-dialog="true" data-close-btn="right">
 
             <div data-role="header" data-theme="b">
-                <h1>Dialog</h1>
+                <h1>Reserva de<br> Hospedaje</h1>
             </div>
-            
-            <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
 
-                <!-- Modal Header -->
-                <h4 class="modal-title" style="color: #0A2A70;">Reserva de Hospedaje</h4>
+            <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
 
                 <div data-role="collapsible">     
                     <h4>Los precios ¿son por persona<br> o por habitación?</h4>     
                     <p> Todos los precios de TICOBOOKING.COM son por habitación y estancia, a menos que se indique lo contrario.</p> 
                 </div>
-
-                <div id="accordion">
-                    <div class="card">
-                        <div style="background-color:#4caf50;" class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Los precios ¿son por persona o por habitación?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                Todos los precios de TICOBOOKING.COM son por habitación y estancia, a menos que se indique lo contrario.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div style="background-color:#4caf50;" class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    ¿Está el desayuno incluido en el precio?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                                Una vez hayas confirmado la disponibilidad para las fechas solicitadas, encontrarás información sobre desayuno, impuestos y equipamiento clicando sobre el nombre de la habitación.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div style="background-color:#4caf50;" class="card-header" id="headingFour">
-                            <h5 class="mb-0">
-                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    No tengo tarjeta de crédito ¿puedo efectuar una reserva?    
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                            <div class="card-body">
-                                No. Todos los hoteles solicitan una tarjeta de crédito para garantizar la reserva. No podemos procesar ninguna sin ella.
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card">
-                        <div style="background-color:#4caf50;" class="card-header" id="headingFive">
-                            <h5 class="mb-0">
-                                <button style="color:#FFFFFF;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapsefive">
-                                    ¿Cómo sé si mi reserva ha sido cancelada?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                            <div class="card-body">
-                                Una vez cancelada la reserva recibirás un email para confirmar la cancelación. Si no recibes el email de cancelación envíanos los datos de tu reserva. 
-                            </div>
-                        </div>
-                    </div>
+                <div data-role="collapsible">     
+                    <h4>¿Está el desayuno incluido<br> en el precio?</h4>     
+                    <p>Una vez hayas confirmado la disponibilidad para las fechas solicitadas, encontrarás información sobre desayuno, impuestos y equipamiento clicando sobre el nombre de la habitación.</p> 
                 </div>
-
-
-                <!-- Modal footer -->
-                <button data-rel="back" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <div data-role="collapsible">     
+                    <h4> No tengo tarjeta de crédito<br> ¿puedo efectuar una reserva? </h4>     
+                    <p>No. Todos los hoteles solicitan una tarjeta de crédito para garantizar la reserva. No podemos procesar ninguna sin ella..</p> 
+                </div>
+                <div data-role="collapsible">     
+                    <h4>¿Cómo sé si mi reserva<br> ha sido cancelada?</h4>     
+                    <p> Una vez cancelada la reserva recibirás un email para confirmar la cancelación. Si no recibes el email de cancelación envíanos los datos de tu reserva.</p> 
+                </div>
 
             </div><!-- /content -->
 
         </div>
+
+        <div data-role="page" class="jqm-demos ui-responsive-panel" id="dialog2" data-title="TicoBooking" data-dialog="true" data-close-btn="right">
+
+            <div data-role="header" data-theme="b">
+                <h1>Reserva de<br> Vehículos</h1>
+            </div>
+
+            <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
+
+                <div data-role="collapsible">     
+                    <h4>¿Qué edad debo tener para<br> alquilar un coche?</h4>     
+                    <p> La mayoría de nuestros proveedores exigen que el conductor principal tenga una edad de entre 21 y 70 años. Si el conductor es menor de 25 años o mayor de 70, es posible que tenga que abonar una tasa adicional. </p> 
+                </div>
+
+                <div data-role="collapsible">     
+                    <h4>¿Puedo reservar un coche<br> para otra persona?</h4>     
+                    <p>  Sí, siempre y cuando dicha persona cumpla con estos requisitos. Sólo tendrá que introducir sus datos al realizar la reserva. </p> 
+                </div>
+
+                <div data-role="collapsible">     
+                    <h4>¿Qué aspectos son los más<br> importantes a la hora de elegir<br> un coche?</h4>  
+                    <ul>
+                        <li>Tamaño: viajará con más comodidad si escoge un vehículo que disponga de suficiente espacio para los pasajeros y las maletas.</li>
+                        <li>Ubicación: le resultará más cómodo escoger un proveedor cuya oficina de alquiler se encuentre en un lugar mas cercano; sin embargo, los proveedores situados fuera del aeropuerto ofrecen un autobús de cortesía que le llevará a la oficina y suelen tener precios más económicos.</li>
+                    </ul>
+                </div>
+
+                <div data-role="collapsible">     
+                    <h4>¿Están todos los impuestos<br> incluidos en el precio del<br> alquiler?</h4>     
+                    <p>  La gran mayoría de nuestras reservas incluyen Cobertura en caso de robo, Cobertura parcial por colisión (CDW), impuestos locales, 
+                        tasas aeroportuarias e impuestos de circulación.  Si desea obtener más información sobre lo que está incluido en su reserva, 
+                        consulte los términos y condiciones o contacte a la empresa a la que pertenece el vehículo.</p> 
+                </div>
+            </div><!-- /content -->
+        </div>
+        
+           
+        <div data-role="page" class="jqm-demos ui-responsive-panel" id="dialog3" data-title="TicoBooking" data-dialog="true" data-close-btn="right">
+
+            <div data-role="header" data-theme="b">
+                <h1>Reserva de<br> Vuelos</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
+
+                <div data-role="collapsible">     
+                    <h4>¿Qué pasa si efectuó mi<br> reserva más de una vez?</h4>     
+                    <p> Si los pasajes para el mismo pasajero se han efectuado con repetición o reservas duplicadas (incluyendo la reserva de vuelos que salen en el mismo día), usted será responsable de las tasas de cancelación. </p> 
+                </div>
+
+                <div data-role="collapsible">     
+                    <h4>¿Cuánto tiempo después de<br> efectuar mi reserva se emitirá<br> el pasaje?</h4>     
+                    <p>  Normalmente, los pasajes se emitirán en 30 minutos después de efectuar y pagar su reserva. </p> 
+                </div>
+
+                <div data-role="collapsible">     
+                    <h4>Me he equivocado al hacer<br> la reserva. ¿Qué debo hacer? </h4>  
+                    <ul>
+                        <li>Ponte en contacto con nuestro departamento de Atención al Cliente lo antes posible.</li>
+                        <li>De todas maneras te recordamos que nuestro proceso de emisión de billetes es automático y una vez confirmada una reserva la mayoría de tarifas no permiten los cambios o cancelaciones.</li> 
+                        <li>En caso que la aerolínea o la tarifa que has comprado permitan el cambio te indicaremos que nos lo pidas por escrito y en cualquier caso se te aplicarán los gastos de gestión correspondientes.</li>
+                    </ul>
+                </div>
+
+                <div data-role="collapsible">     
+                    <h4>¿Con cuánto anticipación<br> puedo reservar un vuelo? </h4>     
+                    <p> Usted puede reservar vuelos domésticos con 180 días de anticipo y vuelos internacionales con 365 días de anticipo. Los pasajes deben pagar en el precio cotizado. </p> 
+                </div>
+            </div><!-- /content -->
+        </div>
+
+
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
