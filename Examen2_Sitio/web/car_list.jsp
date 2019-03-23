@@ -102,7 +102,7 @@
                                         <p class="card-text mb-auto" style="margin-top: 15px;"><s:property value="servicios.getValue()"></s:property></p>
                                     <a class="btn btn-success" href="viewcar_detail.action?idVehiculo=<s:property value="id"></s:property>">Ver oferta</a>
                                     </div>
-                                    <img class="card-img-right flex-auto d-none d-md-block" width="350" height="225" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="Card image cap">                          
+                                    <img class="card-img-right flex-auto d-none d-md-block" width="350" height="225" style="padding-top: 25px;" src="<s:property value="imagen.getValue()"></s:property>" alt="Car image">                          
                                 </div>
                             </div>
                         </div>

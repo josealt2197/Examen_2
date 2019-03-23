@@ -63,7 +63,8 @@
             <s:form  theme="simple" cssClass="needs-validation" action = "reservacion_vuelo" id="registration_form" method = "post">
 
                 <div class="py-5 text-center">
-                    <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                    <br>
+                    <br><br>
                     <h2>Reservación de Vuelo</h2>
                     <p class="lead">Llena los espacios que se solicitan abajo para completar la reservación.</p>
                 </div>
@@ -82,58 +83,58 @@
                             <div class="col-md-6 mb-3">
                                 <label for="firstName">Nombre</label>
                                 <input type="text" class="form-control" name = "fr.nombre" id="firstName" placeholder="Nombre" value='<s:property value="#session.session_nombre"/>' required="">
-                                    <div class="invalid-feedback">
-                                        Este campo es requerido.
-                                    </div>
+                                <div class="invalid-feedback">
+                                    Este campo es requerido.
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="lastName">Apellidos</label>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Apellidos</label>
                                 <input type="text" class="form-control" name = "fr.apellido" id="lastName" placeholder="Apellidos" value='<s:property value="#session.session_apellido"/>' required="">
-                                    <div class="invalid-feedback">
-                                        Este campo es requerido.
-                                    </div>
+                                <div class="invalid-feedback">
+                                    Este campo es requerido.
                                 </div>
-
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="id">Cédula</label>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="id">Cédula</label>
                                 <input type="text" class="form-control" name = "fr.id_cliente" id="id" placeholder="Cédula" value='<s:property value="#session.session_cedula"/>' required="">                                    
-                                    <div class="invalid-feedback">
-                                        Este campo es requerido.
-                                    </div>
+                                <div class="invalid-feedback">
+                                    Este campo es requerido.
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="phone">Teléfono</label>                                
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone">Teléfono</label>                                
                                 <input type="text" class="form-control" name = "fr.telefono" id="phone" placeholder="12345678" value='<s:property value="#session.session_telefono"/>' required="">   
-                                    <div class="invalid-feedback">
-                                        Este campo es requerido.
-                                    </div>
+                                <div class="invalid-feedback">
+                                    Este campo es requerido.
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="email">Correo electrónico</label>
+                        <div class="mb-3">
+                            <label for="email">Correo electrónico</label>
                             <input type="email" class="form-control" name = "fr.correo" id="email" placeholder="ticobooking@correo.com" value='<s:property value="#session.session_correo"/>' required="">                               
-                                <div class="invalid-feedback">
-                                    Este campo es requerido.
-                                </div>
+                            <div class="invalid-feedback">
+                                Este campo es requerido.
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="repeatemail">Repita su correo electrónico</label>
-                                <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required="">
-                                <div class="invalid-feedback">
-                                    Este campo es requerido.
-                                </div>
+                        <div class="mb-3">
+                            <label for="repeatemail">Repita su correo electrónico</label>
+                            <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required="">
+                            <div class="invalid-feedback">
+                                Este campo es requerido.
                             </div>
-                            <hr class="mb-4">
+                        </div>
+                        <hr class="mb-4">
 
-                            <h4 class="mb-3">Datos de reservación</h4>
+                        <h4 class="mb-3">Datos de reservación</h4>
 
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="persons">Cantidad de Pasajeros</label>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="persons">Cantidad de Pasajeros</label>
                                 <s:textfield type = "number" id="cantidad" cssClass="form-control" name = "fr.cantpasajeros" placeholder="" required="required"></s:textfield>    
                                     <div class="invalid-feedback">
                                         Ingrese un número entre 1 y 10.

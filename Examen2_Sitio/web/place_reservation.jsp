@@ -64,7 +64,8 @@
         
         <div class="container">
             <div class="py-5 text-center">
-                <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <br>
+                <br><br>
                 <h2>Reservación</h2>
                 <p class="lead">Llena los espacios que se solicitan abajo para completar la reservación.</p>
             </div>

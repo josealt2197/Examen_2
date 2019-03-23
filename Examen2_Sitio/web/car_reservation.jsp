@@ -64,7 +64,8 @@
 
         <div class="container">
             <div class="py-5 text-center">
-                <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <br>
+                <br><br>
                 <h2>Reservación de Vehículos</h2>
                 <p class="lead">Llena los espacios que se solicitan abajo para completar la reservación.</p>
             </div>
@@ -220,7 +221,7 @@
 
                             <div class="mb-3">
                                 <label for="pick-place">Lugar de Pick-up / Drop-off</label>
-                            <s:textfield type = "text" cssClass="form-control" id="check-in" name = "cr.lugar" placeholder="Fecha de entrada" required="required"></s:textfield>
+                            <s:textfield type = "text" cssClass="form-control" id="check-in" name = "cr.lugar" placeholder="Lugar específico" required="required"></s:textfield>
                                 <div class="invalid-feedback">
                                     Este campo es requerido.
                                 </div>

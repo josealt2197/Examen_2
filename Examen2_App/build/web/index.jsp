@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,7 +26,9 @@
             <div data-role="header" data-theme="b">
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
-                <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                <s:if test="%{#session.session_correo != null}">
+                    <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                </s:if>
             </div><!-- /header -->
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -44,12 +47,7 @@
                         <center>
                             <form>
                                 <div class="mt-3">
-                                    <select>
-                                        <option>¿Dónde quieres hospedarte?</option>
-                                        <option>Cartago</option>
-                                        <option>San José</option>
-                                        <option>Alajuela</option>
-                                    </select>
+                                    <h3>¿Necesitas dónde hospedarte?</h3>
                                     <a class="btn btn-success mt-3" style="max-width:200px; color:#fff; text-decoration: none;" href="viewrecords" rel="external" type="submit">Buscar Hoteles</a> 
                                 </div>
                             </form>
@@ -59,12 +57,7 @@
                         <center>
                             <form>
                                 <div class="mt-3">
-                                    <select>
-                                        <option>¿En dónde quieres tu transporte?</option>
-                                        <option>Cartago</option>
-                                        <option>San José</option>
-                                        <option>Alajuela</option>
-                                    </select>
+                                    <h3>¿Necesitas algún transporte?</h3>
                                     <a class="btn btn-success mt-3" style="max-width:200px; color:#fff; text-decoration: none;" href="viewcar_list" rel="external" type="submit">Buscar Vehículos</a>
                                 </div>
                             </form>
@@ -74,12 +67,7 @@
                         <center>
                             <form>
                                 <div class="mt-3">
-                                    <select>
-                                        <option>¿Adónde quieres ir?</option>
-                                        <option>Cartago</option>
-                                        <option>San José</option>
-                                        <option>Alajuela</option>
-                                    </select>
+                                    <h3>¿Buscas viajar?</h3>
                                     <a class="btn btn-success mt-3" style="max-width:200px; color:#fff; text-decoration: none;" href="viewflight_list" rel="external" type="submit">Buscar Vuelos</a>
                                 </div>
                             </form>
@@ -124,7 +112,7 @@
                         </div>
                         <div class="ui-body ui-body-a">
                             <center><p>Visita nuestra sección de preguntas frecuentes.</p>
-                                <button type="submit" style="width:300px">Ayuda</button></center>
+                                <a href="ayuda.jsp" class="btn btn-success" style="width:300px; color:#fff; text-decoration: none;">Ayuda</a></center>
                         </div>
                     </div>
                 </div>
@@ -134,9 +122,12 @@
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
+                        <s:if test="%{#session.session_correo == null}">
+                        <li><a href="login.jsp" rel="external">Iniciar sesión</a></li>
+                        </s:if>
+                    <li><a href="index.jsp" rel="external">Inicio</a></li>
                     <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
                     <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
-                    <li><a href="login.jsp" rel="external">Ingresar</a></li>
                 </ul>
             </div>
 
