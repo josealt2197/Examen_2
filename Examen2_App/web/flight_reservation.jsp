@@ -29,7 +29,7 @@
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
                 <s:if test="%{#session.session_correo != null}">
-                    <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                    <a href="logout" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
                 </s:if>
             </div><!-- /header -->
 
@@ -82,57 +82,57 @@
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
                                         <label for="id">Cédula</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="id" name = "fr.id_cliente" placeholder="Cédula" required="required" value=""></s:textfield>
-                                            <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
-                                            <div class="invalid-feedback">
-                                                Este campo es requerido.
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label for="firstName">Nombre</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="firstname" name = "fr.nombre" placeholder="Nombre" required="required"></s:textfield>
-                                            <div class="invalid-feedback">
-                                                Este campo es requerido.
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label for="lastName">Apellidos</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="lastName" name = "fr.apellido" placeholder="Apellidos" required="required"></s:textfield>
-                                            <div class="invalid-feedback">
-                                                Este campo es requerido.
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label for="phone">Teléfono</label>
-                                        <s:textfield type = "text" cssClass="form-control" id="phone" name = "fr.telefono" placeholder="85603215" required="required"></s:textfield>
-                                            <div class="invalid-feedback">
-                                                Este campo es requerido.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="email">Correo electrónico</label>
-                                    <s:textfield type = "text" cssClass="form-control" id="email" name = "fr.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+                                        <input type="text" class="form-control" name = "fr.id_cliente" id="id" placeholder="Cédula" value='<s:property value="#session.session_cedula"/>' required="">  
+                                        <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                         <div class="invalid-feedback">
                                             Este campo es requerido.
                                         </div>
                                     </div>
-
-                                    <div class="mb-3">
-                                        <label for="repeatemail">Repita su correo electrónico</label>
-                                        <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="firstName">Nombre</label>
+                                        <input type="text" class="form-control" name = "fr.nombre" id="firstName" placeholder="Nombre" value='<s:property value="#session.session_nombre"/>' required="">
                                         <div class="invalid-feedback">
                                             Este campo es requerido.
                                         </div>
                                     </div>
-                                    <hr class="mb-4">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="lastName">Apellidos</label>
+                                        <input type="text" class="form-control" name = "fr.apellido" id="lastName" placeholder="Apellidos" value='<s:property value="#session.session_apellido"/>' required="">
+                                        <div class="invalid-feedback">
+                                            Este campo es requerido.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="phone">Teléfono</label>
+                                        <input type="text" class="form-control" name = "fr.telefono" id="phone" placeholder="12345678" value='<s:property value="#session.session_telefono"/>' required="">
+                                        <div class="invalid-feedback">
+                                            Este campo es requerido.
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <h4 class="mb-3">Datos de reservación</h4>
+                                <div class="mb-3">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" class="form-control" name = "fr.correo" id="email" placeholder="ticobooking@correo.com" value='<s:property value="#session.session_correo"/>' required="">
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="persons">Cantidad de pasajeros</label>
+                                <div class="mb-3">
+                                    <label for="repeatemail">Repita su correo electrónico</label>
+                                    <input type="email" class="form-control" id="repeatemail" placeholder="ticobooking@correo.com" value="" required>
+                                    <div class="invalid-feedback">
+                                        Este campo es requerido.
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+
+                                <h4 class="mb-3">Datos de reservación</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="persons">Cantidad de pasajeros</label>
                                         <s:textfield type = "number" id="cantidad" cssClass="form-control" name = "fr.cantpasajeros" placeholder="" required="required"></s:textfield> 
                                             <div class="invalid-feedback">
                                                 Ingrese un número entre 1 y 10.

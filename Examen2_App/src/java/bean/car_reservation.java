@@ -3,7 +3,7 @@ package bean;
 
 public class car_reservation {
     
-    private int id_vehiculo;
+    public int id_vehiculo;
     private int id_cliente;
     private String nombre;
     private String apellido;

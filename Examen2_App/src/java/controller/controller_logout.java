@@ -15,6 +15,7 @@ public class controller_logout extends ActionSupport {
         session.remove("session_nombre");
         session.remove("session_apellido");
         session.remove("session_telefono");
+        
         return SUCCESS;
     }
 }

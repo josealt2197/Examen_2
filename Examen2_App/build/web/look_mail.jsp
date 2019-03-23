@@ -26,7 +26,7 @@
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
                 <s:if test="%{#session.session_correo != null}">
-                    <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                    <a href="logout" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
                 </s:if>
             </div>
 
@@ -45,9 +45,10 @@
                                 </svg></center>
                             <div class="checkbox mb-3">
                                 <center>
-                                    <h5 class="font-weight-normal">En caso de no recibir el correo verifica que esté escrito correctamente e intenta de nuevo.
+                                    <h5 class="font-weight-normal">En caso de no recibir el correo verifica que esté escrito correctamente e intenta de nuevo.</h5>
                                         <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_register.jsp'">Regresar</a>
-                                    </h5>
+                                        <a href="index.jsp" class="btn btn-success" style="color:#fff; text-decoration: none;">Volver al inicio</a>
+                                    
                                 </center>
                             </div>
                             <br><br>                    

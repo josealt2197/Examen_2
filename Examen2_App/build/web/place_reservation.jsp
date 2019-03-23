@@ -33,7 +33,7 @@
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
                 <s:if test="%{#session.session_correo != null}">
-                    <a href="login.jsp" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
+                    <a href="logout" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
                 </s:if>
             </div><!-- /header -->
 
@@ -86,7 +86,7 @@
                                 <div class="row">
                                     <div class="col-md-4 mb-3">
                                         <label for="id">Cédula</label>
-                                        <s:textfield type = "text" value="" cssClass="form-control" name = "r.id_cliente" placeholder="Cédula" required="required"></s:textfield>
+                                        <input type="text" class="form-control" name = "r.id_cliente" id="id" placeholder="Cédula" value='<s:property value="#session.session_cedula"/>' required="">
                                             <!--<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">-->
                                             <div class="invalid-feedback">
                                                 Este campo es requerido.
@@ -94,15 +94,15 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="firstName">Nombre</label>
-                                        <s:textfield type = "text" cssClass="form-control" name = "r.nombre" placeholder="Nombre" required="required"></s:textfield>
+                                        <input type="text" class="form-control" name = "r.nombre" id="firstName" placeholder="Nombre" value='<s:property value="#session.session_nombre"/>' required="">
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="lastName">Apellidos</label>
-                                        <s:textfield type = "text" cssClass="form-control" name = "r.apellido" placeholder="Apellidos" required="required"></s:textfield>
+                                         <input type="text" class="form-control" name = "r.apellido" id="lastName" placeholder="Apellidos" value='<s:property value="#session.session_apellido"/>' required="">
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="phone">Teléfono</label>
-                                        <s:textfield type = "text" cssClass="form-control" name = "r.telefono" placeholder="83120203" required="required"></s:textfield>
+                                        <input type="text" class="form-control" name = "r.telefono" id="phone" placeholder="12345678" value='<s:property value="#session.session_telefono"/>' required="">
                                         </div>
                                     </div>
 
@@ -114,7 +114,7 @@
 
                                 <div class="mb-3">
                                     <label for="email">Correo electrónico</label>
-                                    <s:textfield type = "text" cssClass="form-control" name = "r.correo" placeholder="ticobooking@correo.com" required="required"></s:textfield>
+                                    <input type="email" class="form-control" name = "r.correo" id="email" placeholder="ticobooking@correo.com" value='<s:property value="#session.session_correo"/>' required="">
                                     </div>
 
                                     <div class="mb-3">

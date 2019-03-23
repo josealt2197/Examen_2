@@ -24,7 +24,7 @@
             <result name="success">look_mail.jsp</result>
         </action>
         <action name="login" class="controller.controller_login"> 
-            <result name="correcto">index.jsp</result> 
+            <result name="correcto">success_login.jsp</result> 
             <result name="incorrecto">login.jsp</result>
             <result name="sinregistro">login.jsp</result>          
         </action>

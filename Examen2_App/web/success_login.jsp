@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,19 +25,16 @@
             <div data-role="header" data-theme="b">
                 <img src="./img/logo1.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
                 <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
-                <s:if test="%{#session.session_correo != null}">
-                    <a href="logout" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
-                </s:if>
             </div>
 
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#0071bc;">Verifica tu correo</h2>
+                <h2 class="ui-title" role="heading" style="font-weight: 700; color:#0071bc;">¡Sesión iniciada!</h2>
 
                 <div class="pt-menu">
                     <div class="sign-in-body" style="background-color: transparent;">
                         <form class="form-redirect">
-                            <h1 class="text-green">TicoBooking</h1>
-                            <h3 class="mb-3 font-weight-normal text-green">¡Se ha enviado un correo electrónico a tu cuenta!</h3>
+                            <h1 class="text-green">¡Bienvenido <s:property value="#session.session_nombre"></s:property>!</h1>
+                            <h3 class="mb-3 font-weight-normal text-green">Puedes continuar navegando en el sitio.</h3>
                             <center><svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                                 <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
                                 <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
@@ -45,15 +42,13 @@
                                 </svg></center>
                             <div class="checkbox mb-3">
                                 <center>
-                                    <h5 class="font-weight-normal">En caso de no recibir el correo verifica que esté escrito correctamente e intenta de nuevo.</h5>
-                                        <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_register.jsp'">Regresar</a>
-                                        <a href="index.jsp" class="btn btn-success" style="color:#fff; text-decoration: none;">Volver al inicio</a>
-                                    
+                                    <h5>
+                                        <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'index.jsp'">Volver al inicio</a>
+                                    </h5>
                                 </center>
                             </div>
-                            <br><br>                    
                         </form>
-                    </div> 
+                    </div>
                 </div>
 
             </div><!-- /content -->
