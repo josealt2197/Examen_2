@@ -50,9 +50,14 @@
             <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
                 <ul data-role="listview">
                     <li data-icon="delete"><a href="#" data-rel="close">Cerrar Menú</a></li>
-                        <s:if test="%{#session.session_correo != null}">
-                        <li><a href="login.jsp" rel="external">Iniciar sesión</a></li>
-                        </s:if>
+                    <li>
+                    <s:if test="%{#session.session_correo == null}">
+                        <a rel="external" href="login.jsp">Ingresar</a>
+                    </s:if>
+                    <s:elseif test="%{#session.session_correo != null}">
+                        <a rel="external" href="logout">Salir</a>
+                    </s:elseif>
+                    </li>
                     <li><a href="index.jsp" rel="external">Inicio</a></li>
                     <li><a href="tipo_cambio.jsp" rel="external">Tipo de cambio</a></li>
                     <li><a href="ayuda.jsp" rel="external">Ayuda</a></li>
